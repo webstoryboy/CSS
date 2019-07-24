@@ -1,12 +1,33 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>CSS</title>
-</head>
-<body>
-    
-    
+<style>
+.original {background: #a18cd1 url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend06.jpg); min-height: 400px; background-size: cover;}
+.original span {background: rgba(0,0,0,.8); color: #fff; display: inline-block; margin: 10px; padding: 5px 10px; border-radius: 5px;}
+.original {position: relative;}
+.red {position: absolute; left: 50%; top: 50%; border-radius: 50%;
+    transform: translate(-75%, -50%);
+    width: 250px; height: 250px; background: rgba(255,0,0,0.8);
+}
+.bule {position: absolute; left: 50%; top: 50%; border-radius: 50%;
+    transform: translate(-25%, -50%);
+    width: 250px; height: 250px; background: rgba(0,0,255,0.8);
+}
+.img1 > div {width: 50%; float: left; transition: all 0.3s ease;}
+.img1 > div img {display: block; width: 100%;}
+.m-multiply > div {mix-blend-mode :multiply;}
+.m-screen > div {mix-blend-mode :screen;}
+.m-overlay > div {mix-blend-mode :overlay;}
+.m-darken > div {mix-blend-mode :darken;}
+.m-lighten > div {mix-blend-mode :lighten;}
+.m-color-dodge > div {mix-blend-mode :color-dodge;}
+.m-color-burn > div {mix-blend-mode :color-burn;}
+.m-hard-light > div {mix-blend-mode :hard-light;}
+.m-soft-light > div {mix-blend-mode :soft-light;}
+.m-difference > div {mix-blend-mode :difference;}
+.m-exclusion > div {mix-blend-mode :exclusion;}
+.m-hue > div {mix-blend-mode :hue;}
+.m-saturation > div {mix-blend-mode :saturation;}
+.m-color > div {mix-blend-mode :color;}
+.m-luminosity > div {mix-blend-mode :luminosity;}
+</style>
 
 <h2>mix-blend-mode</h2>
 <p>mix-blend-mode 속성은 배경의 혼합 상태를 정의합니다.</p>
@@ -143,9 +164,81 @@
 </div>
 
 
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>필터 효과 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <div class="img1 clearfix">
+                <div class="original"><span>original</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-multiply"><span>multiply</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-screen"><span>screen</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-overlay"><span>overlay</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-darken"><span>darken</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-lighten"><span>lighten</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-color-dodge"><span>color-dodge</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-color-burn"><span>color-burn</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-hard-light"><span>hard-light</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-soft-light"><span>soft-light</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-difference"><span>difference</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-exclusion"><span>exclusion</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-hue"><span>hue</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-saturation"><span>saturation</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-color"><span>color</span><div class="red"></div><div class="bule"></div></div>
+                <div class="original m-luminosity"><span>luminosity</span><div class="red"></div><div class="bule"></div></div>
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="choice1">
+        <a href="#" class="btn1">이미지1</a>
+        <a href="#" class="btn2">이미지2</a>
+        <a href="#" class="btn3">이미지3</a>
+        <a href="#" class="btn4">이미지4</a>
+        <a href="#" class="btn5">이미지5</a>
+        <a href="#" class="btn6">이미지6</a>
+        <a href="#" class="btn7">이미지7</a>
+        <a href="#" class="btn8">이미지8</a>
+        <a href="#" class="btn9">이미지9</a>
+    </div>
+</div>
+
+<div class="sample">
+    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-css">.original {background: #a18cd1 url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend06.jpg);}
+.red {position: absolute; left: 50%; top: 50%; border-radius: 50%; transform: translate(-75%, -50%); width: 250px; height: 250px; background: rgba(255,0,0,0.8);}
+.bule {position: absolute; left: 50%; top: 50%; border-radius: 50%; transform: translate(-25%, -50%); width: 250px; height: 250px; background: rgba(0,0,255,0.8);}
+.multiply {mix-blend-mode :multiply;}
+.screen {mix-blend-mode :screen;}
+.overlay {mix-blend-mode :overlay;}
+.darken {mix-blend-mode :darken;}
+.lighten {mix-blend-mode :lighten;}
+.color-dodge {mix-blend-mode :color-dodge;}
+.color-burn {mix-blend-mode :color-burn;}
+.hard-light {mix-blend-mode :hard-light;}
+.soft-light {mix-blend-mode :soft-light;}
+.difference {mix-blend-mode :difference;}
+.exclusion {mix-blend-mode :exclusion;}
+.hue {mix-blend-mode :hue;}
+.saturation {mix-blend-mode :saturation;}
+.color {mix-blend-mode :color;}
+.luminosity {mix-blend-mode :luminosity;}
+</code></pre>
+    </div>
+</div>
+<!-- sample1 --> 
+
+
 
   
-<h4 class="pt50">호환성(Compatibility) <a href="http://webzz.tistory.com/359" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a></h4>
+<h4 class="pt50">호환성(Compatibility) 
+    <a href="http://webzz.tistory.com/227" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a>
+    <span class="can">caniuse.com <a href="https://caniuse.com/#search=animation" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span>
+</h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
         <thead>
@@ -192,7 +285,50 @@
 
 
 
-   
-    
-</body>
-</html>
+<h4 class="pt40">참고(Reference)</h4>
+<ul>
+    <li>MDN <a href="https://developer.mozilla.org/ko/docs/Web/CSS/mix-blend-mode" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+    <li>CSS Animations <a href="https://drafts.csswg.org/css-animations/#animation"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+</ul>
+
+
+
+
+<script>
+$(".choice1 .btn1").on("click", function(e){
+    e.preventDefault();
+    $(".original").css("background","url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend01.jpg)");
+});
+$(".choice1 .btn2").on("click", function(e){
+    e.preventDefault();
+    $(".original").css("background","url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend02.jpg)");
+});
+$(".choice1 .btn3").on("click", function(e){
+    e.preventDefault();
+    $(".original").css("background","url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend03.jpg)");
+});
+$(".choice1 .btn4").on("click", function(e){
+    e.preventDefault();
+    $(".original").css("background","url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend04.jpg)");
+});
+$(".choice1 .btn5").on("click", function(e){
+    e.preventDefault();
+    $(".original").css("background","url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend05.jpg)");
+});
+$(".choice1 .btn6").on("click", function(e){
+    e.preventDefault();
+    $(".original").css("background","url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend06.jpg)");
+});
+$(".choice1 .btn7").on("click", function(e){
+    e.preventDefault();
+    $(".original").css("background","url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend07.jpg)");
+});
+$(".choice1 .btn8").on("click", function(e){
+    e.preventDefault();
+    $(".original").css("background","url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend08.jpg)");
+});
+$(".choice1 .btn9").on("click", function(e){
+    e.preventDefault();
+    $(".original").css("background","url(https://tistory4.daumcdn.net/tistory/2933724/skin/images/blend09.jpg)");
+});
+</script>

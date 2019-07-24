@@ -1,11 +1,25 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>CSS</title>
-</head>
-<body>
+<style>
+.box > div {
+    width: 60px; height: 60px; line-height: 60px; 
+    text-align: center; border-radius: 50%; 
+    color: #fff; position: relative; font-size: 12px; 
+    overflow: hidden; margin: 10px; 
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
+    .direction {height: 200px;}
+.direction > div.normal {animation: move2 3s 10 ease normal;}
+.direction > div.reverse {animation: move2 3s 10 ease reverse;}
+.direction > div.alternate {animation: move2 3s 10 ease alternate;}
+.direction > div.alternate-reverse {animation: move2 3s 10 ease alternate-reverse;}
     
+@keyframes move2 {
+    0%  {left:0; top:0;}
+    25% {left: calc(100% - 70px); top:0;}
+    50% {left: calc(100% - 70px); top: calc(100% - 70px);}
+    75% {left: 0; top: calc(100% - 70px);}
+    100%{left:0; top:0;}
+}
+</style>
     
 
 <h2>animation-direction</h2>
@@ -103,6 +117,52 @@
 </div>
 
 
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>클릭하면 애니메이션 이동 방향을 표현한 animation direction 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <div class="box direction">
+                <div>direction</div>
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="choice1">
+        <a href="#" class="off1">normal</a>
+        <a href="#" class="off2">reverse</a>
+        <a href="#" class="off3">alternate</a>
+        <a href="#" class="off4">alternate-reverse</a>
+    </div>
+</div>
+
+<div class="sample">
+    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-css">.direction.normal {animation: move2 3s 10 ease normal;}
+.direction.reverse {animation: move2 3s 10 ease reverse;}
+.direction.alternate {animation: move2 3s 10 ease alternate;}
+.direction.alternate-reverse {animation: move2 3s 10 ease alternate-reverse;}
+@keyframes move2 {
+    0%  {left:0; top:0;}
+    25% {left: calc(100% - 70px); top:0;}
+    50% {left: calc(100% - 70px); top: calc(100% - 70px);}
+    75% {left: 0; top: calc(100% - 70px);}
+    100%{left:0; top:0;}
+}
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->  
+
+
+
+
   
 <h4 class="pt50">호환성(Compatibility) <a href="http://webzz.tistory.com/227" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a></h4>
 <div class="table-responsive">
@@ -144,13 +204,23 @@
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
             </tr>
-         
         </tbody>
     </table>
 </div>
 
 
    
-    
-</body>
-</html>
+<h4 class="pt40">참고(Reference)</h4>
+<ul>
+    <li>MDN <a href="https://developer.mozilla.org/ko/docs/Web/CSS/animation" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+    <li>CSS Animations <a href="https://drafts.csswg.org/css-animations/#animation"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+</ul>
+
+
+<script>
+    $(".choice1 a").click(function(e){    
+        e.preventDefault();
+        var text = $(this).text();    
+        $(".direction > div").removeClass().addClass(text);
+    });
+</script>

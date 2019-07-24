@@ -339,7 +339,377 @@
 </div>
 
 
+<style>
+    .img1 > div {width: 50%; float: left; transition: all 0.3s ease;}
+    .img1 > div img {display: block; width: 100%;}
+    .original {background: #a18cd1 url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg); min-height: 400px; background-size: cover;}
+    .original span {background:  rgba(0,0,0,.8); color: #fff; display: inline-block; margin: 10px; padding: 5px 10px; border-radius: 5px;}
+    .original.multiply {background-blend-mode: multiply}
+    .original.screen {background-blend-mode: screen}
+    .original.overlay {background-blend-mode: overlay}
+    .original.darken {background-blend-mode: darken}
+    .original.lighten {background-blend-mode: lighten}
+    .original.color-dodge {background-blend-mode: color-dodge}
+    .original.saturation {background-blend-mode: saturation}
+    .original.color {background-blend-mode: color}
+    .original.luminosity {background-blend-mode: luminosity}
+</style>  
+
+<h4 class="pt50">Sample</h4>  
+<div class="well">
+    <div class="img1 clearfix">
+        <div class="original"><span>original</span></div>
+        <div class="original multiply"><span>multiply</span></div>
+        <div class="original screen"><span>screen</span></div>
+        <div class="original overlay"><span>overlay</span></div>
+        <div class="original darken"><span>darken</span></div>
+        <div class="original lighten"><span>lighten</span></div>
+        <div class="original color-dodge"><span>color-dodge</span></div>
+        <div class="original saturation"><span>saturation</span></div>
+        <div class="original color"><span>color</span></div>
+        <div class="original luminosity"><span>luminosity</span></div>
+    </div>
+</div>
+  
+
+<style>
+.original {position: relative;}
+.red {position: absolute; left: 50%; top: 50%; border-radius: 50%; transform: translate(-75%, -50%); width: 250px; height: 250px; background: rgba(255,0,0,0.8);}
+.bule {position: absolute; left: 50%; top: 50%; border-radius: 50%; transform: translate(-25%, -50%); width: 250px; height: 250px; background: rgba(0,0,255,0.8);}
+.m-multiply > div {mix-blend-mode :multiply;  }
+.m-screen > div {mix-blend-mode :screen;  }
+.m-overlay > div {mix-blend-mode :overlay;  }
+.m-darken > div {mix-blend-mode :darken;  }
+.m-lighten > div {mix-blend-mode :lighten;  }
+.m-color-dodge > div {mix-blend-mode :color-dodge;  }
+.m-color-burn > div {mix-blend-mode :color-burn;  }
+.m-hard-light > div {mix-blend-mode :hard-light;  }
+.m-soft-light > div {mix-blend-mode :soft-light;  }
+.m-difference > div {mix-blend-mode :difference;  }
+.m-exclusion > div {mix-blend-mode :exclusion;  }
+.m-hue > div {mix-blend-mode :hue;  }
+.m-saturation > div {mix-blend-mode :saturation;  }
+.m-color > div {mix-blend-mode :color;  }
+.m-luminosity > div {mix-blend-mode :luminosity;  }    
+</style>
+
+<h4 class="pt50">mix-blend-mode</h4>  
+<div class="well">
+    <div class="img1 clearfix">
+        <div class="original"><span>original</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-multiply"><span>multiply</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-screen"><span>screen</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-overlay"><span>overlay</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-darken"><span>darken</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-lighten"><span>lighten</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-color-dodge"><span>color-dodge</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-color-burn"><span>color-burn</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-hard-light"><span>hard-light</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-soft-light"><span>soft-light</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-difference"><span>difference</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-exclusion"><span>exclusion</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-hue"><span>hue</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-saturation"><span>saturation</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-color"><span>color</span><div class="red"></div><div class="bule"></div></div>
+        <div class="original m-luminosity"><span>luminosity</span><div class="red"></div><div class="bule"></div></div>
+    </div>
+</div>
    
+   
+<h4 class="pt50">filter(Property)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">속성값</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>none</td>
+                <td>이미지의 아무런 효과를 주지 않습니다.</td>
+            </tr>
+            <tr>
+                <td>blur(px)</td>
+                <td>이미지의 블러 효과를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>brihgtness(%)</td>
+                <td>이미지의 밝고 어두움 정도를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>contrast(%)</td>
+                <td>이미지의 대비를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>drop-shadow()</td>
+                <td>이미지의 그림자를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>grayscale(%)</td>
+                <td>이미지의 그레이스케일을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>hue-ratate(deg)</td>
+                <td>이미지의 색조를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>invert(%)</td>
+                <td>이미지의  반전색상을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>opacity(%)</td>
+                <td>이미지의 투명도를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>saturate(%)</td>
+                <td>이미지의 채도를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>sepia(%)</td>
+                <td>이미지의 세피아 효과를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>url()</td>
+                <td>이미지의 경로를 설정합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+   
+
+<style>
+    .img > div {width: 20%; float: left; transition: all 0.3s ease;}
+    .img > div img {width: 100%; border-radius: 0;}
+    .img > div:hover {filter: none;}
+    .blur1 {filter: blur(1px);}
+    .blur2 {filter: blur(3px);}
+    .blur3 {filter: blur(5px);}
+    .blur4 {filter: blur(7px);}
+    .blur5 {filter: blur(10px);}
+    
+    .bright1 {filter: brightness(10%);}
+    .bright2 {filter: brightness(20%);}
+    .bright3 {filter: brightness(30%);}
+    .bright4 {filter: brightness(40%);}
+    .bright5 {filter: brightness(50%);}
+    
+    .contrast1 {filter: contrast(10%);}
+    .contrast2 {filter: contrast(20%);}
+    .contrast3 {filter: contrast(30%);}
+    .contrast4 {filter: contrast(40%);}
+    .contrast5 {filter: contrast(50%);}
+    
+    .grayscale1 {filter: grayscale(100%);}
+    .grayscale2 {filter: grayscale(80%);}
+    .grayscale3 {filter: grayscale(60%);}
+    .grayscale4 {filter: grayscale(40%);}
+    .grayscale5 {filter: grayscale(20%);}
+    
+    .hue1 {filter: hue-rotate(10deg);}
+    .hue2 {filter: hue-rotate(30deg);}
+    .hue3 {filter: hue-rotate(60deg);}
+    .hue4 {filter: hue-rotate(90deg);}
+    .hue5 {filter: hue-rotate(120deg);}
+    
+    .invert1 {filter: invert(10%);}
+    .invert2 {filter: invert(30%);}
+    .invert3 {filter: invert(60%);}
+    .invert4 {filter: invert(80%);}
+    .invert5 {filter: invert(100%);}
+    
+    .opacity1 {filter: opacity(10%);}
+    .opacity2 {filter: opacity(30%);}
+    .opacity3 {filter: opacity(60%);}
+    .opacity4 {filter: opacity(80%);}
+    .opacity5 {filter: opacity(100%);}
+    
+    .saturate1 {filter: saturate(10%);}
+    .saturate2 {filter: saturate(50%);}
+    .saturate3 {filter: saturate(100%);}
+    .saturate4 {filter: saturate(200%);}
+    .saturate5 {filter: saturate(400%);}
+    
+    .sepia1 {filter: sepia(10%);}
+    .sepia2 {filter: sepia(30%);}
+    .sepia3 {filter: sepia(60%);}
+    .sepia4 {filter: sepia(90%);}
+    .sepia5 {filter: sepia(120%);}
+</style> 
+
+<h4 class="pt50">Sample : blur</h4>     
+<div class="well">
+    <div class="img clearfix">
+        <div class="blur1"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt=""></div>
+        <div class="blur2"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt=""></div>
+        <div class="blur3"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt=""></div>
+        <div class="blur4"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt=""></div>
+        <div class="blur5"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt=""></div>
+    </div>
+</div>
+<div class="blue">
+.blur1 {filter: blur(1px);}<br>
+.blur2 {filter: blur(3px);}<br>
+.blur3 {filter: blur(5px);}<br>
+.blur4 {filter: blur(7px);}<br>
+.blur5 {filter: blur(10px);}
+</div>
+ 
+<h4 class="pt50">Sample : brightness</h4>    
+<div class="well">
+    <div class="img clearfix">
+        <div class="bright1"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="bright2"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="bright3"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="bright4"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="bright5"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+    </div>
+</div>
+<div class="blue">
+.bright1 {filter: brightness(10%);}<br>
+.bright2 {filter: brightness(20%);}<br>
+.bright3 {filter: brightness(30%);}<br>
+.bright4 {filter: brightness(40%);}<br>
+.bright5 {filter: brightness(50%);}
+</div>   
+
+<h4 class="pt50">Sample : contrast</h4>    
+<div class="well">
+    <div class="img clearfix">
+        <div class="contrast1"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="contrast2"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="contrast3"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="contrast4"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="contrast5"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+    </div>
+</div>
+<div class="blue">
+.contrast1 {filter: contrast(10%);}<br>
+.contrast2 {filter: contrast(20%);}<br>
+.contrast3 {filter: contrast(30%);}<br>
+.contrast4 {filter: contrast(40%);}<br>
+.contrast5 {filter: contrast(50%);}  
+</div>   
+
+<h4 class="pt50">Sample : grayscale</h4>       
+<div class="well">
+    <div class="img clearfix">
+        <div class="grayscale1"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="grayscale2"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="grayscale3"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="grayscale4"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="grayscale5"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+    </div>
+</div> 
+<div class="blue">
+.grayscale1 {filter: grayscale(100%);}<br>
+.grayscale2 {filter: grayscale(80%);}<br>
+.grayscale3 {filter: grayscale(60%);}<br>
+.grayscale4 {filter: grayscale(40%);}<br>
+.grayscale5 {filter: grayscale(20%);}    
+</div>  
+
+<h4 class="pt50">Sample : hue-rotate</h4>       
+<div class="well">
+    <div class="img clearfix">
+        <div class="hue1"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="hue2"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="hue3"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="hue4"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="hue5"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+    </div>
+</div>
+<div class="blue">
+.hue1 {filter: hue-rotate(10deg);}<br>
+.hue2 {filter: hue-rotate(30deg);}<br>
+.hue3 {filter: hue-rotate(60deg);}<br>
+.hue4 {filter: hue-rotate(90deg);}<br>
+.hue5 {filter: hue-rotate(120deg);}
+</div>
+
+<h4 class="pt50">Sample : invert</h4>      
+<div class="well">
+    <div class="img clearfix">
+        <div class="invert1"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="invert2"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="invert3"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="invert4"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="invert5"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+    </div>
+</div>
+<div class="blue">
+.invert1 {filter: invert(10%);}<br>
+.invert2 {filter: invert(30%);}<br>
+.invert3 {filter: invert(60%);}<br>
+.invert4 {filter: invert(80%);}<br>
+.invert5 {filter: invert(100%);}
+</div>
+  
+<h4 class="pt50">Sample : opacity</h4>       
+<div class="well">
+    <div class="img clearfix">
+        <div class="opacity1"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="opacity2"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="opacity3"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="opacity4"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="opacity5"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+    </div>
+</div>
+<div class="blue">
+.opacity1 {filter: opacity(10%);}<br>
+.opacity2 {filter: opacity(30%);}<br>
+.opacity3 {filter: opacity(60%);}<br>
+.opacity4 {filter: opacity(80%);}<br>
+.opacity5 {filter: opacity(100%);}
+</div>
+  
+  
+<h4 class="pt50">Sample : saturate</h4>       
+<div class="well">
+    <div class="img clearfix">
+        <div class="saturate1"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="saturate2"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="saturate3"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="saturate4"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="saturate5"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+    </div>
+</div>
+<div class="blue">
+.saturate1 {filter: saturate(10%);}<br>
+.saturate2 {filter: saturate(50%);}<br>
+.saturate3 {filter: saturate(100%);}<br>
+.saturate4 {filter: saturate(200%);}<br>
+.saturate5 {filter: saturate(400%);}
+</div>  
+  
+<h4 class="pt50">Sample : sepia</h4>       
+<div class="well">
+    <div class="img clearfix">
+        <div class="sepia1"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="sepia2"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="sepia3"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="sepia4"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+        <div class="sepia5"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg"></div>
+    </div>
+</div>
+<div class="blue">
+.sepia1 {filter: sepia(10%);}<br>
+.sepia2 {filter: sepia(30%);}<br>
+.sepia3 {filter: sepia(60%);}<br>
+.sepia4 {filter: sepia(90%);}<br>
+.sepia5 {filter: sepia(120%);}
+</div>
+    
+    
+    
+    
+    
+    
     
 </body>
 </html>
