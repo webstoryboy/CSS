@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>CSS</title>
-</head>
-<body>
-    
-    
+
 
 <h2>align-items</h2>
 <p>align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.</p>
@@ -102,6 +94,205 @@
 </div>
 
 
+
+
+
+<style>
+    .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items : baseline;
+        background: #f3e5f5;
+        border-radius: 5px;
+        min-height: 400px;
+        padding: 20px;
+    }
+    .item {
+        background: #ce93d8;
+        margin: 10px;
+        padding: 50px;
+        color: #fff;
+        border-radius: 3px;
+    }
+</style>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample362-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 내부 요소의 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex">
+            <div class="item">item</div>
+            <div class="item">item <br> item <br> item</div>
+            <div class="item">item</div>
+            <div class="item">item <br> item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item <br> item <br> item</div>
+            <div class="item">item <br> item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice">
+        <a href="#">reset</a>
+        <a href="#">align-items : stretch;</a>
+        <a href="#">align-items : center;</a>
+        <a href="#">align-items : flex-start;</a>
+        <a href="#">align-items : flex-end;</a>
+        <a href="#">align-items : baseline;</a>
+    </div>
+</div>
+<!-- sample -->
+<div class="sample">
+    <h5>HTML<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+<pre class="line-numbers"><code class="language-xml">&lt;div class="flex"&gt;
+    &lt;div class="item"&gt;item&lt;/div&gt;
+    &lt;div class="item"&gt;item &lt;br&gt; item &lt;br&gt; item&lt;/div&gt;
+    &lt;div class="item"&gt;item&lt;/div&gt;
+    &lt;div class="item"&gt;item &lt;br&gt; item&lt;/div&gt;
+    &lt;div class="item"&gt;item&lt;/div&gt;
+    &lt;div class="item"&gt;item&lt;/div&gt;
+    &lt;div class="item"&gt;item&lt;/div&gt;
+    &lt;div class="item"&gt;item&lt;/div&gt;
+    &lt;div class="item"&gt;item &lt;br&gt; item &lt;br&gt; item&lt;/div&gt;
+    &lt;div class="item"&gt;item &lt;br&gt; item&lt;/div&gt;
+    &lt;div class="item"&gt;item&lt;/div&gt;
+    &lt;div class="item"&gt;item&lt;/div&gt;
+    &lt;div class="item"&gt;item&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+<pre class="line-numbers"><code class="language-css">.flex {
+    display: flex;
+    flex-wrap: wrap;
+    background: #f3e5f5;
+    border-radius: 5px;
+    min-height: 400px;
+    padding: 20px;
+}
+.item {
+    background: linear-gradient(45deg, #ef604e 0%,#fab267 100%);
+    margin: 10px;
+    padding: 50px;
+    color: #fff;
+    border-radius: 3px;
+}</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            background: #f3e5f5;
+            border-radius: 5px;
+            min-height: 400px;
+            padding: 20px;
+        }
+        .item {
+            background: #ce93d8;
+            margin: 10px;
+            padding: 50px;
+            color: #fff;
+            border-radius: 3px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex"&gt;
+        &lt;div class="item"&gt;item&lt;/div&gt;
+        &lt;div class="item"&gt;item &lt;br&gt; item &lt;br&gt; item&lt;/div&gt;
+        &lt;div class="item"&gt;item&lt;/div&gt;
+        &lt;div class="item"&gt;item &lt;br&gt; item&lt;/div&gt;
+        &lt;div class="item"&gt;item&lt;/div&gt;
+        &lt;div class="item"&gt;item&lt;/div&gt;
+        &lt;div class="item"&gt;item&lt;/div&gt;
+        &lt;div class="item"&gt;item&lt;/div&gt;
+        &lt;div class="item"&gt;item &lt;br&gt; item &lt;br&gt; item&lt;/div&gt;
+        &lt;div class="item"&gt;item &lt;br&gt; item&lt;/div&gt;
+        &lt;div class="item"&gt;item&lt;/div&gt;
+        &lt;div class="item"&gt;item&lt;/div&gt;
+        &lt;div class="item"&gt;item&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="choice"&gt;
+        &lt;a href="#"&gt;reset&lt;/a&gt;
+        &lt;a href="#"&gt;align-items : stretch;&lt;/a&gt;
+        &lt;a href="#"&gt;align-items : center;&lt;/a&gt;
+        &lt;a href="#"&gt;align-items : flex-start;&lt;/a&gt;
+        &lt;a href="#"&gt;align-items : flex-end;&lt;/a&gt;
+        &lt;a href="#"&gt;align-items : baseline;&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice a").on("click",function(e){
+            e.preventDefault();
+        });
+
+        $(".choice a").click(function(){
+            var ass = $(this).text();
+            $(".flex").attr("style",ass);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+
+<script>
+    $(".choice a").on("click",function(e){
+        e.preventDefault();
+    });
+
+    $(".choice a").click(function(){
+        var ass = $(this).text();
+        $(".flex").attr("style",ass);
+    });
+</script>
+<!-- //Sample1 -->
+
+
+
+
+
+
+
+
+
+
+
   
 <h4 class="pt50">호환성(Compatibility) <a href="http://webzz.tistory.com/227" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a></h4>
 <div class="table-responsive">
@@ -149,6 +340,3 @@
 
 
    
-    
-</body>
-</html>

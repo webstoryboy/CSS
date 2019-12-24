@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>column</title>
+    <style>
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .column {columns: 3; column-rule-style: solid; column-rule-width: thin;}
+    </style>
+</head>
+<body>
+    <div class="column">
+        <p>컬럼은 CSS에서 레이아웃을 작성하기 위한 새로운 속성입니다. column-count 속성은 컬럼의 수를 정의하고, column-fill 속성은 열의 지정방법을 정의하고, column-gap 속성은 열의 간격을 정의하고, column-rule 속성은 컬럼 라인의 가로값, 스타일, 컬러를 정의하고, column-rule-color 속성은 컬럼의 라인 색을 정의하고, column-rule-style 속성은 컬럼 라인의 스타일을 정의하고, column-rule-width 속성은 컬럼 라인의 가로값을 정의하고, column-span 속성은 열의 속성을 정의하고, column-width 속성은 컬럼의 가로 값을 정의하고, columns 속성은 열의 폭과 열의 수를 정의합니다.</p>
+    </div>
+
+    <div class="choice">
+        <a href="#">reset</a>
+        <a href="#">column-rule-width: thin;</a>
+        <a href="#">column-rule-width: medium;</a>
+        <a href="#">column-rule-width: thick;</a>
+        <a href="#">column-rule-width: 1px</a>
+        <a href="#">column-rule-width: 10px</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".choice a").on("click",function(e){
+            e.preventDefault();
+        });
+
+        $(".choice a").click(function(){
+            var ass = $(this).text();
+            $(".column").attr("style",ass);
+        });
+    </script>
+</body>
+</html>

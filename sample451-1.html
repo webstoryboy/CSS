@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .flex {
+            display: flex;
+            background: #f3e5f5;
+            border-radius: 5px;
+            min-height: 400px;
+            padding: 20px;
+        }
+        .item {
+            background: #ce93d8;
+            margin: 10px;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            color: #fff;
+            border-radius: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+    </div>
+
+    <div class="choice">
+        <a href="#">reset</a>
+        <a href="#">flex-wrap : nowrap</a>
+        <a href="#">flex-wrap : wrap</a>
+        <a href="#">flex-wrap : wrap-reverse</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".choice a").on("click",function(e){
+            e.preventDefault();
+        });
+
+        $(".choice a").click(function(){
+            var ass = $(this).text();
+            $(".flex").attr("style",ass);
+        });
+    </script>
+</body>
+</html>

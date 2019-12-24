@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>CSS</title>
-</head>
-<body>
-    
-    
+
 
 <h2>columns</h2>
 <p>columns 속성은 열의 폭과 열의 수를 정의합니다.</p>
@@ -59,12 +51,30 @@
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
     <li>columns 속성은 열의 폭과 열의 수를 정의합니다.</li>
+    <li>column-width와 column-count를 같이 사용할 경우 count가 우선 적용됩니다.</li>
 </ul>
   
    
    
 <h4 class="pt50">문법(Syntax)</h4>
 <p class="blue">columns : auto | column-width | column-count</p>
+
+<p class="blue">
+    /* 단위 속성이 있는 경우 : column-width 설정 */<br>
+    columns: 12em;<br><br>
+
+    /* 단위 속성이 없는 경우 : column-count 설정 */<br>
+    columns: 3;<br><br>
+
+    /* 두 개의 속성이 있는 경우 : column-count | auto */<br>
+    columns: 2 auto;<br><br>
+
+    /* 두 개의 속성이 있는 경우 : column-width | auto */<br>
+    columns: 10em auto;<br><br>
+
+    /* 두 개의 속성이 있는 경우 : auto | auto */<br>
+    columns: auto auto;
+</p>
 
 
 
@@ -98,6 +108,129 @@
         </tbody>
     </table>
 </div>
+
+
+
+
+<style>
+    .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    .column {column-width: auto;}
+</style>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample436-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>컬럼의 가로 값을 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="column">
+            <p>컬럼은 CSS에서 레이아웃을 작성하기 위한 새로운 속성입니다. column-count 속성은 컬럼의 수를 정의하고, column-fill 속성은 열의 지정방법을 정의하고, column-gap 속성은 열의 간격을 정의하고, column-rule 속성은 컬럼 라인의 가로값, 스타일, 컬러를 정의하고, column-rule-color 속성은 컬럼의 라인 색을 정의합니다. column-rule-style 속성은 컬럼 라인의 스타일을 정의하고, column-rule-width 속성은 컬럼 라인의 가로값을 정의하고, column-span 속성은 열의 속성을 정의하고, column-width 속성은 컬럼의 가로 값을 정의하고, columns 속성은 열의 폭과 열의 수를 정의합니다.</p>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice">
+        <a href="#">reset</a>
+        <a href="#">columns: 2;</a>
+        <a href="#">columns: 3;</a>
+        <a href="#">columns: 100px;</a>
+        <a href="#">columns: 2 auto;</a>
+        <a href="#">columns: 10em auto;</a>
+        <a href="#">columns: auto auto;</a>
+    </div>
+</div>
+<!-- sample -->
+<div class="sample">
+    <h5>HTML<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+<pre class="line-numbers"><code class="language-xml">&lt;div class="column"&gt;
+    &lt;p&gt;컬럼은 CSS에서 레이아웃을 작성하기 위한 새로운 속성입니다. column-count 속성은 컬럼의 수를 정의하고, column-fill 속성은 열의 지정방법을 정의하고, column-gap 속성은 열의 간격을 정의하고, column-rule 속성은 컬럼 라인의 가로값, 스타일, 컬러를 정의하고, column-rule-color 속성은 컬럼의 라인 색을 정의하고, column-rule-style 속성은 컬럼 라인의 스타일을 정의하고, column-rule-width 속성은 컬럼 라인의 가로값을 정의하고, column-span 속성은 열의 속성을 정의하고, column-width 속성은 컬럼의 가로 값을 정의하고, columns 속성은 열의 폭과 열의 수를 정의합니다.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<!-- sample -->
+<div class="sample">
+    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+<pre class="line-numbers"><code class="language-css">.column {
+    column-width: auto;
+}
+</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;column&lt;/title&gt;
+    &lt;style&gt;
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .column {columns: auto;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="column"&gt;
+        &lt;p&gt;컬럼은 CSS에서 레이아웃을 작성하기 위한 새로운 속성입니다. column-count 속성은 컬럼의 수를 정의하고, column-fill 속성은 열의 지정방법을 정의하고, column-gap 속성은 열의 간격을 정의하고, column-rule 속성은 컬럼 라인의 가로값, 스타일, 컬러를 정의하고, column-rule-color 속성은 컬럼의 라인 색을 정의합니다. column-rule-style 속성은 컬럼 라인의 스타일을 정의하고, column-rule-width 속성은 컬럼 라인의 가로값을 정의하고, column-span 속성은 열의 속성을 정의하고, column-width 속성은 컬럼의 가로 값을 정의하고, columns 속성은 열의 폭과 열의 수를 정의합니다.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="choice"&gt;
+        &lt;a href="#"&gt;reset&lt;/a&gt;
+        &lt;a href="#"&gt;columns: 2;&lt;/a&gt;
+        &lt;a href="#"&gt;columns: 3;;&lt;/a&gt;
+        &lt;a href="#"&gt;columns: 100px;&lt;/a&gt;
+        &lt;a href="#"&gt;columns: 2 auto;&lt;/a&gt;
+        &lt;a href="#"&gt;columns: 10em auto;&lt;/a&gt;
+        &lt;a href="#"&gt;columns: auto auto;&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice a").on("click",function(e){
+            e.preventDefault();
+        });
+
+        $(".choice a").click(function(){
+            var ass = $(this).text();
+            $(".column").attr("style", ass);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+
+<script>
+    $(".choice a").on("click",function(e){
+        e.preventDefault();
+    });
+
+    $(".choice a").click(function(){
+        var ass = $(this).text();
+        $(".column").attr("style",ass);
+    });
+</script>
+<!-- //Sample1 -->
+    
+    
+
+
+
 
 
   
@@ -182,5 +315,3 @@
 
    
     
-</body>
-</html>
