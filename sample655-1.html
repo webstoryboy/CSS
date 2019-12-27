@@ -304,12 +304,14 @@
         }
         .item11-1 {
             flex-basis: 100%;
+            margin-bottom: 2%;
         }
         .item11 + .item11 {
             margin-left: 2%;
         }
         
     </style>
+    <h3>d1</h3>
     <div class="flex flex11">
         <div class="item item11">item1</div>
         <div class="item item11">item2</div>
@@ -319,5 +321,346 @@
         <div class="item item11">item6</div>
     </div>
     <br><br><br>
+
+
+    <style>
+        .flex104 {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            height: 600px;
+        }
+        .item104 {
+            flex-grow: 1;
+            margin-bottom: 2%;
+            width: 30%;
+        }
+        .item104.break {
+            flex-basis: 100%;
+            width: 0;
+            margin: 0;
+            border: 1px solid #ddd;
+            margin-bottom: 2%;
+        }
+    </style>
+    <div class="flex flex104">
+        <div class="item item104"></div>
+        <div class="item item104"></div>
+        <div class="item item104"></div>
+        <div class="item item104 break"></div>
+        <div class="item item104"></div>
+        <div class="item item104 break"></div>
+        <div class="item item104"></div>
+        <div class="item item104"></div>
+        <div class="item item104"></div>
+    </div>
+    <br><br><br>
+
+
+    <style>
+        .flex12 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 700px;
+        }
+        .item12 {
+            margin-bottom: 2%;
+            height: auto;
+            width: 30%;
+            margin-left: 0;
+        }
+    </style>
+    <div class="flex flex12">
+        <div class="item item12" style="height: 200px">item1</div>
+        <div class="item item12" style="height: 150px">item2</div>
+        <div class="item item12" style="height: 100px">item3</div>
+        <div class="item item12" style="height: 150px">item4</div>
+        <div class="item item12" style="height: 200px">item5</div>
+        <div class="item item12" style="height: 100px">item6</div>
+        <div class="item item12" style="height: 100px">item7</div>
+        <div class="item item12" style="height: 150px">item8</div>
+        <div class="item item12" style="height: 100px">item9</div>
+    </div>
+    <br><br><br>start<br><br><br>
+
+    <style>
+        .flex100 {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: space-between;
+            height: 765px;
+            counter-reset: items;
+        }
+        .item100 {
+            width: 32%;
+            margin-bottom: 2%;
+            color: #fff;
+        }
+        .item100::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+
+        .item100:nth-child(1){height: 140px}
+        .item100:nth-child(2){height: 190px}
+        .item100:nth-child(3){height: 170px}
+        .item100:nth-child(4){height: 120px}
+        .item100:nth-child(5){height: 160px}
+        .item100:nth-child(6){height: 180px}
+        .item100:nth-child(7){height: 140px}
+        .item100:nth-child(8){height: 150px}
+        .item100:nth-child(9){height: 170px}
+        .item100:nth-child(10){height: 170px}
+
+        .item100:nth-child(3n+1) { order: 1; }
+        .item100:nth-child(3n+2) { order: 2; }
+        .item100:nth-child(3n)   { order: 3; }
+
+        
+        .flex100::before,
+        .flex100::after {
+            content: "";
+            flex-basis: 100%;
+            width: 0;
+            order: 2;
+        }
+    </style>
+
+
+    <div class="flex flex100">
+        <div class="item item100"></div>
+        <div class="item item100"></div>
+        <div class="item item100"></div>
+        <div class="item item100"></div>
+        <div class="item item100"></div>
+        <div class="item item100"></div>
+        <div class="item item100"></div>
+        <div class="item item100"></div>
+        <div class="item item100"></div>
+        <div class="item item100"></div>
+    </div>
+    <br><br><br>
+
+
+
+
+    <style>
+        .flex101 {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: space-between;
+            height: 1060px;
+            counter-reset: items;
+        }
+        .item101 {
+            width: 24%;
+            margin-bottom: 2%;
+            color: #fff;
+        }
+
+        .item101::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+
+        .item101:nth-of-type(4n+1) { order: 1; }
+        .item101:nth-of-type(4n+2) { order: 2; }
+        .item101:nth-of-type(4n+3) { order: 3; }
+        .item101:nth-of-type(4n)   { order: 4; }
+
+        .item101.break {
+            flex-basis: 100%;
+            width: 0;
+            border: 1px solid #ddd;
+            margin: 0;
+            content: "";
+            padding: 0;
+            font-size: 0;
+        }
+
+    </style>
+
+    <div class="flex flex101">
+        <div class="item item101" style="height: 140px"></div>
+        <div class="item item101" style="height: 190px"></div>
+        <div class="item item101" style="height: 170px"></div>
+        <div class="item item101" style="height: 120px"></div>
+        <div class="item item101" style="height: 160px"></div>
+        <div class="item item101" style="height: 180px"></div>
+        <div class="item item101" style="height: 140px"></div>
+        <div class="item item101" style="height: 150px"></div>
+        <div class="item item101" style="height: 170px"></div>
+        <div class="item item101" style="height: 170px"></div>
+        <div class="item item101" style="height: 140px"></div>
+        <div class="item item101" style="height: 190px"></div>
+        <div class="item item101" style="height: 170px"></div>
+        <div class="item item101" style="height: 120px"></div>
+        <div class="item item101" style="height: 160px"></div>
+        <div class="item item101" style="height: 180px"></div>
+        <div class="item item101" style="height: 140px"></div>
+        <div class="item item101" style="height: 150px"></div>
+        <div class="item item101" style="height: 170px"></div>
+        <div class="item item101" style="height: 170px"></div>
+        
+        <span class="item item101 break"></span>
+        <span class="item item101 break"></span>
+        <span class="item item101 break"></span>
+      </div>
+
+
+
+
+    <style>
+        .flex102 {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: space-between;
+            height: 860px;
+            counter-reset: items;
+        }
+        .item102 {
+            width: 19%;
+            margin-bottom: 2%;
+            color: #fff;
+        }
+        .item102::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        .item102:nth-of-type(5n+1) { order: 1; }
+        .item102:nth-of-type(5n+2) { order: 2; }
+        .item102:nth-of-type(5n+3) { order: 3; }
+        .item102:nth-of-type(5n+4) { order: 4; }
+        .item102:nth-of-type(5n)   { order: 5; }
+
+        .item102.break {
+            flex-basis: 100%;
+            width: 0;
+            border: 1px solid #ddd;
+            margin: 0;
+            content: "";
+            padding: 0;
+        }
+    </style>
+    <div class="flex flex102">
+        <div class="item item102" style="height: 140px"></div>
+        <div class="item item102" style="height: 190px"></div>
+        <div class="item item102" style="height: 170px"></div>
+        <div class="item item102" style="height: 120px"></div>
+        <div class="item item102" style="height: 160px"></div>
+        <div class="item item102" style="height: 180px"></div>
+        <div class="item item102" style="height: 140px"></div>
+        <div class="item item102" style="height: 150px"></div>
+        <div class="item item102" style="height: 170px"></div>
+        <div class="item item102" style="height: 170px"></div>
+        <div class="item item102" style="height: 140px"></div>
+        <div class="item item102" style="height: 190px"></div>
+        <div class="item item102" style="height: 170px"></div>
+        <div class="item item102" style="height: 120px"></div>
+        <div class="item item102" style="height: 160px"></div>
+        <div class="item item102" style="height: 180px"></div>
+        <div class="item item102" style="height: 140px"></div>
+        <div class="item item102" style="height: 150px"></div>
+        <div class="item item102" style="height: 170px"></div>
+        <div class="item item102" style="height: 170px"></div>
+
+        <span class="item item102 break"></span>
+        <span class="item item102 break"></span>
+        <span class="item item102 break"></span>
+        <span class="item item102 break"></span>
+    </div>
+
+
+
+
+
+    <style>
+        .flex103 {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: space-between;
+            height: 1060px;
+            counter-reset: items;
+        }
+
+        .item103::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+
+           
+        .item103:nth-of-type(6n+1) { order: 1; }
+        .item103:nth-of-type(6n+2) { order: 2; }
+        .item103:nth-of-type(6n+3) { order: 3; }
+        .item103:nth-of-type(6n+4) { order: 4; }
+        .item103:nth-of-type(6n+5) { order: 5; }
+        .item103:nth-of-type(6n)   { order: 6; }
+
+            /* Force new columns */
+        .item103.break {
+            flex-basis: 100%;
+            width: 0;
+            border: 1px solid #ddd;
+            margin: 0;
+            content: "";
+            padding: 0;
+        }
+
+        .item103 {
+            width: 15%;
+            margin-bottom: 2%;
+            color: #fff;
+        }
+    </style>
+    <div class="flex flex103">
+        <div class="item item103" style="height: 140px"></div>
+        <div class="item item103" style="height: 190px"></div>
+        <div class="item item103" style="height: 170px"></div>
+        <div class="item item103" style="height: 120px"></div>
+        <div class="item item103" style="height: 160px"></div>
+        <div class="item item103" style="height: 180px"></div>
+        <div class="item item103" style="height: 140px"></div>
+        <div class="item item103" style="height: 150px"></div>
+        <div class="item item103" style="height: 170px"></div>
+        <div class="item item103" style="height: 170px"></div>
+        <div class="item item103" style="height: 140px"></div>
+        <div class="item item103" style="height: 190px"></div>
+        <div class="item item103" style="height: 170px"></div>
+        <div class="item item103" style="height: 120px"></div>
+        <div class="item item103" style="height: 160px"></div>
+        <div class="item item103" style="height: 180px"></div>
+        <div class="item item103" style="height: 140px"></div>
+        <div class="item item103" style="height: 150px"></div>
+        <div class="item item103" style="height: 170px"></div>
+        <div class="item item103" style="height: 170px"></div>
+        <div class="item item103" style="height: 140px"></div>
+        <div class="item item103" style="height: 190px"></div>
+        <div class="item item103" style="height: 170px"></div>
+        <div class="item item103" style="height: 120px"></div>
+        <div class="item item103" style="height: 160px"></div>
+        <div class="item item103" style="height: 180px"></div>
+        <div class="item item103" style="height: 140px"></div>
+        <div class="item item103" style="height: 150px"></div>
+        <div class="item item103" style="height: 170px"></div>
+        <div class="item item103" style="height: 170px"></div>
+        
+        <span class="item item103 break"></span>
+        <span class="item item103 break"></span>
+        <span class="item item103 break"></span>
+        <span class="item item103 break"></span>
+        <span class="item item103 break"></span>
+    </div>
+    <br><br><br>
+
+
+
+
+
+
+
+
+
 </body>
 </html>
