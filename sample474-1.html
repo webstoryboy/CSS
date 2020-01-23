@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .grid {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 5px;
+
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 100px 100px 100px;
+        }
+        .grid > div {
+            background: #ce93d8;
+            color: #fff;
+            border-radius: 3px;
+            text-align: center;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .grid > div.selected {background: #966a9e}
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="selected">box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+        <div>box6</div>
+
+    </div>
+
+    <div class="choice">
+        <a href="#">reset</a>
+        <a href="#">grid-row-start: 1;</a>
+        <a href="#">grid-row-start: 2;</a>
+        <a href="#">grid-row-start: 3;</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".choice a").on("click",function(e){
+            e.preventDefault();
+        });
+
+        $(".choice a").click(function(){
+            var ass = $(this).text();
+            $(".grid > div:nth-child(1)").attr("style",ass);
+        });
+    </script>
+</body>
+</html>

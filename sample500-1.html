@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .grid {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 5px;
+
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, minmax(50px,auto));
+            grid-template-areas: 
+            "box1 box1 box1" 
+            "box2 box2 box2" 
+            "box3 box3 box3";
+        }
+        .grid > div {
+            background: #ce93d8;
+            color: #fff;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .grid > div:nth-child(1) {grid-area: box1;}
+        .grid > div:nth-child(2) {grid-area: box2;}
+        .grid > div:nth-child(3) {grid-area: box3;}
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+   
+    </div>
+
+    <div class="choice">
+        <a href="#">reset</a>
+        <a href="#">grid-template-areas: 
+            "box1 box1 box1" 
+            "box2 box3 box3" 
+            "box2 box3 box3";</a>
+        <a href="#">grid-template-areas: 
+            "box2 box2 box1" 
+            "box2 box2 box3" 
+            "box2 box2 box3";</a>
+        <a href="#">grid-template-areas: 
+            "box1 box1 ." 
+            "box1 box1 ." 
+            ". box2 box3";</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".choice a").on("click",function(e){
+            e.preventDefault();
+        });
+
+        $(".choice a").click(function(){
+            var ass = $(this).text();
+            $(".grid").attr("style",ass);
+        });
+    </script>
+</body>
+</html>
