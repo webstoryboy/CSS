@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid</title>
-    <style>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Grid&lt;/title&gt;
+    &lt;style&gt;
         .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
         .grid {
             background: #f3e5f5;
@@ -18,7 +18,7 @@
             "box2 box3 box3" 100px
             "box2 box3 box3" 100px / 200px 200px 200px;
         }
-        .grid > div {
+        .grid &gt; div {
             background: #ce93d8;
             color: #fff;
             border-radius: 3px;
@@ -27,36 +27,36 @@
             align-items: center; 
             justify-content: center;
         }
-        .grid > div:nth-child(1) {grid-area: box1;}
-        .grid > div:nth-child(2) {grid-area: box2;}
-        .grid > div:nth-child(3) {grid-area: box3;}
-    </style>
-</head>
-<body>
-    <div class="grid">
-        <div>box1</div>
-        <div>box2</div>
-        <div>box3</div>
-    </div>
+        .grid &gt; div:nth-child(1) {grid-area: box1;}
+        .grid &gt; div:nth-child(2) {grid-area: box2;}
+        .grid &gt; div:nth-child(3) {grid-area: box3;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid"&gt;
+        &lt;div&gt;box1&lt;/div&gt;
+        &lt;div&gt;box2&lt;/div&gt;
+        &lt;div&gt;box3&lt;/div&gt;
+    &lt;/div&gt;
 
-    <div class="choice">
-        <a href="#">reset</a>
-        <a href="#">grid-template: 
+    &lt;div class="choice"&gt;
+        &lt;a href="#"&gt;reset&lt;/a&gt;
+        &lt;a href="#"&gt;grid-template: 
             "box1 box1 box1" 100px
             "box2 box3 box3" 100px
-            "box2 box3 box3" 100px / 200px 200px 200px;</a>
-        <a href="#">grid-template: 
+            "box2 box3 box3" 100px / 200px 200px 200px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-template: 
             "box1 box1 box1" 200px
             "box2 box2 box3" 100px
-            "box2 box2 box3" 100px / 200px 200px 200px;</a>
-        <a href="#">grid-template: 
+            "box2 box2 box3" 100px / 200px 200px 200px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-template: 
             "box2 box1 box1" 200px
             "box2 box3 box3" 100px
-            "box2 box3 box3" 100px / 100px 100px 200px;</a>
-    </div>
+            "box2 box3 box3" 100px / 100px 100px 200px;&lt;/a&gt;
+    &lt;/div&gt;
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
         $(".choice a").on("click",function(e){
             e.preventDefault();
         });
@@ -65,6 +65,6 @@
             var ass = $(this).text();
             $(".grid").attr("style",ass);
         });
-    </script>
-</body>
-</html>
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;

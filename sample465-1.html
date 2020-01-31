@@ -14,23 +14,23 @@
             display: grid;
             grid-gap: 10px;
             grid-template-columns: 200px 200px 200px;
-            grid-template-rows: 100px 100px 100px;
+            grid-auto-rows: 100px;
         }
         .grid > div {
             background: #ce93d8;
             color: #fff;
             border-radius: 3px;
             text-align: center;
+            width: 200px;
             display: flex; 
             align-items: center; 
             justify-content: center;
         }
-        .grid > div.selected {background: #966a9e}
     </style>
 </head>
 <body>
     <div class="grid">
-        <div class="selected">box1</div>
+        <div>box1</div>
         <div>box2</div>
         <div>box3</div>
         <div>box4</div>
@@ -41,10 +41,11 @@
 
     <div class="choice">
         <a href="#">reset</a>
-        <a href="#">grid-row-end: 4;</a>
-        <a href="#">grid-row-end: 3;</a>
-        <a href="#">grid-row-end: 2;</a>
-        <a href="#">grid-row-end: 1;</a>
+        <a href="#">grid-auto-rows: 100px;</a>
+        <a href="#">grid-auto-rows: 200px;</a>
+        <a href="#">grid-auto-rows: auto;</a>
+        <a href="#">grid-auto-rows: min-content;</a>
+        <a href="#">grid-auto-rows: minmax(200px, auto);</a>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -55,7 +56,7 @@
 
         $(".choice a").click(function(){
             var ass = $(this).text();
-            $(".grid > div:nth-child(1)").attr("style",ass);
+            $(".grid").attr("style",ass);
         });
     </script>
 </body>

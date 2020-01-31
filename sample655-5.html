@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex4 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item4 {
+            /* flex: 0 32%;  flex-grow / flex-basis */
+            flex-basis: 32%;
+            height: 100px;
+            margin-bottom: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex flex4">
+        <div class="item item4"></div>
+        <div class="item item4"></div>
+        <div class="item item4"></div>
+        <div class="item item4"></div>
+        <div class="item item4"></div>
+        <div class="item item4"></div>
+        <div class="item item4"></div>
+        <div class="item item4"></div>
+        <div class="item item4"></div>
+    </div>
+</body>
+</html>

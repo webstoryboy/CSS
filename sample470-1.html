@@ -14,7 +14,7 @@
             display: grid;
             grid-gap: 10px;
             grid-template-columns: 200px 200px 200px;
-            grid-template-rows: 100px 100px 100px;
+            grid-template-rows: 100px 100px;
         }
         .grid > div {
             background: #ce93d8;
@@ -25,26 +25,26 @@
             align-items: center; 
             justify-content: center;
         }
-        .grid > div.selected {background: #966a9e}
     </style>
 </head>
 <body>
     <div class="grid">
-        <div class="selected">box1</div>
+        <div>box1</div>
         <div>box2</div>
         <div>box3</div>
         <div>box4</div>
         <div>box5</div>
         <div>box6</div>
-        <div>box7</div>
     </div>
 
     <div class="choice">
         <a href="#">reset</a>
-        <a href="#">grid-row-end: 4;</a>
-        <a href="#">grid-row-end: 3;</a>
-        <a href="#">grid-row-end: 2;</a>
-        <a href="#">grid-row-end: 1;</a>
+        <a href="#">grid-gap: 10px;</a>
+        <a href="#">grid-gap: 20px;</a>
+        <a href="#">grid-gap: 0</a>
+        <a href="#">grid-gap: 10%;</a>
+        <a href="#">grid-gap: 10px 20px;</a>
+        <a href="#">grid-gap: calc(20px + 10%);</a>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -55,7 +55,7 @@
 
         $(".choice a").click(function(){
             var ass = $(this).text();
-            $(".grid > div:nth-child(1)").attr("style",ass);
+            $(".grid").attr("style",ass);
         });
     </script>
 </body>

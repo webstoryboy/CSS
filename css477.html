@@ -90,23 +90,24 @@
     background: #f3e5f5;
     padding: 20px;
     border-radius: 5px;
+
     display: grid;
-    grid-auto-rows: 100px;
     grid-gap: 10px;
-    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 100px
 }
 .grid > div {
     background: #ce93d8;
     color: #fff;
     border-radius: 3px;
     text-align: center;
-    line-height: 100px;
+    display: flex; align-items: center; justify-content: center;
 }
 </style>
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/CSS/sample476-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/CSS/sample477-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>콘텐츠 내부 요소의 정렬 상태를 설정하는 예제입니다.</p>
 <div class="sample">
     <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
@@ -118,15 +119,19 @@
             <div>item3</div>
             <div>item4</div>
             <div>item5</div>
+            <div>item6</div>
         </div>
         <!-- ex -->
     </div>
 
     <div class="choice">
         <a href="#">reset</a>
-        <a href="#">grid-template-columns: 100px 100px;</a>
-        <a href="#">grid-template-columns: 100px 100px 100px;</a>
-        <a href="#">grid-template-columns: 100px 100px 100px 100px;</a>
+        <a href="#">grid-template-rows: 100px 100px;</a>
+        <a href="#">grid-template-rows: 200px 200px;</a>
+        <a href="#">grid-template-rows: 300px 300px;</a>
+        <a href="#">grid-template-rows: 100px 200px;</a>
+        <a href="#">grid-template-rows: 100px 300px;</a>
+        <a href="#">grid-template-rows: 100px 400px;</a>
     </div>
 </div>
 <!-- sample -->
@@ -139,6 +144,7 @@
     &lt;div&gt;item3&lt;/div&gt;
     &lt;div&gt;item4&lt;/div&gt;
     &lt;div&gt;item5&lt;/div&gt;
+    &lt;div&gt;item6&lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
 </div>
@@ -148,10 +154,21 @@
 <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="script">
 <pre class="line-numbers"><code class="language-css">.grid {
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 5px;
+
     display: grid;
-    grid-auto-rows: 100px;
     grid-gap: 10px;
-    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 100px
+}
+.grid &gt; div {
+    background: #ce93d8;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    display: flex; align-items: center; justify-content: center;
 }</code></pre>
     </div>
 </div>
@@ -172,17 +189,18 @@
             background: #f3e5f5;
             padding: 20px;
             border-radius: 5px;
+
             display: grid;
-            grid-auto-rows: 100px;
             grid-gap: 10px;
-            grid-template-columns: 100px 100px 100px;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 100px 100px
         }
         .grid &gt; div {
             background: #ce93d8;
             color: #fff;
             border-radius: 3px;
             text-align: center;
-            line-height: 100px;
+            display: flex; align-items: center; justify-content: center;
         }
     &lt;/style&gt;
 &lt;/head&gt;
@@ -193,13 +211,17 @@
         &lt;div&gt;item3&lt;/div&gt;
         &lt;div&gt;item4&lt;/div&gt;
         &lt;div&gt;item5&lt;/div&gt;
+        &lt;div&gt;item6&lt;/div&gt;
     &lt;/div&gt;
 
     &lt;div class="choice"&gt;
         &lt;a href="#"&gt;reset&lt;/a&gt;
-        &lt;a href="#"&gt;grid-template-columns: 100px 100px;&lt;/a&gt;
-        &lt;a href="#"&gt;grid-template-columns: 100px 100px 100px;&lt;/a&gt;
-        &lt;a href="#"&gt;grid-template-columns: 100px 100px 100px 100px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-template-rows: 100px 100px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-template-rows: 200px 200px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-template-rows: 300px 300px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-template-rows: 100px 200px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-template-rows: 100px 300px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-template-rows: 100px 400px;&lt;/a&gt;
     &lt;/div&gt;
 
     &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;

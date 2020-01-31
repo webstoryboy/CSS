@@ -93,43 +93,49 @@
     background: #f3e5f5;
     padding: 20px;
     border-radius: 5px;
+
     display: grid;
-    grid-auto-rows: 100px;
     grid-gap: 10px;
-    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 100px 100px 100px;
 }
 .grid > div {
     background: #ce93d8;
     color: #fff;
     border-radius: 3px;
     text-align: center;
-    line-height: 100px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }
+.grid > div.selected {background: #966a9e}
 </style>
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/CSS/sample473-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/CSS/sample474-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>콘텐츠 내부 요소의 정렬 상태를 설정하는 예제입니다.</p>
 <div class="sample">
     <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="ex">
         <!-- ex -->
         <div class="grid">
-            <div>item1</div>
-            <div>item2</div>
-            <div>item3</div>
-            <div>item4</div>
-            <div>item5</div>
+            <div class="selected">box1</div>
+            <div>box2</div>
+            <div>box3</div>
+            <div>box4</div>
+            <div>box5</div>
+            <div>box6</div>
         </div>
         <!-- ex -->
     </div>
 
     <div class="choice">
         <a href="#">reset</a>
-        <a href="#">grid-template-columns: 100px 100px;</a>
-        <a href="#">grid-template-columns: 100px 100px 100px;</a>
-        <a href="#">grid-template-columns: 100px 100px 100px 100px;</a>
+        <a href="#">grid-row-start: 1;</a>
+        <a href="#">grid-row-start: 2;</a>
+        <a href="#">grid-row-start: 3;</a>
+        <a href="#">grid-row-start: 4;</a>
     </div>
 </div>
 <!-- sample -->
@@ -137,11 +143,12 @@
     <h5>HTML<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="script">
 <pre class="line-numbers"><code class="language-xml">&lt;div class="grid"&gt;
-    &lt;div&gt;item1&lt;/div&gt;
-    &lt;div&gt;item2&lt;/div&gt;
-    &lt;div&gt;item3&lt;/div&gt;
-    &lt;div&gt;item4&lt;/div&gt;
-    &lt;div&gt;item5&lt;/div&gt;
+    &lt;div class="selected"&gt;box1&lt;/div&gt;
+    &lt;div&gt;box2&lt;/div&gt;
+    &lt;div&gt;box3&lt;/div&gt;
+    &lt;div&gt;box4&lt;/div&gt;
+    &lt;div&gt;box5&lt;/div&gt;
+    &lt;div&gt;box6&lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
 </div>
@@ -151,11 +158,25 @@
 <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="script">
 <pre class="line-numbers"><code class="language-css">.grid {
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 5px;
+
     display: grid;
-    grid-auto-rows: 100px;
     grid-gap: 10px;
-    grid-template-columns: 100px 100px 100px 100px 100px;
-}</code></pre>
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 100px 100px 100px;
+}
+.grid &gt; div {
+    background: #ce93d8;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.grid &gt; div.selected {background: #966a9e}</code></pre>
     </div>
 </div>
 <!-- sample -->
@@ -175,34 +196,40 @@
             background: #f3e5f5;
             padding: 20px;
             border-radius: 5px;
+
             display: grid;
-            grid-auto-rows: 100px;
             grid-gap: 10px;
-            grid-template-columns: 100px 100px 100px;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 100px 100px 100px 100px;
         }
         .grid &gt; div {
             background: #ce93d8;
             color: #fff;
             border-radius: 3px;
             text-align: center;
-            line-height: 100px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
         }
+        .grid &gt; div.selected {background: #966a9e}
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;div class="grid"&gt;
-        &lt;div&gt;item1&lt;/div&gt;
-        &lt;div&gt;item2&lt;/div&gt;
-        &lt;div&gt;item3&lt;/div&gt;
-        &lt;div&gt;item4&lt;/div&gt;
-        &lt;div&gt;item5&lt;/div&gt;
+        &lt;div class="selected"&gt;box1&lt;/div&gt;
+        &lt;div&gt;box2&lt;/div&gt;
+        &lt;div&gt;box3&lt;/div&gt;
+        &lt;div&gt;box4&lt;/div&gt;
+        &lt;div&gt;box5&lt;/div&gt;
+        &lt;div&gt;box6&lt;/div&gt;
     &lt;/div&gt;
 
     &lt;div class="choice"&gt;
         &lt;a href="#"&gt;reset&lt;/a&gt;
-        &lt;a href="#"&gt;grid-template-columns: 100px 100px;&lt;/a&gt;
-        &lt;a href="#"&gt;grid-template-columns: 100px 100px 100px;&lt;/a&gt;
-        &lt;a href="#"&gt;grid-template-columns: 100px 100px 100px 100px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-row-start: 1;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-row-start: 2;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-row-start: 3;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-row-start: 4;&lt;/a&gt;
     &lt;/div&gt;
 
     &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
@@ -213,7 +240,7 @@
 
         $(".choice a").click(function(){
             var ass = $(this).text();
-            $(".grid").attr("style",ass);
+            $(".grid &gt; div:nth-child(1)").attr("style",ass);
         });
     &lt;/script&gt;
 &lt;/body&gt;
@@ -231,7 +258,7 @@ $(".choice a").on("click",function(e){
 
 $(".choice a").click(function(){
     var ass = $(this).text();
-    $(".grid").attr("style",ass);
+    $(".grid > div:nth-child(1)").attr("style",ass);
 });
 </script>
 <!-- //Sample1 -->

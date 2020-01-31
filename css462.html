@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>CSS</title>
-</head>
-<body>
-    
+
     
 
 <h2>grid-area</h2>
-<p>grid-area 속성은 </p>
+<p>grid-area</p>
 
 <hr>
 
 <h3>grid-area</h3>
-<p class="blue">grid-area 속성은 </p>
+<p class="blue">grid-area</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
@@ -32,10 +25,7 @@
             <tr>
                 <th scope="row"><a href="http://webzz.tistory.com/360">기본 값</a></th>
                 <td><a href="http://webzz.tistory.com/360">
-                    grid-row-start : auto <br>
-                    grid-column-start : auto<br>
-                    grid-row-end : auto<br>
-                    grid-column-end : auto
+                    grid-area : normal
                 </a></td>
             </tr>
             <tr>
@@ -60,16 +50,19 @@
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>grid-area 속성은 -.</li>
+    <li>grid-area 속성은</li>
 </ul>
   
    
    
 <h4 class="pt50">문법(Syntax)</h4>
-<p class="blue">-</p>
+<p class="blue">grid-area</p>
+<p class="blue">
+    /* 단위 속성 */
+</p>
 
 
-<h4 class="pt50">속성(Property)</h4>
+<!-- <h4 class="pt50">속성(Property)</h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
@@ -84,15 +77,202 @@
         </thead>
         <tbody>
             <tr>
-                <th>normal</th>
-                <td>폰트 두께를 normal(기본값) 설정합니다.</td>
+                <th>-</th>
+                <td>-</td>
             </tr>
         </tbody>
     </table>
+</div> -->
+
+
+
+
+<style>
+.choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+.grid {
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 5px;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: repeat(3,minmax(100px,auto));
+    grid-template-areas:
+        "a a a"
+        "b c c"
+        "b c c";
+}
+.grid > div {
+    background: #ce93d8;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    width: 200px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+</style>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/CSS/sample462-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 내부 요소의 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="grid">
+            <div class="selected">box1</div>
+        </div>
+        <!-- ex -->
+    </div>
+
+    <div class="choice">
+        <a href="#">reset</a>
+        <a href="#">grid-area: a / a / a / a;</a>
+        <a href="#">grid-area: b / b / b / b;</a>
+        <a href="#">grid-area: c / c / c / c;</a>
+        <a href="#">grid-area: a / a / b / b;</a>
+        <a href="#">grid-area: 2 / 1 / 2 / 4;</a>
+    </div>
 </div>
+<!-- sample -->
+<div class="sample">
+    <h5>HTML<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+<pre class="line-numbers"><code class="language-xml">&lt;div class="grid"&gt;
+    &lt;div class="selected"&gt;box1&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+<h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+<pre class="line-numbers"><code class="language-css">.grid {
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 5px;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: repeat(3,minmax(100px,auto));
+    grid-template-areas:
+        "a a a"
+        "b c c"
+        "b c c";
+}
+.grid &gt; div {
+    background: #ce93d8;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    width: 200px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Grid&lt;/title&gt;
+    &lt;style&gt;
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .grid {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 5px;
+
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: repeat(3,minmax(100px,auto));
+            grid-template-areas:
+                "a a a"
+                "b c c"
+                "b c c";
+        }
+        .grid &gt; div {
+            background: #ce93d8;
+            color: #fff;
+            border-radius: 3px;
+            text-align: center;
+            width: 200px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid"&gt;
+        &lt;div class="selected"&gt;box1&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="choice"&gt;
+        &lt;a href="#"&gt;reset&lt;/a&gt;
+        &lt;a href="#"&gt;grid-area: a / a / a / a;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-area: b / b / b / b;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-area: c / c / c / c;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-area: a / a / b / b;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-area: 2 / 1 / 2 / 4;&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice a").on("click",function(e){
+            e.preventDefault();
+        });
+
+        $(".choice a").click(function(){
+            var ass = $(this).text();
+            $(".grid .selected").attr("style",ass);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
 
 
-  
+
+<script>
+$(".choice a").on("click",function(e){
+    e.preventDefault();
+});
+
+$(".choice a").click(function(){
+    var ass = $(this).text();
+    $(".grid .selected").attr("style",ass);
+});
+</script>
+<!-- //Sample1 -->
+
+
+
+
+
+
+
+
+
+
+
+
 <h4 class="pt50">호환성(Compatibility) <a href="http://webzz.tistory.com/359" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a></h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
@@ -140,6 +320,4 @@
 
 
    
-    
-</body>
-</html>
+ 

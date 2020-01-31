@@ -13,14 +13,16 @@
 
             display: grid;
             grid-gap: 10px;
-            grid-template-columns: 200px 200px 200px;
             grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "a b c";
+            grid-auto-columns: 200px;
         }
         .grid > div {
             background: #ce93d8;
             color: #fff;
             border-radius: 3px;
             text-align: center;
+            width: 200px;
             display: flex; 
             align-items: center; 
             justify-content: center;
@@ -30,7 +32,7 @@
 </head>
 <body>
     <div class="grid">
-        <div class="selected">box1</div>
+        <div>box1</div>
         <div>box2</div>
         <div>box3</div>
         <div>box4</div>
@@ -41,10 +43,20 @@
 
     <div class="choice">
         <a href="#">reset</a>
-        <a href="#">grid-row-end: 4;</a>
-        <a href="#">grid-row-end: 3;</a>
-        <a href="#">grid-row-end: 2;</a>
-        <a href="#">grid-row-end: 1;</a>
+        <a href="#">grid-auto-columns: 200px</a>
+        <a href="#">grid-auto-columns: 300px</a>
+        <a href="#">grid-auto-columns: 400px</a>
+        <a href="#">grid-auto-columns: 10%</a>
+        <a href="#">grid-auto-columns: 20%</a>
+        <a href="#">grid-auto-columns: 1fr</a>
+        <a href="#">grid-auto-columns: 1fr 2fr</a>
+        <a href="#">grid-auto-columns: min-content;</a>
+        <a href="#">grid-auto-columns: max-content;</a>
+        <a href="#">grid-auto-columns: minmax(100px, auto)</a>
+        <a href="#">grid-auto-columns: minmax(20%, 80vmax);</a>
+        <a href="#">grid-auto-columns: fit-content(400px);</a>
+        <a href="#">grid-auto-columns: 200px 250px 390px;</a>
+        <a href="#">grid-auto-columns: 0.5fr 3fr 1fr;</a>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -55,7 +67,7 @@
 
         $(".choice a").click(function(){
             var ass = $(this).text();
-            $(".grid > div:nth-child(1)").attr("style",ass);
+            $(".grid").attr("style",ass);
         });
     </script>
 </body>

@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>CSS</title>
-</head>
-<body>
-    
+
     
 
 <h2>grid-auto-columns</h2>
-<p>grid-auto-columns 속성은 </p>
+<p>grid-auto-columns</p>
 
 <hr>
 
 <h3>grid-auto-columns</h3>
-<p class="blue">grid-auto-columns 속성은 </p>
+<p class="blue">grid-auto-columns</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
@@ -32,7 +25,7 @@
             <tr>
                 <th scope="row"><a href="http://webzz.tistory.com/360">기본 값</a></th>
                 <td><a href="http://webzz.tistory.com/360">
-                    grid-auto-columns : auto
+                    grid-auto-columns : normal
                 </a></td>
             </tr>
             <tr>
@@ -57,16 +50,19 @@
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>grid-auto-columns 속성은 -.</li>
+    <li>grid-auto-columns 속성은</li>
 </ul>
   
    
    
 <h4 class="pt50">문법(Syntax)</h4>
-<p class="blue">-</p>
+<p class="blue">grid-auto-columns</p>
+<p class="blue">
+    /* 단위 속성 */
+</p>
 
 
-<h4 class="pt50">속성(Property)</h4>
+<!-- <h4 class="pt50">속성(Property)</h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
@@ -86,10 +82,227 @@
             </tr>
         </tbody>
     </table>
+</div> -->
+
+
+
+
+<style>
+.choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+.grid {
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 5px;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-areas: "a b c";
+    grid-auto-columns: 200px;
+}
+.grid > div {
+    background: #ce93d8;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    width: 200px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.grid > div.selected {background: #966a9e}
+</style>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/CSS/sample463-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 내부 요소의 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="grid">
+            <div>box1</div>
+            <div>box2</div>
+            <div>box3</div>
+            <div>box4</div>
+            <div>box5</div>
+            <div>box6</div>
+            <div>box7</div>
+        </div>
+        <!-- ex -->
+    </div>
+
+    <div class="choice">
+        <a href="#">reset</a>
+        <a href="#">grid-auto-columns: 200px</a>
+        <a href="#">grid-auto-columns: 300px</a>
+        <a href="#">grid-auto-columns: 400px</a>
+        <a href="#">grid-auto-columns: 10%</a>
+        <a href="#">grid-auto-columns: 20%</a>
+        <a href="#">grid-auto-columns: 1fr</a>
+        <a href="#">grid-auto-columns: 1fr 2fr</a>
+        <a href="#">grid-auto-columns: min-content;</a>
+        <a href="#">grid-auto-columns: max-content;</a>
+        <a href="#">grid-auto-columns: minmax(100px, auto)</a>
+        <a href="#">grid-auto-columns: minmax(20%, 80vmax);</a>
+        <a href="#">grid-auto-columns: fit-content(400px);</a>
+        <a href="#">grid-auto-columns: 200px 250px 390px;</a>
+        <a href="#">grid-auto-columns: 0.5fr 3fr 1fr;</a>
+    </div>
 </div>
+<!-- sample -->
+<div class="sample">
+    <h5>HTML<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+<pre class="line-numbers"><code class="language-xml">&lt;div class="grid"&gt;
+    &lt;div&gt;box1&lt;/div&gt;
+    &lt;div&gt;box2&lt;/div&gt;
+    &lt;div&gt;box3&lt;/div&gt;
+    &lt;div&gt;box4&lt;/div&gt;
+    &lt;div&gt;box5&lt;/div&gt;
+    &lt;div&gt;box6&lt;/div&gt;
+    &lt;div&gt;box7&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+<h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+<pre class="line-numbers"><code class="language-css">.grid {
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 5px;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-areas: "a b c";
+    grid-auto-columns: 200px;
+}
+.grid &gt; div {
+    background: #ce93d8;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    width: 200px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.grid &gt; div.selected {background: #966a9e}</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Grid&lt;/title&gt;
+    &lt;style&gt;
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .grid {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 5px;
+
+            display: grid;
+            grid-gap: 10px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "a b c";
+            grid-auto-columns: 200px;
+        }
+        .grid &gt; div {
+            background: #ce93d8;
+            color: #fff;
+            border-radius: 3px;
+            text-align: center;
+            width: 200px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .grid &gt; div.selected {background: #966a9e}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid"&gt;
+        &lt;div&gt;box1&lt;/div&gt;
+        &lt;div&gt;box2&lt;/div&gt;
+        &lt;div&gt;box3&lt;/div&gt;
+        &lt;div&gt;box4&lt;/div&gt;
+        &lt;div&gt;box5&lt;/div&gt;
+        &lt;div&gt;box6&lt;/div&gt;
+        &lt;div&gt;box7&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="choice"&gt;
+        &lt;a href="#"&gt;reset&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: 200px&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: 300px&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: 400px&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: 10%&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: 20%&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: 1fr&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: 1fr 2fr&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: min-content;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: max-content;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: minmax(100px, auto)&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: minmax(20%, 80vmax);&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: fit-content(400px);&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: 200px 250px 390px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-auto-columns: 0.5fr 3fr 1fr;&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice a").on("click",function(e){
+            e.preventDefault();
+        });
+
+        $(".choice a").click(function(){
+            var ass = $(this).text();
+            $(".grid").attr("style",ass);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
 
 
-  
+
+<script>
+$(".choice a").on("click",function(e){
+    e.preventDefault();
+});
+
+$(".choice a").click(function(){
+    var ass = $(this).text();
+    $(".grid").attr("style",ass);
+});
+</script>
+<!-- //Sample1 -->
+
+
+
+
+
+
+
+
+
+
+
+
 <h4 class="pt50">호환성(Compatibility) <a href="http://webzz.tistory.com/359" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a></h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
@@ -137,6 +350,4 @@
 
 
    
-    
-</body>
-</html>
+ 
