@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex23 {display: flex;}
+        .item23 {width: 100px;}
+        .item23 + .item23 {margin-left: 2%;}
+        .item23:last-child {margin-left: auto;}
+    </style>
+</head>
+<body>
+    <div class="flex flex23">
+        <div class="item item23"></div>
+        <div class="item item23"></div>
+        <div class="item item23"></div>
+        <div class="item item23"></div>
+    </div>
+</body>
+</html>

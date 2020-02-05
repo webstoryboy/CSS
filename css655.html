@@ -200,7 +200,7 @@
 &lt;/html&gt;</code></pre>
     </div>
 </div>
-<!-- sample -->
+<!-- sample1 -->
 
 
 <style>
@@ -288,6 +288,162 @@
 <!-- //sample2 -->
 
 
+
+
+<style>
+/* flex */
+.flex22 {display: flex; flex-direction: row-reverse;}
+.item22 {width: 100px; margin-left: 2%;}
+</style>
+
+<!-- Sample22 -->
+<h4 class="pt50">Sample22 <span><a href="https://webstoryboy.github.io/CSS/sample655-22.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex22">
+            <div class="item item22"></div>
+            <div class="item item22"></div>
+            <div class="item item22"></div>
+            <div class="item item22"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample22 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex22 {display: flex; flex-direction: row-reverse;}
+        .item22 {width: 100px; margin-left: 2%;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex22"&gt;
+        &lt;div class="item item22"&gt;&lt;/div&gt;
+        &lt;div class="item item22"&gt;&lt;/div&gt;
+        &lt;div class="item item22"&gt;&lt;/div&gt;
+        &lt;div class="item item22"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample22 -->
+
+
+
+
+
+
+<style>
+/* flex */
+.flex23 {display: flex;}
+.item23 {width: 100px;}
+.item23 + .item23 {margin-left: 2%;}
+.item23:last-child {margin-left: auto;}
+</style>
+
+<!-- Sample23 -->
+<h4 class="pt50">Sample23 <span><a href="https://webstoryboy.github.io/CSS/sample655-23.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex23">
+            <div class="item item23"></div>
+            <div class="item item23"></div>
+            <div class="item item23"></div>
+            <div class="item item23"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample23 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex23 {display: flex;}
+        .item23 {width: 100px;}
+        .item23 + .item23 {margin-left: 2%;}
+        .item23:last-child {margin-left: auto;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex23"&gt;
+        &lt;div class="item item23"&gt;&lt;/div&gt;
+        &lt;div class="item item23"&gt;&lt;/div&gt;
+        &lt;div class="item item23"&gt;&lt;/div&gt;
+        &lt;div class="item item23"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample23 -->
 
 
 
@@ -973,3 +1129,318 @@
     </div>
 </div>
 <!-- //sample7 -->
+
+
+
+
+
+
+
+
+<style>
+/* flex */
+.flex9 {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    height: 780px;
+}
+.item9 {
+    width: 24%;
+    margin-bottom: 1%;
+}
+.item9:nth-of-type(1) { height: 100px; }
+.item9:nth-of-type(2) { height: 200px; }
+.item9:nth-of-type(3) { height: 300px; }
+.item9:nth-of-type(4) { height: 200px; }
+.item9:nth-of-type(5) { height: 200px; }
+.item9:nth-of-type(6) { height: 200px; }
+.item9:nth-of-type(7) { height: 200px; }
+.item9:nth-of-type(8) { height: 100px; }
+.item9:nth-of-type(9) { height: 100px; }
+.item9:nth-of-type(10){ height: 100px; }
+.item9:nth-of-type(11){ height: 100px; }
+.item9:nth-of-type(12){ height: 300px; }
+.item9:nth-of-type(13){ height: 300px; }
+.item9:nth-of-type(14){ height: 200px; }
+.item9:nth-of-type(4n+1) { order: 1; }
+.item9:nth-of-type(4n+2) { order: 2; }
+.item9:nth-of-type(4n+3) { order: 3; }
+.item9:nth-of-type(4n)   { order: 4; }
+
+.item9.break {
+    flex-basis: 100%;
+    width: 0;
+    border: 1px solid #ddd;
+    margin: 0;
+    content: "";
+    padding: 0;
+    font-size: 0;
+}
+</style>
+
+<!-- Sample8 -->
+<h4 class="pt50">Sample9 <span><a href="https://webstoryboy.github.io/jquery/sample655-10.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex9">
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+    
+            <span class="item item9 break"></span>
+            <span class="item item9 break"></span>
+            <span class="item item9 break"></span>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample8 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px;;
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex9 {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: space-between;
+            height: 780px;
+        }
+        .item9 {
+            width: 24%;
+            margin-bottom: 1%;
+        }
+        .item9:nth-of-type(1) { height: 100px; }
+        .item9:nth-of-type(2) { height: 200px; }
+        .item9:nth-of-type(3) { height: 300px; }
+        .item9:nth-of-type(4) { height: 200px; }
+        .item9:nth-of-type(5) { height: 200px; }
+        .item9:nth-of-type(6) { height: 200px; }
+        .item9:nth-of-type(7) { height: 200px; }
+        .item9:nth-of-type(8) { height: 100px; }
+        .item9:nth-of-type(9) { height: 100px; }
+        .item9:nth-of-type(10){ height: 100px; }
+        .item9:nth-of-type(11){ height: 100px; }
+        .item9:nth-of-type(12){ height: 300px; }
+        .item9:nth-of-type(13){ height: 300px; }
+        .item9:nth-of-type(14){ height: 200px; }
+        .item9:nth-of-type(4n+1) { order: 1; }
+        .item9:nth-of-type(4n+2) { order: 2; }
+        .item9:nth-of-type(4n+3) { order: 3; }
+        .item9:nth-of-type(4n)   { order: 4; }
+
+        .item9.break {
+            flex-basis: 100%;
+            width: 0;
+            border: 1px solid #ddd;
+            margin: 0;
+            content: "";
+            padding: 0;
+            font-size: 0;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex9"&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+
+        &lt;span class="item item9 break"&gt;&lt;/span&gt;
+        &lt;span class="item item9 break"&gt;&lt;/span&gt;
+        &lt;span class="item item9 break"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample8 -->
+
+
+
+
+
+<style>
+.flex11 {
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.item11 {margin-bottom: 2%;}
+.item11:nth-child(1) {
+    /* flex-grow / flex-shrink / flex-basis : auto */
+    flex: 1 100%;
+}
+.item11:nth-child(2) {
+    flex: 1 0 0;
+}
+.item11:nth-child(3) {
+    flex: 3 0 0;
+    margin-left: 2%;
+}
+.item11:nth-child(4) {
+    flex: 1 0 0;
+    margin-left: 2%;
+}
+.item11:nth-child(5) {
+    flex: 1 100%;
+}
+/* mediaquery */
+@media (max-width: 600px){
+    .item11:nth-child(3) {flex: 1 0 100%; margin-left: 0;}
+    .item11:nth-child(4) {margin-left: 0;}
+}
+</style>
+<!-- Sample11 -->
+<h4 class="pt50">Sample11 <span><a href="https://webstoryboy.github.io/jquery/sample655-11.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex11">
+            <div class="item item11"></div>
+            <div class="item item11"></div>
+            <div class="item item11"></div>
+            <div class="item item11"></div>
+            <div class="item item11"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample11 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px;;
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex11 {
+            display: flex; 
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        .item11 {margin-bottom: 2%;}
+        .item11:nth-child(1) {
+            /* flex-grow / flex-shrink / flex-basis : auto */
+            flex: 1 100%;
+        }
+        .item11:nth-child(2) {
+            flex: 1 0 0;
+        }
+        .item11:nth-child(3) {
+            flex: 3 0 0;
+            margin-left: 2%;
+        }
+        .item11:nth-child(4) {
+            flex: 1 0 0;
+            margin-left: 2%;
+        }
+        .item11:nth-child(5) {
+            flex: 1 100%;
+        }
+        /* mediaquery */
+        @media (max-width: 600px){
+            .item11:nth-child(3) {flex: 1 0 100%; margin-left: 0;}
+            .item11:nth-child(4) {margin-left: 0;}
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex11"&gt;
+        &lt;div class="item item11"&gt;&lt;/div&gt;
+        &lt;div class="item item11"&gt;&lt;/div&gt;
+        &lt;div class="item item11"&gt;&lt;/div&gt;
+        &lt;div class="item item11"&gt;&lt;/div&gt;
+        &lt;div class="item item11"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample11 -->
