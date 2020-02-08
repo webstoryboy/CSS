@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <style>
+        /* option */
+        .animation {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .box {
+            position: relative;
+            width: 60px; height: 60px; line-height: 60px;
+            text-align: center; color: #fff; font-size: 12px;
+            margin: 10px;
+            border-radius: 50%;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+        }
+        .box::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        .choice > a{    
+            border: 1px solid #5f6368;
+            padding: 7px 20px 5px 20px;
+            display: inline-block;
+            border-radius: 20px;
+            text-decoration: none;
+            margin: 3px;
+        }
+        /* animation */
+        .box5:nth-child(1).show {animation: move 3s .1s 1}
+        .box5:nth-child(2).show {animation: move 3s .2s 1}
+        .box5:nth-child(3).show {animation: move 3s .3s 1}
+
+        @keyframes move {
+            0%   {left: 0%}
+            50%  {left: calc(100% - 80px)}
+            100% {left: 0%}
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="animation ani5">
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+    </div>
+
+    <div class="choice choice5">
+        <a href="#" class="reset5">reset</a>
+        <a href="#" class="start5">클릭</a>
+    </div>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".choice5 .reset5").on("click",function(e){
+            e.preventDefault();
+            $(".ani5 > div").removeClass("show");
+        });
+
+        $(".choice5 .start5").click(function(e){
+            e.preventDefault();
+            $(".ani5 > div").eq(0).addClass("show");
+            $(".ani5 > div").eq(1).addClass("show");
+            $(".ani5 > div").eq(2).addClass("show");
+        });
+    </script>
+</body>
+</html>

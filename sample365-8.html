@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <style>
+        /* option */
+        .animation {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .box {
+            position: relative;
+            width: 60px; height: 60px; line-height: 60px;
+            text-align: center; color: #fff; font-size: 12px;
+            margin: 10px;
+            border-radius: 50%;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+        }
+        .box::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        .choice > a{    
+            border: 1px solid #5f6368;
+            padding: 7px 20px 5px 20px;
+            display: inline-block;
+            border-radius: 20px;
+            text-decoration: none;
+            margin: 3px;
+        }
+        /* animation */
+        .box8:nth-child(1).show {animation: move1 2s 1 none}
+        .box8:nth-child(2).show {animation: move1 2s 1 forwards}
+        .box8:nth-child(3).show {animation: move1 2s 1 backwards}
+        .box8:nth-child(4).show {animation: move1 2s 1 both}
+
+        @keyframes move1 {
+            0%   {left: 0%}
+            100%  {left: calc(100% - 80px)}
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="animation ani8">
+        <div class="box box8"></div>
+        <div class="box box8"></div>
+        <div class="box box8"></div>
+        <div class="box box8"></div>
+    </div>
+
+    <div class="choice choice8">
+        <a href="#" class="reset8">reset</a>
+        <a href="#" class="start8">클릭</a>
+    </div>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".choice8 .reset8").on("click",function(e){
+            e.preventDefault();
+            $(".ani8 > div").removeClass("show");
+        });
+
+        $(".choice8 .start8").click(function(e){
+            e.preventDefault();
+            $(".ani8 > div").eq(0).addClass("show");
+            $(".ani8 > div").eq(1).addClass("show");
+            $(".ani8 > div").eq(2).addClass("show");
+            $(".ani8 > div").eq(3).addClass("show");
+        });
+    </script>
+</body>
+</html>
