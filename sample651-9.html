@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Layout 방식3</title>
+    <title>Layout 방식9</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,700,900&display=swap" rel="stylesheet">
     <style>
         *, *::after, *::before {box-sizing: border-box;}
@@ -12,15 +12,23 @@
         body {
             margin: 0;
             --color-text : #dc6e25;
-            --color-link : #000;
-            --color-bg : #111;
+            --color-link : #333;
+            --color-bg : #333;
             --imgwidthmax: 550px;
             --aspect-ratio: 32/17;
             color: var(--color-link);
             background-color: var(--color-bg);
             font-family: 'Lato', sans-serif;;
         }
-        .wrap h1 {
+        .infor {
+            position: fixed; right: 10px; top: 10px; z-index: 1000;
+            background: rgba(0,0,0,.3);
+            color: #fff;
+            padding: 20px;
+            font-size: 14px; line-height: 1.4;
+            text-align: right;
+        }
+        #wrap h1 {
             font-size: 5rem;
             padding: 3rem;
             color: var(--color-text);
@@ -54,8 +62,9 @@
             text-align: right; font-weight: 300; text-transform: capitalize;
             color: #999;
         }
-        .content-item:nth-child(even) .content-item-title {text-align: left;}
-
+        .content-item:nth-child(even) .content-item-title {
+            text-align: left;
+        }
         .content-item-imgWrap {
             position: relative;
             --imgwidth: 100%;
@@ -90,10 +99,6 @@
         .content-item:nth-child(even) .content-item-desc {
             text-align: left; margin-right: 0; margin-left: -10vw;
         }
-
-
-
-        
         #section1 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so01.jpg);}
         #section2 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so02.jpg);}
         #section3 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so03.jpg);}
@@ -106,7 +111,7 @@
     </style>
 </head>
 <body>
-    <div class="wrap">
+    <div id="wrap">
         <h1>Parallax Scrolling</h1>
         <div class="contents">
             <section id="section1" class="content-item">
@@ -183,5 +188,55 @@
             </section>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+
+        //let top = document.querySelector(".content-item-img");
+
+        let offseTop = $(".content-item-img").offset().top;
+        let offseLeft = $(".content-item-img").offset().left;
+        let winsizeWidth = window.innerWidth;
+        let winsizeHeight = window.innerHeight;
+        const toValue = 1.5;
+        const fromValue = 1;
+
+
+        
+
+        // const render = () => {
+        //     let docScroll = window.pageYOffset
+
+        //     const val = ( offseTop - docScroll, winsizeHeight, -1 * offseLeft, fromValue, toValue);
+        //     console.log(val)
+        //     console.log("docScroll : " + docScroll)
+        //     console.log("offseTop : " + offseTop)
+        //     console.log("offseLeft : " + offseLeft)
+        //     console.log("winsizeHeight : " + winsizeHeight)
+
+        //     $(".content-item-img").css("transform","scale3d("+ val +", "+ val +", 1")
+            
+        
+        //     requestAnimationFrame(render)
+        // }
+
+        $(window).scroll(function(){
+            let docScroll = $(window).scrollTop();
+
+            //const val = ( offseTop - docScroll, winsizeHeight, -1 * offseLeft, fromValue, toValue);
+
+            //map: (x, a, b, c, d) => (x - a) * (d - c) / (b - a) + c,
+            // x                        a              b           c          d                   
+            //요소의 top값 - 스크롤 위치 값, 브라우저의 높이값, 요소의 높이값, fromValue, toValue                     
+            //((요소의 top값 - 스크롤 위치 값) - 브라우저의 높이값) * (toValue - fromValue) / (요소의 높이값 - 브라우저의 높이값) + 요소의 높이값
+
+            const val =  ((offseTop - docScroll) * (toValue - fromValue) / (offseTop - winsizeHeight) + fromValue) 
+
+            $(".content-item-img").css("transform","scale3d("+ val +", "+ val +", 1")
+        });
+
+
+    </script>
 </body>
 </html>
