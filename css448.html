@@ -11,8 +11,8 @@
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
-            <col width="width: 30%">
-            <col width="width: 70%">
+            <col style="width: 30%">
+            <col style="width: 70%">
         </colgroup>
         <thead>
             <tr>
@@ -27,14 +27,6 @@
                     flex-direction : row <br>
                     flex-wrap : nowrap
                 </a></td>
-            </tr>
-            <tr>
-                <th scope="row"><a href="http://webzz.tistory.com/360">상속</a></th>
-                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
-            </tr>
-            <tr>
-                <th scope="row"><a href="http://webzz.tistory.com/360">애니메이션</a></th>
-                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
             </tr>
             <tr>
                 <th scope="row"><a href="http://webzz.tistory.com/360">적용</a></th>
@@ -89,216 +81,13 @@
 
 
 
-
-
-
-<style>
-.choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
-.flex {
-    display: flex;
-    flex-flow: row nowrap;
-    background: #f3e5f5;
-    border-radius: 5px;
-    padding: 20px;
-    min-height: 400px;
-}
-.item {
-    background: #ce93d8;
-    margin: 10px;
-    padding: 10px;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    color: #fff;
-    border-radius: 3px;
-    text-align: center;
-}
-</style>
-
-
-<!-- Sample1 -->
-<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample449-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
-<p>콘텐츠 내부 요소의 정렬 상태를 설정하는 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="flex">
-            <div class="item">item1</div>
-            <div class="item">item2</div>
-            <div class="item">item3</div>
-            <div class="item">item4</div>
-            <div class="item">item5</div>
-            <div class="item">item6</div>
-            <div class="item">item7</div>
-            <div class="item">item8</div>
-        </div>
-        <!-- ex -->
-    </div>
-
-    <div class="choice">
-        <a href="#">reset</a>
-        <a href="#">flex-flow : row nowrap</a>
-        <a href="#">flex-flow : row wrap;</a>
-        <a href="#">flex-flow : row wrap-reverse;</a>
-        <a href="#">flex-flow : row-reverse nowrap;</a>
-        <a href="#">flex-flow : row-reverse wrap;</a>
-        <a href="#">flex-flow : row-reverse wrap-reverse;</a>
-        <a href="#">flex-flow : column nowrap;</a>
-        <a href="#">flex-flow : column wrap;</a>
-        <a href="#">flex-flow : column wrap-reverse;</a>
-        <a href="#">flex-flow : column-reverse nowrap;</a>
-        <a href="#">flex-flow : column-reverse wrap;</a>
-        <a href="#">flex-flow : column-reverse wrap-reverse;</a>
-    </div>
-</div>
-<!-- sample -->
-<div class="sample">
-<h5>HTML<span class="dot"><i></i><i></i><i></i></span></h5>
-<div class="script">
-<pre class="line-numbers"><code class="language-xml">&lt;div class="flex"&gt;
-    &lt;div class="item"&gt;item1&lt;/div&gt;
-    &lt;div class="item"&gt;item2&lt;/div&gt;
-    &lt;div class="item"&gt;item3&lt;/div&gt;
-    &lt;div class="item"&gt;item4&lt;/div&gt;
-    &lt;div class="item"&gt;item5&lt;/div&gt;
-    &lt;div class="item"&gt;item6&lt;/div&gt;
-    &lt;div class="item"&gt;item7&lt;/div&gt;
-    &lt;div class="item"&gt;item8&lt;/div&gt;
-    &lt;div class="item"&gt;item9&lt;/div&gt;
-    &lt;div class="item"&gt;item10&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-</div>
-<!-- sample -->
-
-<div class="sample">
-<h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-<div class="script">
-<pre class="line-numbers"><code class="language-css">.flex {
-    display: flex;
-    background: #f3e5f5;
-    border-radius: 5px;
-    padding: 20px;
-}
-.item {
-    flex-grow: 1;
-    background: #ce93d8;
-    margin: 10px;
-    padding: 10px;
-    width: 50px;
-    line-height: 100px;
-    color: #fff;
-    border-radius: 3px;
-    text-align: center;
-}</code></pre>
-</div>
-</div>
-<!-- sample -->
-
-<div class="sample">
-    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="script on">
-<pre class="line-numbers"><code class="language-javascript">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
-    &lt;style&gt;
-        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
-        .flex {
-            display: flex;
-            flex-flow: row nowrap;
-            background: #f3e5f5;
-            border-radius: 5px;
-            padding: 20px;
-            min-height: 400px;
-        }
-        .item {
-            background: #ce93d8;
-            margin: 10px;
-            padding: 10px;
-            width: 100px;
-            height: 100px;
-            line-height: 100px;
-            color: #fff;
-            border-radius: 3px;
-            text-align: center;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class="flex"&gt;
-        &lt;div class="item"&gt;item1&lt;/div&gt;
-        &lt;div class="item"&gt;item2&lt;/div&gt;
-        &lt;div class="item"&gt;item3&lt;/div&gt;
-        &lt;div class="item"&gt;item4&lt;/div&gt;
-        &lt;div class="item"&gt;item5&lt;/div&gt;
-        &lt;div class="item"&gt;item6&lt;/div&gt;
-        &lt;div class="item"&gt;item7&lt;/div&gt;
-        &lt;div class="item"&gt;item8&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="choice"&gt;
-        &lt;a href="#"&gt;reset&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : row nowrap&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : row wrap;&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : row wrap-reverse;&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : row-reverse nowrap;&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : row-reverse wrap;&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : row-reverse wrap-reverse;&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : column nowrap;&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : column wrap;&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : column wrap-reverse;&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : column-reverse nowrap;&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : column-reverse wrap;&lt;/a&gt;
-        &lt;a href="#"&gt;flex-flow : column-reverse wrap-reverse;&lt;/a&gt;
-    &lt;/div&gt;
-
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-        $(".choice a").on("click",function(e){
-            e.preventDefault();
-        });
-
-        $(".choice a").click(function(){
-            var ass = $(this).text();
-            $(".flex").attr("style",ass);
-        });
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-    </div>
-</div>
-<!-- sample -->
-
-
-
-<script>
-$(".choice a").on("click",function(e){
-    e.preventDefault();
-});
-
-$(".choice a").click(function(){
-    var ass = $(this).text();
-    $(".flex").attr("style",ass);
-});
-</script>
-<!-- //Sample1 -->
-
-        
-
-
-
-
-
-
   
-<h4 class="pt50">호환성(Compatibility) <a href="http://webzz.tistory.com/359" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a></h4>
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
         <thead>
             <tr>
                 <th></th>
@@ -341,3 +130,4 @@ $(".choice a").click(function(){
 </div>
 
 
+<hr>

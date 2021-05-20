@@ -1,59 +1,4 @@
- <style>
-.img > div {width: 33.33333%; float: left; transition: all 0.3s ease;}
-.img > div img {width: 100%; display: block;}
-.skin_view .area_view img { border-radius: 0 !important;}     
-.img > div:hover {filter: none;}
-.blur1 {filter: blur(1px);}
-.blur2 {filter: blur(3px);}
-.blur3 {filter: blur(5px);}
-.blur4 {filter: blur(7px);}
-.blur5 {filter: blur(10px);}
-.blur6 {filter: blur(20px);}
-.brightness1 {filter: brightness(10%);}
-.brightness2 {filter: brightness(20%);}
-.brightness3 {filter: brightness(30%);}
-.brightness4 {filter: brightness(40%);}
-.brightness5 {filter: brightness(50%);}
-.brightness6 {filter: brightness(60%);}
-.contrast1 {filter: contrast(10%);}
-.contrast2 {filter: contrast(20%);}
-.contrast3 {filter: contrast(30%);}
-.contrast4 {filter: contrast(40%);}
-.contrast5 {filter: contrast(50%);}
-.contrast6 {filter: contrast(60%);}
-.grayscale1 {filter: grayscale(10%);}
-.grayscale2 {filter: grayscale(20%);}
-.grayscale3 {filter: grayscale(40%);}
-.grayscale4 {filter: grayscale(60%);}
-.grayscale5 {filter: grayscale(80%);}
-.grayscale6 {filter: grayscale(100%);}
-.hue1 {filter: hue-rotate(10deg);}
-.hue2 {filter: hue-rotate(30deg);}
-.hue3 {filter: hue-rotate(60deg);}
-.hue4 {filter: hue-rotate(90deg);}
-.hue5 {filter: hue-rotate(120deg);}
-.hue6 {filter: hue-rotate(120deg);}
-.invert1 {filter: invert(10%);}
-.invert2 {filter: invert(30%);}
-.invert3 {filter: invert(60%);}
-.invert4 {filter: invert(80%);}
-.invert5 {filter: invert(100%);}
-.opacity1 {filter: opacity(10%);}
-.opacity2 {filter: opacity(30%);}
-.opacity3 {filter: opacity(60%);}
-.opacity4 {filter: opacity(80%);}
-.opacity5 {filter: opacity(100%);}
-.saturate1 {filter: saturate(10%);}
-.saturate2 {filter: saturate(50%);}
-.saturate3 {filter: saturate(100%);}
-.saturate4 {filter: saturate(200%);}
-.saturate5 {filter: saturate(400%);}      
-.sepia1 {filter: sepia(10%);}
-.sepia2 {filter: sepia(30%);}
-.sepia3 {filter: sepia(60%);}
-.sepia4 {filter: sepia(90%);}
-.sepia5 {filter: sepia(120%);}
-</style>
+ 
 
 <h2>filter</h2>
 <p>filter 속성은 이미지의 비쥬얼 효과를 정의합니다.</p>
@@ -66,8 +11,8 @@
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
-            <col width="width: 30%">
-            <col width="width: 70%">
+            <col style="width: 30%">
+            <col style="width: 70%">
         </colgroup>
         <thead>
             <tr>
@@ -81,18 +26,6 @@
                 <td><a href="http://webzz.tistory.com/360">
                     filter : none
                 </a></td>
-            </tr>
-            <tr>
-                <th scope="row"><a href="http://webzz.tistory.com/360">상속</a></th>
-                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
-            </tr>
-            <tr>
-                <th scope="row"><a href="http://webzz.tistory.com/360">애니메이션</a></th>
-                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
-            </tr>
-            <tr>
-                <th scope="row"><a href="http://webzz.tistory.com/360">적용</a></th>
-                <td><a href="http://webzz.tistory.com/360">-</a></td>
             </tr>
             <tr>
                 <th scope="row"><a href="http://webzz.tistory.com/359">버전</a></th>
@@ -120,8 +53,8 @@
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
-            <col width="width: 30%">
-            <col width="width: 70%">
+            <col style="width: 30%">
+            <col style="width: 70%">
         </colgroup>
         <thead>
             <tr>
@@ -189,329 +122,13 @@
   
   
   
-<!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
-<p>필터 효과 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="img clearfix">
-                <div class="blur1"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-                <div class="blur2"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-                <div class="blur3"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-                <div class="blur4"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-                <div class="blur5"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-                <div class="blur5"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.blur1 {filter: blur(1px);}
-.blur2 {filter: blur(3px);}
-.blur3 {filter: blur(5px);}
-.blur4 {filter: blur(7px);}
-.blur5 {filter: blur(10px);}
-</code></pre>
-    </div>
-</div>
-<!-- sample1 --> 
   
-  
-<!-- Sample2 -->
-<h4 class="pt50">Sample2</h4>
-<p>필터 효과 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="img clearfix">
-                <div class="brightness1"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-                <div class="brightness2"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-                <div class="brightness3"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-                <div class="brightness4"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-                <div class="brightness5"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-                <div class="brightness6"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="이미지"></div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.brightness1 {filter: brightness(10%);}
-.brightness2 {filter: brightness(20%);}
-.brightness3 {filter: brightness(30%);}
-.brightness4 {filter: brightness(40%);}
-.brightness5 {filter: brightness(50%);}
-</code></pre>
-    </div>
-</div>
-<!-- sample2 --> 
-  
-  
-<!-- Sample3 -->
-<h4 class="pt50">Sample3</h4>
-<p>필터 효과 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="img clearfix">
-                <div class="contrast1"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="contrast1"></div>
-                <div class="contrast2"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="contrast2"></div>
-                <div class="contrast3"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="contrast3"></div>
-                <div class="contrast4"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="contrast4"></div>
-                <div class="contrast5"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="contrast5"></div>
-                <div class="contrast6"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="contrast5"></div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.contrast1 {filter: contrast(10%);}
-.contrast2 {filter: contrast(20%);}
-.contrast3 {filter: contrast(30%);}
-.contrast4 {filter: contrast(40%);}
-.contrast5 {filter: contrast(50%);}
-</code></pre>
-    </div>
-</div>
-<!-- sample3 --> 
-  
-  
-<!-- Sample4 -->
-<h4 class="pt50">Sample4</h4>
-<p>필터 효과 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="img clearfix">
-                <div class="grayscale1"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="grayscale1"></div>
-                <div class="grayscale2"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="grayscale2"></div>
-                <div class="grayscale3"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="grayscale3"></div>
-                <div class="grayscale4"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="grayscale4"></div>
-                <div class="grayscale5"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="grayscale5"></div>
-                <div class="grayscale6"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="grayscale5"></div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.grayscale1 {filter: grayscale(100%);}
-.grayscale2 {filter: grayscale(80%);}
-.grayscale3 {filter: grayscale(60%);}
-.grayscale4 {filter: grayscale(40%);}
-.grayscale5 {filter: grayscale(20%);}
-</code></pre>
-    </div>
-</div>
-<!-- sample4 --> 
-  
-  
-<!-- Sample5 -->
-<h4 class="pt50">Sample5</h4>
-<p>필터 효과 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="img clearfix">
-                <div class="hue1"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="hue1"></div>
-                <div class="hue2"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="hue1"></div>
-                <div class="hue3"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="hue1"></div>
-                <div class="hue4"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="hue1"></div>
-                <div class="hue5"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="hue1"></div>
-                <div class="hue6"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="hue1"></div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.hue1 {filter: hue-rotate(10deg);}
-.hue2 {filter: hue-rotate(30deg);}
-.hue3 {filter: hue-rotate(60deg);}
-.hue4 {filter: hue-rotate(90deg);}
-.hue5 {filter: hue-rotate(120deg);}
-</code></pre>
-    </div>
-</div>
-<!-- sample5 --> 
-  
-  
-<!-- Sample6 -->
-<h4 class="pt50">Sample6</h4>
-<p>필터 효과 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="img clearfix">
-                <div class="invert1"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="invert1"></div>
-                <div class="invert2"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="invert1"></div>
-                <div class="invert3"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="invert1"></div>
-                <div class="invert4"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="invert1"></div>
-                <div class="invert5"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="invert1"></div>
-                <div class="invert6"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg" alt="invert1"></div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.invert1 {filter: invert(10%);}
-.invert2 {filter: invert(30%);}
-.invert3 {filter: invert(60%);}
-.invert4 {filter: invert(80%);}
-.invert5 {filter: invert(100%);}
-</code></pre>
-    </div>
-</div>
-<!-- sample6 --> 
-  
-  
-<!-- Sample7 -->
-<h4 class="pt50">Sample7</h4>
-<p>필터 효과 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="img clearfix">
-                <div class="opacity1"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="opacity2"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="opacity3"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="opacity4"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="opacity5"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="opacity6"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.opacity1 {filter: opacity(10%);}
-.opacity2 {filter: opacity(30%);}
-.opacity3 {filter: opacity(60%);}
-.opacity4 {filter: opacity(80%);}
-.opacity5 {filter: opacity(100%);}
-</code></pre>
-    </div>
-</div>
-<!-- sample7 --> 
-  
-  
-  
-<!-- Sample8 -->
-<h4 class="pt50">Sample8</h4>
-<p>필터 효과 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="img clearfix">
-                <div class="saturate1"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="saturate2"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="saturate3"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="saturate4"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="saturate5"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="saturate6"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.saturate1 {filter: saturate(10%);}
-.saturate2 {filter: saturate(50%);}
-.saturate3 {filter: saturate(100%);}
-.saturate4 {filter: saturate(200%);}
-.saturate5 {filter: saturate(400%);}  
-</code></pre>
-    </div>
-</div>
-<!-- sample8 --> 
-  
-
-  
-<!-- Sample9 -->
-<h4 class="pt50">Sample9</h4>
-<p>필터 효과 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="img clearfix">
-                <div class="sepia1"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="sepia2"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="sepia3"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="sepia4"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="sepia5"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-                <div class="sepia6"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/blend01.jpg"></div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.sepia1 {filter: sepia(10%);}
-.sepia2 {filter: sepia(30%);}
-.sepia3 {filter: sepia(60%);}
-.sepia4 {filter: sepia(90%);}
-.sepia5 {filter: sepia(120%);}
-</code></pre>
-    </div>
-</div>
-<!-- sample9 --> 
-
-  
-<h4 class="pt50">호환성(Compatibility) 
-    <a href="http://webzz.tistory.com/227" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a>
-    <span class="can">caniuse.com <a href="https://caniuse.com/#search=animation" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span>
-</h4>
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
         <thead>
             <tr>
                 <th></th>
@@ -553,10 +170,4 @@
     </table>
 </div>
 
-<h4 class="pt40">참고(Reference)</h4>
-<ul>
-    <li>MDN <a href="https://developer.mozilla.org/ko/docs/Web/CSS/animation" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
-    <li>CSS Animations <a href="https://drafts.csswg.org/css-animations/#animation"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
-</ul>
-
- 
+<hr>

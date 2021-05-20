@@ -1,25 +1,3 @@
-<style>
-.box > div {
-    width: 60px; height: 60px; line-height: 60px; 
-    text-align: center; border-radius: 50%; 
-    color: #fff; position: relative; font-size: 12px; 
-    overflow: hidden; margin: 10px; 
-    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-}
-.duration > div.du1 {animation: move1 1s 1 ease}
-.duration > div.du2 {animation: move1 2s 1 ease}
-.duration > div.du3 {animation: move1 3s 1 ease}
-.duration > div.du4 {animation: move1 4s 1 ease}
-.duration > div.du5 {animation: move1 5s 1 ease}    
-    
-@keyframes move1 {
-    0%   {left: 0%;}
-    50%  {left: calc(100% - 70px);}
-    100% {left: 0%;}
-}
-</style>
-    
-
 <h2>animation-duration</h2>
 <p>animation-duration 속성은 애니메이션 움직임 시간을 설정합니다.</p>
 
@@ -47,14 +25,6 @@
                 </td>
             </tr>
             <tr>
-                <th><a href="http://webzz.tistory.com/360">상속</a></th>
-                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
-            </tr>
-            <tr>
-                <th><a href="http://webzz.tistory.com/360">애니메이션</a></th>
-                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
-            </tr>
-            <tr>
                 <th><a href="http://webzz.tistory.com/360">적용</a></th>
                 <td><a href="http://webzz.tistory.com/360">animations</a></td>
             </tr>
@@ -80,8 +50,8 @@
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
-            <col width="">
-            <col width="">
+            <col width="30%">
+            <col width="70%">
         </colgroup>
         <thead>
             <tr>
@@ -94,54 +64,37 @@
                 <th>time</th>
                 <td>애니메이션의 작동 시간을 설정합니다.</td>
             </tr>
+            <tr>
+                <th>inherit </th>
+                <td>애니메이션 움직임을 상위 요소한테 상속받습니다.</td>
+            </tr>
         </tbody>
     </table>
 </div>
   
-<!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
-<p>클릭하면 애니메이션 시간을 설정한 예시입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="box duration">
-                <div>durtion1</div>
-                <div>durtion2</div>
-                <div>durtion3</div>
-                <div>durtion4</div>
-                <div>durtion5</div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-    <div class="choice1">
-        <a href="#" class="off0">리셋</a>
-        <a href="#" class="off1">클릭</a>
-    </div>
-</div>
 
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.durtion1 {animation: move1 1s 1 ease;}
-.durtion2 {animation: move1 2s 1 ease;}
-.durtion3 {animation: move1 3s 1 ease;}
-.durtion4 {animation: move1 4s 1 ease;}
-.durtion5 {animation: move1 5s 1 ease;} 
-</code></pre>
-    </div>
-</div>
-<!-- sample1 -->  
 
   
-<h4 class="pt50">호환성(Compatibility) 
-    <a href="http://webzz.tistory.com/227" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a>
-    <span class="can">caniuse.com <a href="https://caniuse.com/#search=animation" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span>
-</h4>
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:10%" />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+        </colgroup>
         <thead>
             <tr>
                 <th></th>
@@ -188,24 +141,8 @@
     
 <h4 class="pt40">참고(Reference)</h4>
 <ul>
-    <li>MDN <a href="https://developer.mozilla.org/ko/docs/Web/CSS/animation" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
-    <li>CSS Animations <a href="https://drafts.csswg.org/css-animations/#animation"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+    <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/animation">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-animations/#animation">CSS Animations</a></li>
 </ul>
 
-
-
-
-<script>
-    $(".choice1 .off0").click(function(e){
-        e.preventDefault();
-        $(".duration > div").removeClass();
-    });
-    $(".choice1 .off1").click(function(e){
-        e.preventDefault();
-        $(".duration > div").eq(0).addClass("du1");
-        $(".duration > div").eq(1).addClass("du2");
-        $(".duration > div").eq(2).addClass("du3");
-        $(".duration > div").eq(3).addClass("du4");
-        $(".duration > div").eq(4).addClass("du5");
-    });
-</script>
+<hr>

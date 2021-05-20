@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>CSS</title>
-</head>
-<body>
-    
-    
 
-<h2>isolation</h2>
-<p>isolation 속성은 stacking context을 설정합니다.</p>
+<h2>hyphens</h2>
+<p>hyphens 속성은 텍스트의 하이픈 영역을 설정합니다.</p>
 
 <hr>
 
-<h3>isolation</h3>
-<p class="blue">isolation 속성은 stacking context을 설정합니다.</p>
+<h3>hyphens</h3>
+<p class="blue">hyphens 속성은 텍스트의 하이픈 영역을 설정합니다.</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
-            <col width="width: 30%">
-            <col width="width: 70%">
+            <col style="width: 30%" />
+            <col style="width: 70%" />
         </colgroup>
         <thead>
             <tr>
@@ -31,47 +22,31 @@
         <tbody>
             <tr>
                 <th scope="row"><a href="http://webzz.tistory.com/360">기본 값</a></th>
-                <td><a href="http://webzz.tistory.com/360">
-                    isolation : auto
-                </a></td>
-            </tr>
-            <tr>
-                <th scope="row"><a href="http://webzz.tistory.com/360">상속</a></th>
-                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
-            </tr>
-            <tr>
-                <th scope="row"><a href="http://webzz.tistory.com/360">애니메이션</a></th>
-                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
-            </tr>
-            <tr>
-                <th scope="row"><a href="http://webzz.tistory.com/360">적용</a></th>
-                <td><a href="http://webzz.tistory.com/360">-</a></td>
+                <td><a href="http://webzz.tistory.com/360">hyphens : auto </a></td>
             </tr>
             <tr>
                 <th scope="row"><a href="http://webzz.tistory.com/359">버전</a></th>
-                <td><a href="http://webzz.tistory.com/359">CSS3</a></td>
+                <td><a href="http://webzz.tistory.com/359">CSS1</a></td>
             </tr>
         </tbody>
     </table>
 </div>
 
+
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>isolation 속성은 stacking context을 설정합니다.</li>
+    <li>hyphens 속성은 텍스트의 하이픈 영역을 설정합니다.</li>
 </ul>
-  
-   
-   
-<h4 class="pt50">문법(Syntax)</h4>
-<p class="blue">isolation: auto | isolate</p>
 
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">hyphens : none | manual | auto</p>
 
 <h4 class="pt50">속성(Property)</h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
-            <col width="width: 30%">
-            <col width="width: 70%">
+            <col style="width: 30%" />
+            <col style="width: 70%" />
         </colgroup>
         <thead>
             <tr>
@@ -81,22 +56,29 @@
         </thead>
         <tbody>
             <tr>
-                <th>auto</th>
-                <td>새로운 stacking context를 자동으로 설정합니다.</td>
+                <th>none</th>
+                <td>하이픈 영역을 설정하지 않습니다.</td>
             </tr>
             <tr>
-                <th>isolate</th>
-                <td>새로운 stacking context을 설정합니다.</td>
+                <th>manual</th>
+                <td>단어를 하이픈으로 연결합니다.</td>
+            </tr>
+            <tr>
+                <th>auto</th>
+                <td>단어의 하이픈으로 자동으로 설정합니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
 
-  
-<h4 class="pt50">호환성(Compatibility) <a href="http://webzz.tistory.com/359" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a></h4>
+
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
         <thead>
             <tr>
                 <th></th>
@@ -118,19 +100,19 @@
         </thead>
         <tbody>
             <tr>
-                <td scope="row" class="ce">isolation</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td scope="row" class="ce">hyphens</td>
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 크롬 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 오페라 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
             </tr>
@@ -141,6 +123,4 @@
 
 
    
-    
-</body>
-</html>
+<hr>

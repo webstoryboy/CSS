@@ -1,23 +1,3 @@
-<style>
-.box > div {
-    width: 60px; height: 60px; line-height: 60px; 
-    text-align: center; border-radius: 50%; 
-    color: #fff; position: relative; font-size: 12px; 
-    overflow: hidden; margin: 10px; 
-    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-}
-.mode > div.mo1 {animation: move3 3s 1 ease none;}
-.mode > div.mo2 {animation: move3 3s 1 ease forwards;}
-.mode > div.mo3 {animation: move3 3s 1 ease backwards;}
-.mode > div.mo4 {animation: move3 3s 1 ease both;}   
-    
-@keyframes move3 {
-    0%   {left: 0%;}
-    100% {left: calc(100% - 70px);}
-}
-</style>
-    
-    
 
 <h2>animation-fill-mode</h2>
 <p>animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</p>
@@ -46,14 +26,6 @@
                 </td>
             </tr>
             <tr>
-                <th><a href="http://webzz.tistory.com/360">상속</a></th>
-                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
-            </tr>
-            <tr>
-                <th><a href="http://webzz.tistory.com/360">애니메이션</a></th>
-                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
-            </tr>
-            <tr>
                 <th><a href="http://webzz.tistory.com/360">적용</a></th>
                 <td><a href="http://webzz.tistory.com/360">animations</a></td>
             </tr>
@@ -79,8 +51,8 @@
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
-            <col width="">
-            <col width="">
+            <col width="30%">
+            <col width="70%">
         </colgroup>
         <thead>
             <tr>
@@ -115,56 +87,11 @@
 
 
 
-<!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
-<p>클릭하면 애니메이션이 끝난 후 상태를 설정하는 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <div class="box mode">
-                <div>none</div>
-                <div>forwards</div>
-                <div>backwards</div>
-                <div>both</div>
-            </div>
-        </div>
-        <!-- ex -->
-    </div>
-    <div class="choice1">
-        <a href="#c" class="off0">리셋</a>
-        <a href="#c" class="off1">클릭</a>
-    </div>
-</div>
-
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-css">.none {animation: move2 3s 10 ease;}
-.forwards {animation: move2 3s 10 ease forwards;}
-.backwards {animation: move2 3s 10 ease backwards;}
-.both {animation: move2 3s 10 ease both;}
-@keyframes move3 {
-    0%   {left: 0%;}
-    100% {left: calc(100% - 70px);}
-}
-</code></pre>
-    </div>
-</div>
-<!-- sample1 -->  
-
-
-  
-<h4 class="pt50">호환성(Compatibility) 
-    <a href="http://webzz.tistory.com/227" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a>
-    <span class="can">caniuse.com <a href="https://caniuse.com/#search=animation" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span>
-</h4>
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
         <thead>
             <tr>
-                <th></th>
                 <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
                 <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
                 <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
@@ -183,7 +110,6 @@
         </thead>
         <tbody>
             <tr>
-                <td scope="row" class="ce">animation-fill-mode</td>
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
@@ -206,22 +132,9 @@
        
 <h4 class="pt40">참고(Reference)</h4>
 <ul>
-    <li>MDN <a href="https://developer.mozilla.org/ko/docs/Web/CSS/animation" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
-    <li>CSS Animations <a href="https://drafts.csswg.org/css-animations/#animation"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+    <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/animation">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-animations/#animation">CSS Animations</a></li>
 </ul>
 
 
-   
-<script>
-    $(".choice1 .off0").click(function(e){
-        e.preventDefault();
-        $(".mode > div").removeClass();
-    });
-    $(".choice1 .off1").click(function(e){
-        e.preventDefault();
-        $(".mode > div").eq(0).addClass("mo1");
-        $(".mode > div").eq(1).addClass("mo2");
-        $(".mode > div").eq(2).addClass("mo3");
-        $(".mode > div").eq(3).addClass("mo4");
-    });
-</script>
+<hr>
