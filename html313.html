@@ -21,20 +21,6 @@
         </thead>
         <tbody>
             <tr>
-                <th><a href="http://webzz.tistory.com/223">카테고리</a></th>
-                <td>
-                    <a href="http://webzz.tistory.com/223">플로우 콘텐츠(Flow Content)</a>, 
-                    <a href="http://webzz.tistory.com/223">팰퍼블 콘텐츠 (palpable content)</a>
-                </td>
-            </tr>
-            <tr>
-                <th><a href="http://webzz.tistory.com/224">속성</a></th>
-                <td>
-                    <a href="http://webzz.tistory.com/224">글로벌 속성 적용(Global Attributes)</a>, 
-                    <a href="http://webzz.tistory.com/226">이벤트 속성 적용(Event Attributes)</a>
-                </td>
-            </tr>
-            <tr>
                 <th><a href="http://webzz.tistory.com/225">요소</a></th>
                 <td><a href="http://webzz.tistory.com/225">인라인 요소(Inline Element)</a></td>
             </tr>
@@ -66,10 +52,10 @@
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
-            <col width="">
-            <col width="">
-            <col width="">
-            <col width="7%">
+            <col style="width:15%">
+            <col style="width:25%">
+            <col>
+            <col style="width:7%">
         </colgroup>
         <thead>
             <tr>
@@ -97,91 +83,13 @@
 </div>
 
 
-<!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
-<p>&lt;pre&gt; 태그를 사용했을 때와 사용하지 않았을 때의 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <pre>
-$(".choice1 .btn2").click(function(e){
-    e.preventDefault();
-    $(".list1 .desc .ot").text( $(".list1 .circle").offset().top + "px" );
-});</pre>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-$(".choice1 .btn2").click(function(e){
-    e.preventDefault();
-    $(".list1 .desc .ot").text( $(".list1 .circle").offset().top + "px" );
-});
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-<div class="sample">
-    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-js">&lt;pre&gt;$(".choice1 .btn2").click(function(e){
-    e.preventDefault();
-    $(".list1 .desc .ot").text( $(".list1 .circle").offset().top + "px" );
-});
-&lt;/pre&gt;
-&lt;p&gt;$(".choice1 .btn2").click(function(e){
-    e.preventDefault();
-    $(".list1 .desc .ot").text( $(".list1 .circle").offset().top + "px" );
-});
-&lt;/p&gt;
-</code></pre>
-    </div>
-</div>
-<!-- sample1 -->
 
-
-
-<!-- Sample2 -->
-<h4 class="pt50">Sample2</h4>
-<p>&lt;pre&gt; 태그와 &lt;code&gt; 태그를 같이 사용하는 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <pre><code>if(wScroll >= cont.eq(0).offset().top){
-    dot.removeClass("active");
-    dot.eq(0).addClass("active");
-}</code></pre>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
-<div class="sample">
-    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-<pre class="line-numbers"><code class="language-js">&lt;pre&gt;&lt;code&gt;if(wScroll >= cont.eq(0).offset().top){
-    dot.removeClass("active");
-    dot.eq(0).addClass("active");
-}&lt;/code&gt;&lt;/pre&gt;
-</code></pre>
-    </div>
-</div>
-<!-- sample2 -->
-
-
-<h4 class="pt50">호환성(Compatibility) 
-    <a href="http://webzz.tistory.com/227" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a>
-    <span class="can">caniuse.com <a href="https://caniuse.com/#search=%3Cprogress%3E" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span>
-</h4>
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
         <thead>
             <tr>
                 <th></th>
@@ -257,12 +165,5 @@ $(".choice1 .btn2").click(function(e){
     </table>
 </div>
 
-
-<h4 class="pt40">참고(Reference)</h4>
-<ul>
-    <li>MDN <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
-    <li>HTML5 <a href="https://www.w3.org/TR/html50/grouping-content.html#the-pre-element" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
-</ul>
-
-
+<hr>
 
