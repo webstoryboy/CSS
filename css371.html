@@ -33,6 +33,14 @@
                 <th><a href="http://webzz.tistory.com/359">버전</a></th>
                 <td><a href="http://webzz.tistory.com/359">CSS3</a></td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -43,7 +51,7 @@
 </ul>
    
 <h4 class="pt50">문법(Syntax)</h4>
-<p class="blue">animation-name : keyframename | none | inherit;</p>
+<p class="blue">animation-name : keyframe name | none | inherit;</p>
 
   
 <h4 class="pt50">속성(Property)</h4>
@@ -77,12 +85,144 @@
 </div>
 
 
+<style>
+    .animation-box {
+        counter-reset: items;
+    }
+    .animation-box .box {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+        position: relative;
+        font-size: 12px;
+        overflow: hidden;
+        margin: 10px;
+        background-color: #A2CBFA;
+        border: 1px solid #4390E1;
+        box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+    }
+    .animation-box .box::before {
+        counter-increment: items;
+        content: counter(items);
+    }
+    .sampleBtn.show a {pointer-events: none; user-select: none;}
+
+    /* start */
+    .animation-box.show1 .box {animation: move1 2s 1;}
+    .animation-box.show2 .box {animation: move2 2s 1;}
+    .animation-box.show3 .box {animation: move3 2s 1;}
+
+    @keyframes move1 {
+        0%   {left: 0%;}
+        50%  {left: 10%;}
+        100% {left: 0%;}
+    }
+    @keyframes move2 {
+        0%   {left: 0%;}
+        50%  {left: 20%;}
+        100% {left: 0%;}
+    }
+    @keyframes move3 {
+        0%   {left: 0%;}
+        50%  {left: calc(100% - 80px);}
+        100% {left: 0%;}
+    }
+</style>
+
+<!-- Sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>애니메이션 이름을 설정한 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="animation-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#" data-value="show1" data-dur="2000">animation-name : move1;</a>
+        <a href="#" data-value="show2" data-dur="2000">animation-name : move2;</a>
+        <a href="#" data-value="show3" data-dur="2000">animation-name : move3;</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="animation-box"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.animation-box.show1 .box {animation: move1 2s 1;}
+.animation-box.show2 .box {animation: move2 2s 1;}
+.animation-box.show3 .box {animation: move3 2s 1;}
+
+@keyframes move1 {
+    0%   {left: 0%;}
+    50%  {left: 10%;}
+    100% {left: 0%;}
+}
+@keyframes move2 {
+    0%   {left: 0%;}
+    50%  {left: 20%;}
+    100% {left: 0%;}
+}
+@keyframes move3 {
+    0%   {left: 0%;}
+    50%  {left: calc(100% - 80px);}
+    100% {left: 0%;}
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample1 -->
+<script>
+$(".sampleBtn a").click(function (e) {
+    e.preventDefault();
+    $(this).parent().addClass("show");
+    var attr = $(this).attr("data-value");
+    var duration = $(this).attr("data-dur");
+    $(this).parent().prev().children().addClass(attr);
+    
+    if( $(".animation-box").hasClass(attr) ) {
+        setTimeout(function(){
+            $(".sampleView > div").removeClass(attr);
+            $(".sampleBtn").removeClass("show");
+        }, duration)
+    }
+});
+</script>
+
+
   
 <h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
         <thead>
             <tr>
+                <th></th>
                 <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
                 <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
                 <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
@@ -101,6 +241,7 @@
         </thead>
         <tbody>
             <tr>
+                <td>animation-name</td>
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
@@ -122,4 +263,23 @@
 
 
    
+<h4 class="pt50">애니메이션과 관련된 속성(Animation Related Properties)</h4>
+<ul>
+    <li>animation 속성은 애니메이션 속성을 설정합니다.</li>
+    <li>animation-delay 속성은 애니메이션 지연 시간을 설정합니다.</li>
+    <li>animation-direction 속성은 애니메이션 움직임 방향을 설정합니다.</li>
+    <li>animation-duration 속성은 애니메이션 움직임 시간을 설정합니다.</li>
+    <li>animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</li>
+    <li>animation-iteration-count 속성은 애니메이션 반복 횟수 설정합니다.</li>
+    <li>animation-name 속성은 애니메이션 keyframe 이름을 설정합니다.</li>
+    <li>animation-play-state 속성은 애니메이션 진행상태를 설정합니다.</li>
+    <li>animation-timing-function 속성은 애니메이션 움직임의 속도를 설정합니다.</li>
+</ul>
+
+<h4 class="pt40">참고(Reference)</h4>
+<ul>
+    <li>MDN <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+    <li>CSS Animations <a href="https://drafts.csswg.org/css-animations-1/#animation-name"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+</ul>
+
 <hr>

@@ -1,11 +1,11 @@
 
 <h2>&lt;footer&gt;</h2>
-<p>&lt;footer&gt; 태그는 웹 문서의 바닥글 영역을 정의합니다.</p>
+<p>&lt;footer&gt; 태그는 사이트 관련 정보 및 관련 링크 콘텐츠 섹션을 설정합니다.</p>
 
 <hr>
 
 <h3>&lt;footer&gt;</h3>
-<p class="blue">&lt;footer&gt; 태그는 웹 문서의 바닥글 영역을 정의합니다.</p>
+<p class="blue">&lt;footer&gt; 태그는 사이트 관련 정보 및 관련 링크 콘텐츠 섹션을 설정합니다.</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
@@ -22,7 +22,7 @@
         <tbody>
             <tr>
                 <th><a href="http://webzz.tistory.com/225">요소</a></th>
-                <td><a href="http://webzz.tistory.com/225">인라인 요소(Inline Element)</a></td>
+                <td><a href="http://webzz.tistory.com/225">블록 요소(Block Element)</a></td>
             </tr>
             <tr>
                 <th><a href="http://webzz.tistory.com/225">닫는 태그</a></th>
@@ -32,6 +32,14 @@
                 <th><a href="http://webzz.tistory.com/228">버전</a></th>
                 <td>HTML5</td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -39,18 +47,24 @@
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>&lt;footer&gt; 태그는 사이트와 관련된 정보(저작권자, 연락처, 사이트 맵, 관련된 문서 링크)가 포함됩니다.</li>
-    <li>&lt;footer&gt; 태그는 한 문서에서 여러번 사용할 수 있습니다.</li>
-    <li>&lt;footer&gt; 태그는 섹션을 구성하는 태그가 아니가 때문에 섹션을 잡기 위해서 사용하는 위한 태그로는 적절하지 않습니다.</li>
-    <li>&lt;footer&gt; 태그안에는 <a href="http://webzz.tistory.com/232">&lt;address&gt;</a> 요소가 포함될 수 있습니다.</li>
+    <li>&lt;footer&gt; 태그는 사이트 관련 정보 및 관련 링크 콘텐츠 섹션을 설정합니다.</li>
+    <li>&lt;footer&gt; 태그는 사이트와 관련된 정보, 저작권, 연락처, 사이트 맵, 관련된 문서 링크를 제공합니다.</li>
+    <li>&lt;footer&gt; 태그에는 연락처 정보를 설정하는 &lt;address&gt; 태그가 포함 될 수 있습니다.</li>
+    <li>&lt;footer&gt; 태그는 화면 판독기에 의해 "콘텐츠 정보"라고 표현되지 않기 때문에 footer 요소에는 role="contentinfo" 속성을 추가해주는게 좋습니다.</li>
 </ul>
 
 
-<h4 class="pt50">접근성(Accessibility)</h4>
+<h4 class="pt50">섹션 관련 요소(Section Related Elements)</h4>
 <ul>
-    <li>&lt;footer&gt; 태그는 화면 판독기에 의해 바닥글이라고 정의되어 있지 않기 때문에 footer 요소에는 role="콘텐츠 정보"라고 추가합니다.</li>
+    <li>&lt;body&gt; 태그는 사이트 본문에 해당하는 모든 콘텐츠를 포함하는 섹션을 설정합니다.</li>
+    <li>&lt;article&gt; 태그는 사이트의 독립적인 컨텐츠 섹션을 설정합니다.</li>
+    <li>&lt;section&gt; 태그는 주제별 그룹의 콘텐츠 섹션을 설정합니다.</li>
+    <li>&lt;nav&gt; 태그는 내부 페이지 및 외부 페이지에 대한 탐색 링크를 제공하는 페이지 섹션을 설정합니다.</li>
+    <li>&lt;aside&gt; 태그는 주요 콘텐츠의 보조적 컨텐츠 섹션을 설정합니다.</li>
+    <li>&lt;h1&gt~&lt;h6&gt; 태그는 각 섹션의 제목을 설정합니다.</li>
+    <li>&lt;header&gt; 태그는 사이트의 소개 및 메뉴 그룹을 나타내는 섹션을 설정합니다.</li>
+    <li>&lt;footer&gt; 태그는 사이트 관련 정보 및 관련 링크 콘텐츠 섹션을 설정합니다.</li>
 </ul>
-
 
 <h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
 <div class="table-responsive">
@@ -99,5 +113,12 @@
     </table>
 </div>
 
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">MDN</a></li>
+    <li><a href="https://www.w3.org/TR/html52/sections.html#the-footer-element">W3</a></li>
+</ul>
 
 <hr>

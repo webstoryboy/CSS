@@ -1,12 +1,11 @@
 
-
 <h2>&lt;body&gt;</h2>
-<p>&lt;body&gt; 태그는 문서 본문에 해당하는 콘텐츠를 포함하는 영역입니다.</p>
+<p>&lt;body&gt; 태그는 사이트 본문에 해당하는 모든 콘텐츠를 포함하는 섹션을 설정합니다. 문서에서 한 번만 사용됩니다.</p>
 
 <hr>
 
 <h3>&lt;body&gt;</h3>
-<p class="blue">&lt;body&gt; 태그는 문서 본문에 해당하는 콘텐츠를 포함하는 영역입니다. 문서에서 한 번만 사용됩니다.</p>
+<p class="blue">&lt;body&gt; 태그는 사이트 본문에 해당하는 모든 콘텐츠를 포함하는 섹션을 설정합니다.</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
@@ -33,6 +32,14 @@
                 <th><a href="http://webzz.tistory.com/228">버전</a></th>
                 <td>HTML4</td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -40,11 +47,21 @@
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>&lt;body&gt; 태그는 텍스트, 링크, 이미지, 테이블, 리스트등 문서의 모든 내용을 포함합니다.</li>
-    <li>&lt;body&gt; 요소 안에 있는 모든 콘텐츠는 브라우저에 표현됩니다.</li>
-    <li>&lt;body&gt; 태그는 한 문서 하나만 존재합니다.</li>
+    <li>&lt;body&gt; 태그는 사이트 본문에 해당하는 모든 콘텐츠를 포함하는 섹션을 설정합니다.</li>
+    <li>&lt;body&gt; 태그는 문서에서 한 번만 사용됩니다.</li>
 </ul>
 
+<h4 class="pt50">섹션 관련 요소(Section Related Elements)</h4>
+<ul>
+    <li>&lt;body&gt; 태그는 사이트 본문에 해당하는 모든 콘텐츠를 포함하는 섹션을 설정합니다.</li>
+    <li>&lt;article&gt; 태그는 사이트의 독립적인 컨텐츠 섹션을 설정합니다.</li>
+    <li>&lt;section&gt; 태그는 주제별 그룹의 콘텐츠 섹션을 설정합니다.</li>
+    <li>&lt;nav&gt; 태그는 내부 페이지 및 외부 페이지에 대한 탐색 링크를 제공하는 페이지 섹션을 설정합니다.</li>
+    <li>&lt;aside&gt; 태그는 주요 콘텐츠의 보조적 컨텐츠 섹션을 설정합니다.</li>
+    <li>&lt;h1&gt~&lt;h6&gt; 태그는 각 섹션의 제목을 설정합니다.</li>
+    <li>&lt;header&gt; 태그는 사이트의 소개 및 메뉴 그룹을 나타내는 섹션을 설정합니다.</li>
+    <li>&lt;footer&gt; 태그는 사이트 관련 정보 및 관련 링크 콘텐츠 섹션을 설정합니다.</li>
+</ul>
 
 <h4 class="pt50">속성(Property)</h4>
 <div class="table-responsive">
@@ -129,6 +146,32 @@
 </div>
 
 
+<!-- Sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>&lt;body&gt; 태그를 사용하는 예제입니다.<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView p0">
+        <!-- ex -->
+        <div>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 본문에 해당하는 모든 콘텐츠 설정 --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- //Sample1 -->
+
+
 
 <h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
 <div class="table-responsive">
@@ -173,178 +216,15 @@
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
             </tr>
-            <tr>
-                <td scope="row">&lt;alink&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
-            <tr>
-                <td scope="row">&lt;background&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
-            <tr>
-                <td scope="row">&lt;bgcolor&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
-            <tr>
-                <td scope="row">&lt;bottommargin&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
-            <tr>
-                <td scope="row">&lt;leftmargin&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
-            <tr>
-                <td scope="row">&lt;link&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
-            <tr>
-                <td scope="row">&lt;rightmargin&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
-            <tr>
-                <td scope="row">&lt;text&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
-            <tr>
-                <td scope="row">&lt;topmargin&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
-            <tr>
-                <td scope="row">&lt;vlink&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
         </tbody>
     </table>
 </div>
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">MDN</a></li>
+    <li><a href="https://html.spec.whatwg.org/multipage/sections.html#the-body-element">W3</a></li>
+</ul>
 
 <hr>

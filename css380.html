@@ -1,11 +1,11 @@
 
 <h2>background-image</h2>
-<p>background-image 속성은 백그라운 색을 설정합니다.</p>
+<p>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</p>
 
 <hr>
 
 <h3>background-image</h3>
-<p class="blue">background-image 속성은 백그라운 색을 설정합니다.</p>
+<p class="blue">background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
@@ -32,18 +32,37 @@
                 <th scope="row"><a href="http://webzz.tistory.com/359">버전</a></th>
                 <td><a href="http://webzz.tistory.com/359">CSS1</a></td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>background-image 속성은 백그라운 색을 설정합니다.</li>
-    <li>background-image 속성 멀티 이미지는 익스플로러9 이상부터 지원됩니다.</li>
+    <li>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
+    <li>background-image 속성은 다중 이미지를 익스플로러9 이상부터 지원됩니다.</li>
 </ul>
   
 <h4 class="pt50">문법(Syntax)</h4>
 <p class="blue">background-image : url | none </p>
+<p class="blue">
+    /* 이미지 설정 */<br>
+    background-image : url()<br>
+    background-image : url(), url()...<br><br>
+
+    /* 그라디언트 설정 */<br>
+    background-image : linear-gradient()<br>
+    background-image : radial-gradient()<br>
+    background-image : repeating-linear-gradient()<br>
+    background-image : repeating-radial-gradient()<br>
+</p>
 
   
 <h4 class="pt50">속성(Property)</h4>
@@ -88,6 +107,114 @@
     </table>
 </div>
 
+<style>
+    .background-box.b1 {
+        background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover17.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 400px;
+    }
+    .background-box.b2 {
+        background-image: 
+            url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover17.jpg),
+            url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg);
+        background-position: left, right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 400px;
+    }
+</style>
+
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>백그라운드 이미지를 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="background-box b1">
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#" data-value="background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover17.jpg)">background-image: url(images/img01.jpg);</a>
+        <a href="#" data-value="background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover18.jpg)">background-image: url(images/img02.jpg);</a>
+        <a href="#" data-value="background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover19.jpg)">background-image: url(images/img03.jpg);</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample1 -->
+
+<!-- sample2 -->
+<h4 class="pt50">예제2(Sample)</h4>
+<div class="sample">
+    <h5>두개 이상의 백그라운드 이미지를 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="background-box b2">
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#" data-value="background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover17.jpg), url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg)">background-image: url(images/img01.jpg), url(images/img02.jpg);</a>
+        <a href="#" data-value="background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover18.jpg), url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover14.jpg)">background-image: url(images/img03.jpg), url(images/img04.jpg);</a>
+        <a href="#" data-value="background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover19.jpg), url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover15.jpg)">background-image: url(images/img05.jpg), url(images/img06.jpg);</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample2 -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(".sampleBtn a").click(function (e) {
+        e.preventDefault();
+        var attr = $(this).attr("data-value");
+        $(this).parent().prev().children().attr("style",attr);
+    });
+</script>
 
   
 <h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
@@ -205,8 +332,26 @@
     </table>
 </div>
 
+<h4 class="pt50">백그라운드와 관련된 속성(Background Related Properties)</h4>
+<ul>
+    <li>background 속성은 애니메이션 속성을 설정합니다.</li>
+    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
+    <li>background-clip 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+    <li>background-color 속성은 배경 색을 설정합니다.</li>
+    <li>background-image 속성은 배경 이미지 및 배경 속성을 설정합니다.</li>
+    <li>background-origin 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+    <li>background-position 속성은 배경 이미지의 위치 영역을 설정합니다.</li>
+    <li>background-repeat 속성은 배경 이미지 반복 여부를 설정합니다.</li>
+    <li>background-size 속성은 배경 이미지 사이즈를 설정합니다.</li>
+</ul>
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/background-image">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-backgrounds-3/#background-image">w3</a></li>
+</ul>
+
+
 <hr>
- 
-
-
 

@@ -33,6 +33,14 @@
                 <th scope="row"><a href="http://webzz.tistory.com/359">버전</a></th>
                 <td><a href="http://webzz.tistory.com/359">CSS1</a></td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -46,6 +54,24 @@
    
 <h4 class="pt50">문법(Syntax)</h4>
 <p class="blue">background-size : length | percentage | auto | cover | contain </p>
+<p class="blue">
+    /* 키워드 속성 */<br>
+    background-size : auto;<br>
+    background-size : cover;<br>
+    background-size : contain;<br><br>
+
+    /* 단위 속성 */<br>
+    background-size : 10px;<br>
+    background-size : 50%;<br><br>
+
+    /* 너비 값 / 높이 값 */<br>
+    background-size : 10px 100px;<br>
+    background-size : auto 100px;<br><br>
+
+    /* 여러 개 이미지 사이즈 조정 */<br>
+    background-size : 10px, 100px;<br>
+    background-size : auto, 100px, 200px;
+</p>
 
   
 <h4 class="pt50">속성(Property)</h4>
@@ -86,6 +112,89 @@
     </table>
 </div>
 
+<style>
+    .background-box {
+        background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover18.jpg);
+        background-repeat: repeat;
+        background-position: center;
+        background-size: 10%;
+        height: 400px;
+    }
+</style>
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>백그라운드 이미지 사이즈를 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="background-box">
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">background-size : cover; </a>
+        <a href="#">background-size : contain;</a>
+        <a href="#">background-size : 10%;</a>
+        <a href="#">background-size : 100px;</a>
+        <a href="#">background-size : auto;</a>
+        <a href="#">background-size : 10% 100px</a>
+        <a href="#">background-size : 20% 50%</a>
+    </div>
+    <div class="sampleOption">
+        <div class="option">
+            <span class="left">이미지 크기</span>
+            <span class="right">
+                <i class="fa fa-plus-circle opt1" aria-hidden="true"></i>
+                <i class="fa fa-minus-circle opt1" aria-hidden="true"></i>
+            </span>
+        </div>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="background-box"&gt;&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.background-box {
+    background-image: url(../images/hover18.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 10%;
+    height: 400px;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample1 -->
+
+<script>
+    $(".sampleBtn a").click(function (e) {
+        e.preventDefault();
+        var text = $(this).text();
+        $(this).parent().prev().children().attr("style",text);
+    });
+
+    $(".fa-plus-circle.opt1").click(function (e) {
+        e.preventDefault();
+        $(this).parent().parent().parent().prev().prev().children().css({"background-size":"+=5%"});
+    });
+    $(".fa-minus-circle.opt1").click(function (e) {
+        e.preventDefault();
+        $(this).parent().parent().parent().prev().prev().children().css({"background-size":"-=5%"});
+    });
+</script>
 
   
 <h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
@@ -135,5 +244,24 @@
     </table>
 </div>
 
+<h4 class="pt50">백그라운드와 관련된 속성(Background Related Properties)</h4>
+<ul>
+    <li>background 속성은 애니메이션 속성을 설정합니다.</li>
+    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
+    <li>background-clip 속성은 백그라운드 색의 영역을 설정합니다.</li>
+    <li>background-color 속성은 백그라운드 색을 설정합니다.</li>
+    <li>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
+    <li>background-origin 속성은 백그라운드 이미지의 영역 속성을 설정합니다.</li>
+    <li>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+    <li>background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다.</li>
+    <li>background-size 속성은 백그라운드 이미지 사이즈를 설정합니다.</li>
+</ul>
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/background-size">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-backgrounds-3/#the-background-size">w3</a></li>
+</ul>
 
 <hr>
