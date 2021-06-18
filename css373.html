@@ -1,6 +1,10 @@
 
 <h2>animation-timing-function</h2>
 <p>animation-timing-function 속성은 애니메이션 움직임의 속도를 설정합니다.</p>
+<p>
+    애니메이션은 움직임 시간, 움직임 지연 시간, 움직임 방향, 움직임 속도, 움직임 진행상태, 움직임 반복 횟수,
+    움직임 진행상태, 움직임 속도, 키프레임 이름 등을 설정하여 원하는 애니메이션을 구현 할 수 있습니다.
+</p>
 
 <hr>
 
@@ -53,7 +57,34 @@
    
 <h4 class="pt50">문법(Syntax)</h4>
 <p class="blue">animation-timing-function : linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(int,start|end) | cubic-bezier(n,n,n,n) | inherit;</p>
+<p class="blue">
+    /* 기본 애니메이션 */<br>
+    animation-timing-function : linear;<br>
+    animation-timing-function : ease;<br>
+    animation-timing-function : ease-in;<br>
+    animation-timing-function : ease-out;<br>
+    animation-timing-function : ease-in-out;<br>
+    animation-timing-function : step-start;<br>
+    animation-timing-function : step-end;<br>
+    animation-timing-function : steps(int,start|end);<br>
+    animation-timing-function : cubic-bezier(n,n,n,n);<br>
+    animation-timing-function : inherit;
+</p>
 
+
+<h4 class="pt50">애니메이션과 관련된 속성(Animation Related Properties)</h4>
+<ul>
+    <li>animation 속성은 애니메이션과 관련된 속성을 일괄적으로 설정합니다.</li>
+    <li>animation-delay 속성은 애니메이션 지연 시간을 설정합니다.</li>
+    <li>animation-direction 속성은 애니메이션 움직임 방향을 설정합니다.</li>
+    <li>animation-duration 속성은 애니메이션 움직임 시간을 설정합니다.</li>
+    <li>animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</li>
+    <li>animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다.</li>
+    <li>animation-name 속성은 애니메이션 keyframe 이름을 설정합니다.</li>
+    <li>animation-play-state 속성은 애니메이션 진행 상태를 설정합니다.</li>
+    <li>animation-timing-function 속성은 애니메이션 움직임의 속도를 설정합니다.</li>
+</ul>
+  
   
 <h4 class="pt50">속성(Property)</h4>
 <div class="table-responsive">
@@ -462,11 +493,10 @@
     <li>animation-timing-function 속성은 애니메이션 움직임의 속도를 설정합니다.</li>
 </ul>
 
-<h4 class="pt40">참고(Reference)</h4>
+<h4 class="pt30">참고 사이트(Reference)</h4>
 <ul>
-    <li>MDN <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
-    <li>CSS Animations <a href="https://drafts.csswg.org/css-animations-1/#animation-timing-function"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-animations-1/#animation-timing-function">W3</a></li>
 </ul>
 
-   
 <hr>

@@ -55,8 +55,40 @@
     <li>align-content 속성은 컨테이너의 높이 값을 기준으로 정렬하고 align-items 속성은 아이템의 높이 값을 기준으로 정렬합니다.</li>
 </ul>
    
+<h4 class="pt50">참고(Reference)</h4>
+<ul>
+    <li>flex는 효율적으로 요소를 배치하거나 정렬 할 수 있는 레이아웃 방식입니다.</li>
+    <li>flex에서 사용하는 속성은 부모 요소인 컨테이너(Container)와 자식 요소인 아이템(Item)으로 구성됩니다.</li>
+    <li>플렉스 컨테이너에는 flex-direction, flex-wrap, justify-content, align-items, align-content가 있습니다.</li>
+    <li>플렉스 아이템에는 flex, flex-grow, flex-shrink, flex-basis, align-self, order가 있습니다.</li>
+</ul>
+
+<h4 class="pt50">Flex와 관련된 속성(Flex Related Properties)</h4>
+<ul>
+    <li>align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.</li>
+    <li>align-items 속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.</li>
+    <li>align-self 속성은 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다.</li>
+    <li>flex 속성은 콘텐츠의 성질을 flex로 설정합니다.</li>
+    <li>flex-basis 속성은 콘텐츠 아이템의 기본 값을 설정합니다.</li>
+    <li>flex-direction 속성은 콘텐츠 아이템의 정렬 방향을 설정합니다.</li>
+    <li>flex-flow 속성은 콘텐츠 아이템의 정렬 방향과 줄 속성을 설정합니다.</li>
+    <li>flex-grow 속성은 콘텐츠 아이템의 크기를 숫자를 통해 확대 설정합니다.</li>
+    <li>flex-shrink 속성은 콘텐츠 아이템의 크기를 숫자를 통해 축소 설정합니다.</li>
+    <li>flex-wrap 속성은 콘텐츠 아이템의 줄 속성을 설정합니다.</li>
+    <li>justify-content 속성은 콘텐츠 아이템의 좌우 관계 정렬 상태를 설정합니다.</li>
+    <li>order 속성은 콘텐츠 아이템의 순서를 설정합니다.</li>
+</ul>
+
 <h4 class="pt50">문법(Syntax)</h4>
-<p class="blue">align-items : stretch | center | flex-start | flex-end | baseline | inherit;</p>
+<p class="blue">align-items : stretch | center | flex-start | flex-end | baseline</p>
+<p class="blue">
+    /* 기본 속성 */<br>
+    align-items : stretch<br>
+    align-items : center<br>
+    align-items : flex-start<br>
+    align-items : flex-end<br>
+    align-items : baseline
+</p>
 
   
 <h4 class="pt50">속성(Property)</h4>
@@ -164,15 +196,15 @@
         <div class="option">
             <span class="left">아이템</span>
             <span class="right">
-                <i class="fa fa-plus-circle opt1" aria-hidden="true"></i>
-                <i class="fa fa-minus-circle opt1" aria-hidden="true"></i>
+                <a href="#"><i class="fa fa-plus-circle opt1" aria-hidden="true"></a></i>
+                <a href="#"><i class="fa fa-minus-circle opt1" aria-hidden="true"></a></i>
             </span>
         </div>
         <div class="option">
             <span class="left">박스크기</span>
             <span class="right">
-                <i class="fa fa-plus-circle opt2" aria-hidden="true"></i>
-                <i class="fa fa-minus-circle opt2" aria-hidden="true"></i>
+                <a href="#"><i class="fa fa-plus-circle opt2" aria-hidden="true"></a></i>
+                <a href="#"><i class="fa fa-minus-circle opt2" aria-hidden="true"></a></i>
             </span>
         </div>
     </div>
@@ -237,19 +269,19 @@
     });
     $(".fa-plus-circle.opt1").click(function (e) {
         e.preventDefault();
-        $(this).parent().parent().parent().prev().prev().children().append("<div class='item'></div>");
+        $(this).parent().parent().parent().parent().prev().prev().children().append("<div class='item'></div>");
     });
     $(".fa-minus-circle.opt1").click(function (e) {
         e.preventDefault();
-        $(this).parent().parent().parent().prev().prev().children().find(".item:last-child").remove();
+        $(this).parent().parent().parent().parent().prev().prev().children().find(".item:last-child").remove();
     });
     $(".fa-plus-circle.opt2").click(function (e) {
         e.preventDefault();
-        $(this).parent().parent().parent().prev().prev().children().children().css({width:"+=10", height:"+=10"});
+        $(this).parent().parent().parent().parent().prev().prev().children().children().css({width:"+=10", height:"+=10"});
     });
     $(".fa-minus-circle.opt2").click(function (e) {
         e.preventDefault();
-        $(this).parent().parent().parent().prev().prev().children().children().css({width:"-=10", height:"-=10"});
+        $(this).parent().parent().parent().parent().prev().prev().children().children().css({width:"-=10", height:"-=10"});
     });
 </script>
 
@@ -303,22 +335,6 @@
         </tbody>
     </table>
 </div>
-
-<h4 class="pt50">Flex와 관련된 속성(Flex Related Properties)</h4>
-<ul>
-    <li>align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.</li>
-    <li>align-items 속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.</li>
-    <li>align-self 속성은 개별적인 콘텐츠 아이템의 정렬 상태를 정의합니다.</li>
-    <li>flex 속성은 콘텐츠의 성질을 flex로 정의합니다.</li>
-    <li>flex-basis 속성은 요소의 기본 단위를 정의합니다.</li>
-    <li>flex-direction 속성은 요소의 정렬 방향을 정의합니다.</li>
-    <li>flex-flow 속성은 요소의 정렬 방향과 줄 속성을 설정합니다.</li>
-    <li>flex-grow 속성은 요소의 크기를 숫자를 통해 정의합니다.</li>
-    <li>flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다.</li>
-    <li>flex-wrap 속성은 요소의 줄 속성을 설정합니다.</li>
-    <li>justify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</li>
-    <li>order 속성은 flex 콘텐츠의 순서를 정의합니다.</li>
-</ul>
 
 <h4 class="pt30">참고 사이트(Reference)</h4>
 <ul>

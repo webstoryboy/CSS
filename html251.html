@@ -1,6 +1,6 @@
 
 <h2>&lt;center&gt;</h2>
-<p>&lt;center&gt; 태그는 텍스트를 가운데 정렬합니다.</p>
+<p>&lt;center&gt; 태그는 텍스트를 가운데 정렬합니다. CSS 속성이 기능을 대신하고 있기 때문에 현재는 사용하지 않습니다.</p>
 
 <hr>
 
@@ -36,6 +36,12 @@
                 <th>시각적 표현</th>
                 <td>가운데 정렬</td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-ban" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -44,13 +50,93 @@
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
     <li>&lt;center&gt; 태그는 가운데 정렬을 할 때 사용합니다.</li>
-    <li>&lt;center&gt; 태그는 현재 사용하지 않기 때문에 CSS의 text-align:center를 사용합니다. 만약 블록 구조에서 가운데 정렬을 해야 한다면 margin: 0 auto를 사용합니다.</li>
+    <li>인라인 구조에서 가운데 정렬은 CSS의 text-align : center를 사용합니다.</li>
+    <li>블록 구조에서 가운데 정렬은 CSS의 margin: 0 auto를 사용합니다.</li>
+    <li>display: flex와 dispaly: grid를 통해서도 가운데 정렬이 가능합니다.</li>
 </ul>
 
 <h4 class="pt50">CrossBroswing</h4>
 <ul>
     <li>&lt;center&gt; 태그는 HTML5에서 지원하지 않습니다. 대신 CSS를 사용합니다.</li>
 </ul>
+
+<!-- Sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>가운데 정렬을 설정한 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+            <center>center 태그는 가운데 정렬을 할 때 사용합니다.</center>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;center&gt;center 태그는 가운데 정렬을 할 때 사용합니다.&lt;/center&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">//css none
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-js">//javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample1 -->
+
+
+<style>
+    .sampleView .center {
+        text-align: center;
+    }
+</style>
+<!-- Sample1 -->
+<h4 class="pt50">예제2(Sample)</h4>
+<div class="sample">
+    <h5>CSS를 통해 가운데 정렬을 설정한 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+            <p class="center">center 태그는 가운데 정렬을 할 때 사용합니다.</p>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;p class="center"&gt;center 태그는 가운데 정렬을 할 때 사용합니다.&lt;/p&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.center {
+    text-align: center;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-js">//javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample1 -->
 
 <h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
 <div class="table-responsive">
@@ -98,5 +184,11 @@
         </tbody>
     </table>
 </div>
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/center">MDN</a></li>
+</ul>
 
 <hr>

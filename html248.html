@@ -36,6 +36,14 @@
                 <th>시각적 표현</th>
                 <td>기본적인 버튼 디자인</td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -44,10 +52,8 @@
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
     <li>&lt;button&gt; 태그는 클릭 할 수 있는 버튼을 설정합니다.</li>
-    <li>&lt;button&gt; 태그는 이미지나 텍스트 버튼을 설정 할 수 있습니다.</li>
-    <li>&lt;button&gt; 태그는 type 속성을 설정합니다.</li>
+    <li>&lt;button&gt; 태그는 데이터를 전송하기 위한 버튼이라면 type 속성을 설정해야합니다.</li>
     <li>&lt;button&gt; 태그는 CSS를 통해 버튼 디자인 작업을 할 수 있습니다.</li>
-    <li>버튼의 양식을 서버에 전송하지 않을 경우 버튼의 type은 button으로 설정합니다. 그렇지 않으면 문서의 양식을 훼손할 수 있습니다.</li>
 </ul>
 
 
@@ -142,6 +148,61 @@
         </tbody>
     </table>
 </div>
+
+<style>
+    .samBtn {
+        border-radius: 3px;
+        background-color: #a2cbfa;
+        border: 1px solid #4390e1;
+        box-sizing: border-box;
+        box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+        color: #fff;
+        padding: 10px 30px;
+    }
+</style>
+
+<!-- Sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>버튼을 설정한 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+            <button class="samBtn" type="button">클릭하기</button>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;button class="samBtn" type="button"&gt;클릭하기&lt;/button&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.samBtn {
+    border-radius: 3px;
+    background-color: #a2cbfa;
+    border: 1px solid #4390e1;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+    color: #fff;
+    padding: 10px 30px;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample1 -->
 
 
 <h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
@@ -378,6 +439,12 @@
     </table>
 </div>
 
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">MDN</a></li>
+    <li><a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element">W3</a></li>
+</ul>
 
 
 

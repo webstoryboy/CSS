@@ -21,15 +21,23 @@
         <tbody>
             <tr>
                 <th><a href="http://webzz.tistory.com/360">기본 값</a></th>
-                <td><a href="http://webzz.tistory.com/360">auto</a></td>
+                <td><a href="http://webzz.tistory.com/360">all : auto</a></td>
             </tr>
             <tr>
                 <th><a href="http://webzz.tistory.com/360">적용</a></th>
-                <td><a href="http://webzz.tistory.com/360">flexbox</a></td>
+                <td><a href="http://webzz.tistory.com/360">모든 속성</a></td>
             </tr>
             <tr>
                 <th><a href="http://webzz.tistory.com/359">버전</a></th>
                 <td><a href="http://webzz.tistory.com/359">CSS3</a></td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -38,11 +46,19 @@
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
     <li>all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
+    <li>all 속성은 모든 요소에 설정 가능합니다.</li>
 </ul>
    
    
 <h4 class="pt50">문법(Syntax)</h4>
-<p class="blue">all : initial | inherit | unset;</p>
+<p class="blue">all : initial | inherit | unset | revert</p>
+<p class="blue">
+    /* 기본 속성 */<br>
+    all : initial;<br>
+    all : inherit;<br>
+    all : unset;<br>
+    all : revert;
+</p>
 
   
 <h4 class="pt50">속성(Property)</h4>
@@ -65,11 +81,15 @@
             </tr>
             <tr>
                 <th>inherit </th>
-                <td>상위 요소의 속성을 상속받어 적용합니다.</td>
+                <td>요소의 속성을 상속받어 적용합니다.</td>
             </tr>
             <tr>
                 <th>unset</th>
-                <td>요소의 원래 속성으로 설정합니다.</td>
+                <td>상속되는 경우는 상속값으로, 그렇지 않으면 초기값으로 설정됩니다.</td>
+            </tr>
+            <tr>
+                <th>revert</th>
+                <td>선언된 CSS따라 다르게 적용됩니다.</td>
             </tr>
         </tbody>
     </table>
@@ -81,21 +101,7 @@
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
         <colgroup>
-            <col style="width:10%" />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
+            <col style="width:20%" />
         </colgroup>
         <thead>
             <tr>
@@ -137,5 +143,13 @@
         </tbody>
     </table>
 </div>
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/all">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-cascade/#all-shorthand">w3</a></li>
+</ul>
+
 
 <hr>
