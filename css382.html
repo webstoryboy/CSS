@@ -48,23 +48,41 @@
 <ul>
     <li>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</li>
 </ul>
+
+<h4 class="pt50">백그라운드와 관련된 속성(Background Related Properties)</h4>
+<ul>
+    <li>background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</li>
+    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
+    <li>background-clip 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+    <li>background-color 속성은 백그라운드 색을 설정합니다.</li>
+    <li>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
+    <li>background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+    <li>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+    <li>background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다.</li>
+    <li>background-size 속성은 백그라운드 이미지 사이즈를 설정합니다.</li>
+</ul>
   
    
 <h4 class="pt50">문법(Syntax)</h4>
 <p class="blue">background-position : left | center | right | bottom | top | percentage | length</p>
 <p class="blue">
-    /* 키워드 속성 */<br>
+    /* 기본 속성 */<br>
     background-position : left;<br>
     background-position : center; <br>
     background-position : right; <br>
     background-position : bottom; <br>
     background-position : top; <br><br>
 
-    /* x축 / y축 */<br>
+    /* x축과 y축을 length 및 percentage로 설정한 경우 */<br>
+    background-position : 10%;<br>ㄴ
+    background-position : 100px;<br><br>
+
+    /* x축과 y축을 키워드와 퍼센트로 설정한 경우 */<br>
     background-position : top right;<br>
     background-position : 100px 20%;<br><br>
 
-    /* x축 여백 / y축 여백 */<br>
+    /* x축과 x축 여백을 설정하고 y축과 y축 여백을 설정한 경우 */<br>
     background-position : right 100px top 200px; <br>
     background-position : top 100% right 10em; 
 </p>
@@ -237,19 +255,6 @@
     </table>
 </div>
 
-<h4 class="pt50">백그라운드와 관련된 속성(Background Related Properties)</h4>
-<ul>
-    <li>background 속성은 애니메이션 속성을 설정합니다.</li>
-    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
-    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
-    <li>background-clip 속성은 백그라운드 색의 영역을 설정합니다.</li>
-    <li>background-color 속성은 백그라운드 색을 설정합니다.</li>
-    <li>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
-    <li>background-origin 속성은 백그라운드 이미지의 영역 속성을 설정합니다.</li>
-    <li>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</li>
-    <li>background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다.</li>
-    <li>background-size 속성은 백그라운드 이미지 사이즈를 설정합니다.</li>
-</ul>
 
 <h4 class="pt30">참고 사이트(Reference)</h4>
 <ul>

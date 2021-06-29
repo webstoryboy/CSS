@@ -1,11 +1,10 @@
-
 <h2>&lt;dt&gt;</h2>
-<p>&lt;dt&gt; 태그는 용어의 제목을 설명하는 목록형 태그입니다.</p>
+<p>&lt;dt&gt; 태그는 설명 목록 항목의 제목을 설정합니다.</p>
 
 <hr>
 
 <h3>&lt;dt&gt;</h3>
-<p class="blue">&lt;dt&gt; 태그는 용어의 제목을 설명하는 목록형 태그입니다.</p>
+<p class="blue">&lt;dt&gt; 태그는 설명 목록 항목의 제목을 설정합니다.</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
@@ -32,6 +31,14 @@
                 <th><a href="http://webzz.tistory.com/228">버전</a></th>
                 <td>HTML4</td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -39,18 +46,71 @@
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>&lt;dt&gt; 태그(definition term)는 용어의 제목을 설명하는 목록형 태그입니다.</li>
+    <li>&lt;dt&gt; 태그(definition term)는 설명 목록 항목의 제목을 설정합니다.</li>
+    <li>&lt;dt&gt; 태그는 &lt;dl&gt;,&lt;dd&gt; 태그와 함께 사용됩니다.</li>
 </ul>
 
 <h4 class="pt50">비교(Compare)</h4>
 <ul>
-    <li><a href="http://webzz.tistory.com/265">&lt;dl&gt;</a> 태그는 용어를 설명하는 목록형 태그입니다.</li>
-    <li><a href="http://webzz.tistory.com/266">&lt;dt&gt;</a> 태그는 용어의 제목을 설명하는 목록형 태그입니다.</li>
-    <li><a href="http://webzz.tistory.com/258">&lt;dd&gt;</a> 태그는 용어를 설명하는 태그입니다.</li>
-    <li><a href="http://webzz.tistory.com/348">&lt;ul&gt;</a> 태그는 순서가 없는 몰록형 태그입니다.</li>
-    <li><a href="http://webzz.tistory.com/306">&lt;ol&gt;</a> 태그는 순서가 있는 목록형 태그입니다.</li>
-    <li><a href="http://webzz.tistory.com/292">&lt;li&gt;</a> 태그는 목록의 항목 태그입니다.</li>
+    <li>&lt;ul&gt; 태그는 순서가 없는 목록을 설정합니다.</li>
+    <li>&lt;ol&gt; 태그는 순서가 있는 목록을 설정합니다.</li>
+    <li>&lt;li&gt; 태그는 목록의 항목을 설정합니다.</li>
+    <li>&lt;dl&gt; 태그는 설명 목록을 설정합니다.</li>
+    <li>&lt;dd&gt; 태그는 설명 목록의 항목을 설정합니다.</li>
+    <li>&lt;dt&gt; 태그는 설명 목록 항목의 제목을 설정합니다.</li>
 </ul>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>설명 목록 태그의 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+            <p>목록을 표현할 때 쓰는 태그입니다.</p>
+            <dl>
+                <dt>ul : </dt>
+                <dd>순서가 없는 목록을 표현할 때 사용합니다.</dd>
+                <dt>ol : </dt>
+                <dd>순서가 필요한 목록을 표현할 때 사용합니다.</dd>
+                <dt>dl : </dt>
+                <dd>설명이 필요한 목록을 표현할 때 사용합니다.</dd>
+            </dl>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+                <pre class="line-numbers"><code class="language-markup">&lt;p&gt;목록을 표현할 때 쓰는 태그입니다.&lt;/p&gt;
+&lt;dl&gt;
+    &lt;dt&gt;ul : &lt;/dt&gt;
+    &lt;dd&gt;순서가 없는 목록을 표현할 때 사용합니다.&lt;/dd&gt;
+    &lt;dt&gt;ol : &lt;/dt&gt;
+    &lt;dd&gt;순서가 필요한 목록을 표현할 때 사용합니다.&lt;/dd&gt;
+    &lt;dt&gt;dl : &lt;/dt&gt;
+    &lt;dd&gt;설명이 필요한 목록을 표현할 때 사용합니다.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+            </div>
+            <div>
+                <pre class="line-numbers"><code class="language-css">//CSS none
+</code></pre>
+            </div>
+            <div>
+                <pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample1 -->
 
 
 <h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
@@ -62,20 +122,34 @@
         <thead>
             <tr>
                 <th></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
-                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png"
+                        alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png"
+                        alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png"
+                        alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png"
+                        alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png"
+                        alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png"
+                        alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png"
+                        alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png"
+                        alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png"
+                        alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png"
+                        alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png"
+                        alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png"
+                        alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
             </tr>
         </thead>
         <tbody>
@@ -100,4 +174,10 @@
     </table>
 </div>
 
-<hr>
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt">MDN</a></li>
+    <li><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dt-element">w3</a></li>
+</ul>
+
+<hr />

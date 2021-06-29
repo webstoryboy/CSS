@@ -1,21 +1,20 @@
-<h2>&lt;details&gt;</h2>
-<p>&lt;details&gt; 태그는 접기/펼치기 목록을 설정합니다. </p>
+<h2>&lt;datalist&gt;</h2>
+<p>&lt;datalist&gt; 태그는 선택 목록과 자동 완성 기능을 설정합니다.</p>
 
 <p>
-    자바스크립트를 이용하여 컨텐츠 내용을 숨기고 보여줄 수 있는 기능을 HTML 태그를 통해 구현할 수 있습니다. 
-    접기/펼치기 목록의 제목은 &lt;summary&gt; 태그를 통해 설정합니다.
+    사용자가 데이터를 입력하면 일치하는 목록이 있을 경우 보여줍니다. &lt;select&gt; 태그는 주어진 선택 목록을
+    선택만 할 수 있지만, &lt;datalist&gt; 태그는 선택 목록에 없어도, 사용자가 입력할 수 있습니다.
 </p>
+<hr />
 
-<hr>
-
-<h3>&lt;details&gt;</h3>
-<p class="blue">&lt;details&gt; 태그는 접기/펼치기 목록을 정의합니다.</p>
+<h3>&lt;datalist&gt;</h3>
+<p class="blue">&lt;datalist&gt; 태그는 선택 목록과 자동 완성 기능을 설정합니다. </p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
-            <col style="width: 30%">
-            <col style="width: 70%">
+            <col style="width: 30%" />
+            <col style="width: 70%" />
         </colgroup>
         <thead>
             <tr>
@@ -26,11 +25,15 @@
         <tbody>
             <tr>
                 <th><a href="http://webzz.tistory.com/225">요소</a></th>
-                <td><a href="http://webzz.tistory.com/225">인라인 요소(Inline Element)</a></td>
+                <td>
+                    <a href="http://webzz.tistory.com/225">인라인 요소(Inline Element)</a>
+                </td>
             </tr>
             <tr>
                 <th><a href="http://webzz.tistory.com/225">닫는 태그</a></th>
-                <td><a href="http://webzz.tistory.com/225">닫는 태그 사용(&lt;details&gt; ~ &lt;/details&gt;)</a></td>
+                <td>
+                    <a href="http://webzz.tistory.com/225">닫는 태그 사용(&lt;datalist&gt; ~ &lt;/datalist&gt;)</a>
+                </td>
             </tr>
             <tr>
                 <th><a href="http://webzz.tistory.com/228">버전</a></th>
@@ -38,7 +41,7 @@
             </tr>
             <tr>
                 <th>시각적 표현</th>
-                <td>접기/펼치기 삼각형 아이콘</td>
+                <td>선택 메뉴 리스트</td>
             </tr>
             <tr>
                 <th>사용성</th>
@@ -52,274 +55,244 @@
     </table>
 </div>
 
-
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>&lt;details&gt; 태그는 접기/펼치기 목록을 정의합니다.</li>
-    <li>&lt;details&gt; 요소의 제목은 &lt;summary&gt; 태그를 사용합니다.</li>
-    <li>::-webkit-details-marker 속성을 사용하면 마커 모양을 수정할 수 있습니다.</li>
+    <li>&lt;datalist&gt; 태그는 태그는 선택 목록과 자동 완성 기능을 설정합니다.</li>
+    <li>&lt;datalist&gt; 태그는 &lt;input&gt; 요소의 list 속성 값과 datalist의 id 값을 연결하여 사용합니다.</li>
+    <li>&lt;datalist&gt; 태그는 사용자가 데이터를 입력하면 목록에서 일치하는 데이터를 찾아서 자동완성 기능을 제공합니다.</li>
+    <li>&lt;datalist&gt; 태그는 선택 목록이 많을 경우에 사용자가 데이터를 쉽게 찾아서 선택할 수 있습니다.</li>
+    <li>&lt;datalist&gt; 태그는 선택 목록에 없는 값도, 사용자의 입력 할 수 있습니다.</li>
+    <li>&lt;selecg&gt; 태그와 &lt;datalist&gt; 태그는 선택 목록을 보여주는 것은 똑같지만, &lt;datalist&gt;는 사용자가 선택 목록에 없는 값도 사용할 수 있으면, 일치하는 데이터 값이 있으면 바로 선택할 수 있습니다.</li>
 </ul>
 
 <h4 class="pt50">비교(Compare)</h4>
 <ul>
-    <li>접기/펼치기 목록을 사용시 &lt;details&gt; 태그를 사용합니다.</li>
-    <li>접기/펼치기 목록의 제목은 &lt;summary&gt; 태그를 사용합니다.</li>
+    <li>&lt;select&gt; 태그는 선택 목록을 설정합니다.</li>
+    <li>&lt;datalist&gt; 태그는 선택 목록과 자동 완성 기능을 설정합니다.</li>
+    <li>&lt;details&gt; 태그는 접기/펼치기 목록을 설정합니다.</li>
 </ul>
-
-<h4 class="pt50">속성(Property)</h4>
-<div class="table-responsive">
-    <table class="table table-bordered table-striped table-hover">
-        <colgroup>
-            <col width="">
-            <col width="">
-            <col width="">
-            <col width="7%">
-        </colgroup>
-        <thead>
-            <tr>
-                <th>속성</th>
-                <th>값(예)</th>
-                <th>설명</th>
-                <th class="ce">버전</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>open</td>
-                <td>
-                    open
-                </td>
-                <td>
-                    숨겨진 정보를 보여줍니다.
-                </td>
-                <td class="ce"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-html5x.png"
-                        class="icon" alt="html5" title="html5에서 지원하지 않습니다."></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
-<p>&lt;details&gt; 태그와 &lt;summary&gt; 태그의 사용 예제입니다.</p>
+<h4 class="pt50">예제1(Sample)</h4>
 <div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
+    <h5>&lt;datalist&gt; 태그와 &lt;input&gt;을 이용한 선택 목록 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
         <!-- ex -->
-        <div class="none">
-            <details>
-                <summary>더 자세한 정보를 알고 싶다면?</summary>
-                <ol>
-                    <li>접기/펼치기 목록은 deatails 요소를 사용합니다.</li>
-                    <li>접기/펼치기 목록의 제목은 summary 요소를 사용합니다.</li>
-                </ol>
-            </details>
+        <div>
+            <label for="choice">당신이 선호하는 언어는 무엇인가요?</label>
+            <input list="language" id="choice" name="choice" />
+
+            <datalist id="language">
+                <option value="html">
+                <option value="css">
+                <option value="react">
+                <option value="vue">
+                <option value="Javascript">
+            </datalist>
         </div>
         <!-- ex -->
     </div>
-</div>
-<div class="sample">
-    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-        <pre class="line-numbers"><code class="language-markup">&lt;details&gt;
-    &lt;summary&gt;더 자세한 정보를 알고 싶다면?&lt;/summary&gt;
-    &lt;ol&gt;
-       &lt;li&gt;접기/펼치기 목록은 deatails 요소를 사용합니다.&lt;/li&gt;
-       &lt;li&gt;접기/펼치기 목록의 제목은 summary 요소를 사용합니다.&lt;/li&gt; 
-    &lt;/ol&gt;
-&lt;/details&gt;
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;label for="choice"&gt;당신이 선호하는 언어는 무엇인가요?&lt;/label&gt;
+&lt;input list="language" id="choice" name="choice" /&gt;
+
+&lt;datalist id="language"&gt;
+    &lt;option value="html"&gt;
+    &lt;option value="css"&gt;
+    &lt;option value="react"&gt;
+    &lt;option value="vue"&gt;
+    &lt;option value="Javascript"&gt;
+&lt;/datalist&gt;
 </code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">//CSS none
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
     </div>
 </div>
-<!-- sample1 -->
+<!-- //Sample1 -->
+
 
 
 <!-- Sample2 -->
-<h4 class="pt50">Sample2</h4>
-<p>&lt;details&gt; 태그에 open 속성으로 숨겨진 내요을 펼쳐 볼 수 있는 예제입니다.</p>
+<h4 class="pt50">예제2(Sample)</h4>
 <div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
+    <h5>&lt;select&gt; 태그를 이용한 선택 목록 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
         <!-- ex -->
-        <div class="none">
-            <details open>
-                <summary>더 자세한 정보를 알고 싶다면?</summary>
-                <ol>
-                    <li>접기/펼치기 목록은 deatails 요소를 사용합니다.</li>
-                    <li>접기/펼치기 목록의 제목은 summary 요소를 사용합니다.</li>
-                </ol>
-            </details>
+        <div>
+            <label for="select">당신이 선호하는 언어는 무엇인가요?</label>
+            <select id="select">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="react">React.js</option>
+                <option value="vue">vue.js</option>
+                <option value="Javascript">Javascript</option>
+            </select>
         </div>
         <!-- ex -->
     </div>
-</div>
-<div class="sample">
-    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-        <pre class="line-numbers"><code class="language-markup">&lt;details open&gt;
-    &lt;summary&gt;더 자세한 정보를 알고 싶다면?&lt;/summary&gt;
-    &lt;ol&gt;
-       &lt;li&gt;접기/펼치기 목록은 deatails 요소를 사용합니다.&lt;/li&gt;
-       &lt;li&gt;접기/펼치기 목록의 제목은 summary 요소를 사용합니다.&lt;/li&gt; 
-    &lt;/ol&gt;
-&lt;/details&gt;
-</code></pre>
-    </div>
-</div>
-<!-- sample2 -->
-
-
-<!-- Sample3 -->
-<h4 class="pt50">Sample3</h4>
-<p>&lt;summary&gt; 태그에 제목 태그나 강조 태그를 넣을 수 있는 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            <details open>
-                <summary><strong>더 자세한 정보를 알고 싶다면?</strong></summary>
-                <ol>
-                    <li>접기/펼치기 목록은 deatails 요소를 사용합니다.</li>
-                    <li>접기/펼치기 목록의 제목은 summary 요소를 사용합니다.</li>
-                </ol>
-            </details>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
         </div>
-        <!-- ex -->
-    </div>
-</div>
-<div class="sample">
-    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-        <pre class="line-numbers"><code class="language-markup">&lt;details open&gt;
-    &lt;summary&gt;&lt;strong&gt;더 자세한 정보를 알고 싶다면?&lt;/strong&gt;&lt;/summary&gt;
-    &lt;ol&gt;
-       &lt;li&gt;접기/펼치기 목록은 deatails 요소를 사용합니다.&lt;/li&gt;
-       &lt;li&gt;접기/펼치기 목록의 제목은 summary 요소를 사용합니다.&lt;/li&gt; 
-    &lt;/ol&gt;
-&lt;/details&gt;
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;label for="select"&gt;당신이 선호하는 언어는 무엇인가요?&lt;/label&gt;
+&lt;select id="select"&gt;
+    &lt;option value="html"&gt;HTML&lt;/option&gt;
+    &lt;option value="css"&gt;CSS&lt;/option&gt;
+    &lt;option value="react"&gt;React.js&lt;/option&gt;
+    &lt;option value="vue"&gt;vue.js&lt;/option&gt;
+    &lt;option value="Javascript"&gt;Javascript&lt;/option&gt;
+&lt;/select&gt;
 </code></pre>
-    </div>
-</div>
-<!-- sample3 -->
-
-
-<style>
-    .none.n2 details {
-        width: 500px;
-    }
-
-    .none.n2 details>summary {
-        background: #f1f1f1;
-        padding: 3px 10px;
-    }
-
-    .none.n2 details>summary::-webkit-details-marker {
-        display: none
-    }
-</style>
-<!-- Sample4 -->
-<h4 class="pt50">Sample4</h4>
-<p>&lt;details&gt; 태그에 CSS를 통해 디자인 수정이 가능합니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none n2">
-            <details>
-                <summary>더 자세한 정보를 알고 싶다면?</summary>
-                <p>&lt;details&gt; 태그는 접기/펼치기 목록을 설정합니다. 자바스크립트를 이용하여 컨텐츠 내용을 숨기고 보여줄 수 있는 기능을 HTML 태그를 통해 구현할 수 있습니다.
-                    접기/펼치기 목록의 제목은 &lt;summary&gt; 태그를 통해 설정합니다.</p>
-            </details>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">//CSS none
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
         </div>
-        <!-- ex -->
     </div>
 </div>
-<div class="sample">
-    <h5>HTML<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-        <pre class="line-numbers"><code class="language-markup">&lt;details&gt;
-    &lt;summary&gt;더 자세한 정보를 알고 싶다면?&lt;/summary&gt;
-    &lt;p&gt; details 태그는 접기/펼치기 목록을 설정합니다. 자바스크립트를 이용하여 컨텐츠 내용을 숨기고 보여줄 수 있는 기능을 HTML 태그를 통해 구현할 수 있습니다. 접기/펼치기 목록의 제목은 summary 태그를 통해 설정합니다.&lt;/p&gt;
-&lt;/details&gt;
-</code></pre>
-    </div>
-</div>
-<div class="sample">
-    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html">
-        <pre class="line-numbers"><code class="language-css">details {width: 500px;}
-details > summary {background: #f1f1f1; padding: 3px 10px;}
-details > summary::-webkit-details-marker {display: none}
-</code></pre>
-    </div>
-</div>
-<!-- sample4 -->
+<!-- //Sample2 -->
 
 
 
 
-<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
+<h4 class="pt50">
+    <a href="http://webzz.tistory.com/227">호환성(Compatibility)</a>
+</h4>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover compatibility">
         <colgroup>
-            <col style="width:20%" />
+            <col style="width: 20%" />
         </colgroup>
         <thead>
             <tr>
                 <th></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png"
-                        alt="크롬 아이콘" title="크롬 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png"
-                        alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png"
-                        alt="사파리 아이콘" title="사파리 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png"
-                        alt="오페라 아이콘" title="오페라 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png"
-                        alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
-                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png"
-                        alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
-                        alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
-                        alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png"
-                        alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png"
-                        alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png"
-                        alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png"
-                        alt="엣지 아이콘" title="엣지 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png"
-                        alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png"
-                        alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+                <th scope="col">
+                    <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘"
+                        title="크롬 브라우저" />
+                </th>
+                <th scope="col">
+                    <img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png"
+                        alt="파이어폭스 아이콘" title="파이어폭스 브라우저" />
+                </th>
+                <th scope="col">
+                    <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘"
+                        title="사파리 브라우저" />
+                </th>
+                <th scope="col">
+                    <img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘"
+                        title="오페라 브라우저" />
+                </th>
+                <th scope="col">
+                    <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일"
+                        title="네이버 웨일 브라우저" />
+                </th>
+                <th scope="col">
+                    <img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘"
+                        title="인터넷 익스플로러6 브라우저" /><em>6</em>
+                </th>
+                <th scope="col">
+                    <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘"
+                        title="인터넷 익스플로러7 브라우저" /><em>7</em>
+                </th>
+                <th scope="col">
+                    <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘"
+                        title="인터넷 익스플로러8 브라우저" /><em>8</em>
+                </th>
+                <th scope="col">
+                    <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘"
+                        title="인터넷 익스플로러9 브라우저" /><em>9</em>
+                </th>
+                <th scope="col">
+                    <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘"
+                        title="인터넷 익스플로러10 브라우저" /><em>10</em>
+                </th>
+                <th scope="col">
+                    <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘"
+                        title="인터넷 익스플로러11 브라우저" /><em>11</em>
+                </th>
+                <th scope="col">
+                    <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘"
+                        title="엣지 브라우저" />
+                </th>
+                <th scope="col">
+                    <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘"
+                        title="모바일 안드로이드 브라우저" />
+                </th>
+                <th scope="col">
+                    <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘"
+                        title="모바일 아이폰 브라우저" />
+                </th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td scope="row" class="ce">&lt;details&gt;</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
-                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+                <td scope="row" class="ce">&lt;datalist&gt;</td>
+                <td><span title="사용가능합니다.">사용가능</span></td>
+                <!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td>
+                <!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td>
+                <!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td>
+                <!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td>
+                <!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td>
+                <!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td>
+                <!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td>
+                <!-- 익스플로러8 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td>
+                <!-- 익스플로러9 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td>
+                <!-- 익스플로러10 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td>
+                <!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td>
+                <!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td>
+                <!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td>
+                <!-- IOS -->
             </tr>
         </tbody>
     </table>
 </div>
 
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">MDN</a>
+    </li>
+    <li>
+        <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element">w3</a>
+    </li>
+</ul>
 
-<hr>
+<hr />

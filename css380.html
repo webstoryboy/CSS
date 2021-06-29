@@ -49,6 +49,21 @@
     <li>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
     <li>background-image 속성은 다중 이미지를 익스플로러9 이상부터 지원됩니다.</li>
 </ul>
+
+<h4 class="pt50">백그라운드와 관련된 속성(Background Related Properties)</h4>
+<ul>
+    <li>background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</li>
+    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
+    <li>background-clip 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+    <li>background-color 속성은 백그라운드 색을 설정합니다.</li>
+    <li>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
+    <li>background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+    <li>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+    <li>background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다.</li>
+    <li>background-size 속성은 백그라운드 이미지 사이즈를 설정합니다.</li>
+</ul>
+   
   
 <h4 class="pt50">문법(Syntax)</h4>
 <p class="blue">background-image : url | none </p>
@@ -150,11 +165,18 @@
         </div>
         <div class="scCont">
             <div>
-<pre class="line-numbers"><code class="language-markup">
+<pre class="line-numbers"><code class="language-markup">&lt;div class="background-box"&gt;
+&lt;/div&gt;
 </code></pre>
             </div>
             <div>
-<pre class="line-numbers"><code class="language-css">
+<pre class="line-numbers"><code class="language-css">.background-box {
+    background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover17.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 400px;
+}
 </code></pre>
             </div>
             <div>
@@ -190,11 +212,20 @@
         </div>
         <div class="scCont">
             <div>
-<pre class="line-numbers"><code class="language-markup">
+<pre class="line-numbers"><code class="language-markup">&lt;div class="background-box"&gt;
+&lt;/div&gt;
 </code></pre>
             </div>
             <div>
-<pre class="line-numbers"><code class="language-css">
+<pre class="line-numbers"><code class="language-css">.background-box {
+    background-image: 
+        url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover17.jpg),
+        url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg);
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+}
 </code></pre>
             </div>
             <div>
@@ -331,20 +362,6 @@
         </tbody>
     </table>
 </div>
-
-<h4 class="pt50">백그라운드와 관련된 속성(Background Related Properties)</h4>
-<ul>
-    <li>background 속성은 애니메이션 속성을 설정합니다.</li>
-    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
-    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
-    <li>background-clip 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
-    <li>background-color 속성은 배경 색을 설정합니다.</li>
-    <li>background-image 속성은 배경 이미지 및 배경 속성을 설정합니다.</li>
-    <li>background-origin 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
-    <li>background-position 속성은 배경 이미지의 위치 영역을 설정합니다.</li>
-    <li>background-repeat 속성은 배경 이미지 반복 여부를 설정합니다.</li>
-    <li>background-size 속성은 배경 이미지 사이즈를 설정합니다.</li>
-</ul>
 
 <h4 class="pt30">참고 사이트(Reference)</h4>
 <ul>

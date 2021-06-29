@@ -1,12 +1,10 @@
-
-
 <h2>&lt;ins&gt;</h2>
-<p>&lt;ins&gt; 태그는 문서에 삽입된 텍스트를 정의합니다</p>
+<p>&lt;ins&gt; 태그는 문서에 삽입된 텍스트를 설정합니다</p>
 
 <hr>
 
 <h3>&lt;ins&gt;</h3>
-<p class="blue">&lt;ins&gt; 태그는 문서에 삽입된 텍스트를 정의합니다</p>
+<p class="blue">&lt;ins&gt; 태그는 문서에 삽입된 텍스트를 설정합니다</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
@@ -37,6 +35,14 @@
                 <th>시각적 표현</th>
                 <td>밑줄</td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -60,8 +66,49 @@
 
 <h4 class="pt50">접근성(Accessibility)</h4>
 <ul>
-    <li>&lt;ins&gt; 태그는 화면 판독기를 통해 판별할 수 없기 때문에 가상요소(::before, ::after)를 이용하여 시작과 끝을 알려주어야 합니다. 일부 화면 판독기 사용자는 이 기능을 불편해 하기 때문에 이 내용을 알지 못하면 불편한 경우에만 사용하는 것을 추천합니다.  </li>
+    <li>&lt;ins&gt; 태그는 화면 판독기를 통해 판별할 수 없기 때문에 가상요소(::before, ::after)를 이용하여 시작과 끝을 알려주어야 합니다. 일부 화면 판독기 사용자는 이 기능을 불편해
+        하기 때문에 이 내용을 알지 못하면 불편한 경우에만 사용하는 것을 추천합니다. </li>
 </ul>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>삭제된 텍스트 및 추가된 텍스트를 표현하는 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+            <p>문서 편집을 위한 텍스트</p>
+            <p>&lt;del&gt; 태그는 문서의 <del>수정된</del> <ins>삭제된</ins> 텍스트를 설정합니다.</p>
+            <p>&lt;ins&gt; 태그는 문서에 <del>추가된</del> <ins>삽입된</ins> 텍스트를 정의합니다</p>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;h2&gt;문서 편집을 위한 텍스트&lt;/h2&gt;
+&lt;p&gt;del 태그는 문서의 &lt;del&gt;수정된&lt;/del&gt; &lt;ins&gt;삭제된&lt;/ins&gt; 텍스트를 설정합니다.&lt;/p&gt;
+&lt;p&gt;ins 태그는 문서에 &lt;del&gt;추가된&lt;/del&gt; &lt;ins&gt;삽입된&lt;/ins&gt; 텍스트를 정의합니다&lt;/p&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">//CSS none
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample1 -->
 
 
 <h4 class="pt50">속성(Property)</h4>
@@ -109,20 +156,34 @@
         <thead>
             <tr>
                 <th></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
-                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png"
+                        alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png"
+                        alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png"
+                        alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png"
+                        alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png"
+                        alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png"
+                        alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png"
+                        alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png"
+                        alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png"
+                        alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png"
+                        alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png"
+                        alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png"
+                        alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
             </tr>
         </thead>
         <tbody>
@@ -181,5 +242,10 @@
     </table>
 </div>
 
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins">MDN</a></li>
+    <li><a href="https://html.spec.whatwg.org/multipage/edits.html#the-ins-element">W3</a></li>
+</ul>
 
-<hr>
+<hr />

@@ -1,11 +1,10 @@
-
 <h2>&lt;embed&gt;</h2>
-<p>&lt;embed&gt; 태그는 외부 어플리케이션을 연결합니다.</p>
+<p>&lt;embed&gt; 태그는 외부 콘텐츠를 사용할 수 있도록 설정합니다.</p>
 
 <hr>
 
 <h3>&lt;embed&gt;</h3>
-<p class="blue">&lt;embed&gt; 태그는 외부 어플리케이션을 연결합니다.</p>
+<p class="blue">&lt;embed&gt; 태그는 외부 콘텐츠를 사용할 수 있도록 설정합니다.</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
@@ -32,6 +31,18 @@
                 <th><a href="http://webzz.tistory.com/228">버전</a></th>
                 <td>HTML5</td>
             </tr>
+            <tr>
+                <th>시각적 표현</th>
+                <td>콘텐츠 표현</td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -39,19 +50,22 @@
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>&lt;embed&gt; 태그는 외부 콘텐츠를 특점 지점에 포함 시켜줍니다. 이 콘텐츠는 외부 어플리케이션 또는 브라우저 플러그인이 여기에 포함됩니다.</li>
-    <li>유투브 영상 소스는 &lt;embed&gt; 형식으로 특점 지점에 추가할 수 있습니다.</li>
+    <li>&lt;embed&gt; 태그는 외부 콘텐츠를 사용할 수 있도록 설정합니다.</li>
+    <li>외부 콘텐츠에는 유튜브 콘텐츠, 코딩 콘텐츠, 음악 콘텐츠 등 다양한 외부 콘텐츠를 포함합니다.</li>
+    <li>현재 대부분의 최신 브라우저는 플러그인 지원을 중단하고 있어, &lt;embed&gt; 태그의 사용은 권하지 않습니다.</li>
 </ul>
 
 <h4 class="pt50">크로스브라우징(CrossBroswing)</h4>
 <ul>
-    <li>&lt;embed&gt; 태그는 오래 전부터 모든 브라우저에서 지원되었지만 HTML4 지침서에는 포함되어 있지 않습니다. &lt;embed&gt; 태그는 HTML5 지침서에 새롭게 추가되었습니다.</li>
+    <li>&lt;embed&gt; 태그는 오래 전부터 모든 브라우저에서 지원되었지만 HTML4 지침서에는 포함되어 있지 않습니다. &lt;embed&gt; 태그는 HTML5 지침서에 새롭게 추가되었습니다.
+    </li>
 </ul>
 
 <h4 class="pt50">비교(Compare)</h4>
 <ul>
-    <li>동영상을 재생할 때에는 &lt;video&gt; 태그를 사용합니다.</li>
-    <li>외부 프로그램이나 플러그인을 삽입 할 때에는 &lt;embed&gt; 태그를 사용합니다.</li>
+    <li>외부 동영상을 재생할 때에는 &lt;video&gt; 태그를 사용합니다.</li>
+    <li>외부 음악을 재생할 때에는 &lt;audio&gt; 태그를 사용합니다.</li>
+    <li>외부 콘텐츠를 삽입 할 때에는 &lt;embed&gt; 태그를 사용합니다.</li>
 </ul>
 
 <h4 class="pt50">속성(Property)</h4>
@@ -109,20 +123,34 @@
         <thead>
             <tr>
                 <th></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
-                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png"
+                        alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png"
+                        alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png"
+                        alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png"
+                        alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png"
+                        alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png"
+                        alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png"
+                        alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png"
+                        alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png"
+                        alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png"
+                        alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png"
+                        alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png"
+                        alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
             </tr>
         </thead>
         <tbody>
@@ -148,4 +176,11 @@
 </div>
 
 
-<hr>
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">MDN</a></li>
+    <li><a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element">w3</a></li>
+</ul>
+
+<hr />

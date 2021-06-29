@@ -1,11 +1,11 @@
 
 <h2>background</h2>
-<p>background 속성은 배경 속성 값을 정의합니다.</p>
+<p>background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</p>
 
 <hr>
 
 <h3>background</h3>
-<p class="blue">background 속성은 배경 속성 값을 정의합니다.</p>
+<p class="blue">background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
@@ -41,28 +41,50 @@
                 <th><a href="http://webzz.tistory.com/359">버전</a></th>
                 <td><a href="http://webzz.tistory.com/359">CSS3</a></td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>ackground 속성은 배경 속성 값을 정의합니다.</li>
-    <li>background-attachment 속성은 배경이미지의 고정여부를 설정하기 위한 속성입니다.</li>
-    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 정의합니다.</li>
-    <li>background-clip 속성은 백그라운드 색의 영역을 설정합니다.</li>
-    <li>background-color 속성은 백그라운 색을 설정합니다.</li>
-    <li>background-image 속성은 백그라운 이미지 속성을 설정합니다.</li>
-    <li>background-origin 속성은 백그라운드 이미지의 영역 속성을 설정합니다.</li>
-    <li>background-position은 백그라운 이미지의 위치 영역을 설정합니다.</li>
-    <li>background-repeat은 백그라운 이미지 반복여부를 설정합니다.</li>
-    <li>background-size은 백그라운드 이미지 사이즈를 설정합니다.</li>
+    <li>background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</li>
+</ul>
+
+<h4 class="pt50">백그라운드와 관련된 속성(Background Related Properties)</h4>
+<ul>
+    <li>background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</li>
+    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
+    <li>background-clip 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+    <li>background-color 속성은 백그라운드 색을 설정합니다.</li>
+    <li>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
+    <li>background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+    <li>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+    <li>background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다.</li>
+    <li>background-size 속성은 백그라운드 이미지 사이즈를 설정합니다.</li>
 </ul>
    
    
 <h4 class="pt50">문법(Syntax)</h4>
-<p class="blue">background : background-attachment | background-blend-mode | background-clip | background-color | background-image | background-origin | background-position | background-repeat | background-size | inherit;</p>
+<p class="blue">background : background-attachment | background-clip | background-color | background-image | background-origin | background-position | background-repeat | background-size | inherit;</p>
+<p class="blue">
+    /* background-image | background-repeat */<br>
+    background: url(../images/images01.jpg) no-repeat;<br><br>
 
+    /* background-image | background-repeat | background-position */<br>
+    background: url(../images/images01.jpg) no-repeat 50% 70%;<br><br>
+
+    /* background-color | background-image | background-repeat | background-position */<br>
+    background: #000 url(../images/images01.jpg) no-repeat 50% 70%;
+</p>
   
 <h4 class="pt50">속성(Property)</h4>
 <div class="table-responsive">
@@ -80,43 +102,39 @@
         <tbody>
             <tr>
                 <th>background-attachment</th>
-                <td>배경 고정여부를 설정합니다.</td>
-            </tr>
-            <tr>
-                <th>background-blend-mode</th>
-                <td>배경을 혼합했을 때의 상태를 정의합니다.</td>
+                <td>배경 이미지의 고정 여부를 설정합니다.</td>
             </tr>
             <tr>
                 <th>background-clip</th>
-                <td>배경 적용 범위를 설정합니다.</td>
+                <td>백그라운드 이미지의 위치 기준점을 설정합니다.</td>
             </tr>
             <tr>
                 <th>background-color</th>
-                <td>배경 색을 설정합니다.</td>
+                <td>백그라운드 색을 설정합니다.</td>
             </tr>
             <tr>
                 <th>background-image</th>
-                <td>배경 이미지를 설정합니다.</td>
+                <td>백그라운드 이미지 및 배경 속성을 설정합니다.</td>
             </tr>
             <tr>
                 <th>background-origin</th>
-                <td>배경 방향을 설정합니다.</td>
+                <td>백그라운드 이미지의 위치 기준점을 설정합니다.</td>
             </tr>
             <tr>
                 <th>background-position</th>
-                <td>배경 위치를 설정합니다.</td>
+                <td>백그라운드 이미지의 위치 영역을 설정합니다.</td>
             </tr>
             <tr>
                 <th>background-repeat</th>
-                <td>배경 반복여부를 설정합니다.</td>
+                <td>백그라운드 이미지 반복 여부를 설정합니다</td>
             </tr>
             <tr>
                 <th>background-size</th>
-                <td>배경 사이즈를 설정합니다.</td>
+                <td>백그라운드 이미지 사이즈를 설정합니다.</td>
             </tr>
             <tr>
                 <th>inherit</th>
-                <td>background 값을 상위요소한테 상속받습니다.</td>
+                <td>속성 값을 상위 요소한테 상속받습니다.</td>
             </tr>
         </tbody>
     </table>
@@ -152,23 +170,6 @@
         <tbody>
             <tr>
                 <td scope="row">background-attachment</td>
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
-                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
-            </tr>
-            <tr>
-                <td scope="row">background-blend-mode</td>
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
@@ -309,5 +310,10 @@
 
 
    
-    
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-backgrounds-3/#the-background">w3</a></li>
+</ul>
+
 <hr>

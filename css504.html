@@ -1,4 +1,3 @@
-
 <h2>backdrop-filter</h2>
 <p>backdrop-filter 속성은 배경에 그래픽 효과를 설정합니다.</p>
 
@@ -32,7 +31,7 @@
                 <th>사용성</th>
                 <td>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </td>
             </tr>
@@ -42,42 +41,34 @@
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>mix-blend-mode 속성은 배경의 혼합 상태를 정의합니다.</li>
-    <li>blend-mode는 크게 background-blend-mode와 mix-blend-mode로 설정됩니다.</li>
-    <li>포토샵의 브렌드 모드와 동일한 효과입니다.</li>
+    <li>backdrop-filter 속성은 배경에 그래픽 효과를 설정합니다.</li>
+    <li>요소의 배경을 반투명 설정하여야 효과를 확인할 수 있습니다.</li>
 </ul>
 
-<h4 class="pt50">비교(Compare)</h4>
+<h4 class="pt50">그래픽 효과와 관련된 속성(Graphic Related Properties)</h4>
 <ul>
-    <li>background-blend 속성은 background 속성을 통한 이미지의 혼합 상태를 설정합니다.</li>
-    <li>mix-blend-mode 속성은 &lt;img&gt; 태그를 통한 이미지의 혼합 상태를 설정합니다.</li>
+    <li>filter 속성은 그래픽 효과를 설정합니다.</li>
+    <li>backdrop-filter 속성은 배경에 그래픽 효과를 설정합니다.</li>
+    <li>background-blend-mode 속성은 배경을 혼합했을 때 그래픽 효과를 설정합니다.</li>
+    <li>mix-blend-mode 속성은 요소를 혼합했을 때 그래픽 효과를 설정합니다.</li>
 </ul>
 
 
 <h4 class="pt50">문법(Syntax)</h4>
-<p class="blue">mix-blend-mode: normal | multiply | screen | overlay | darken | lighten | color-dodge | color-burn | difference | exclusion | hue | saturation | color | luminosity</p>
+<p class="blue">backdrop-filter : none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | sepia() | saturate()</p>
 <p class="blue">
     /* 기본 속성 */<br>
-    mix-blend-mode : normal; <br>
-    mix-blend-mode : multiply;<br>
-    mix-blend-mode : screen;<br>
-    mix-blend-mode : overlay; <br>
-    mix-blend-mode : darken;<br> 
-    mix-blend-mode : lighten;<br> 
-    mix-blend-mode : color-dodge;<br> 
-    mix-blend-mode : color-burn;<br>
-    mix-blend-mode : hard-light;<br>
-    mix-blend-mode : soft-light;<br>
-    mix-blend-mode : difference;<br>
-    mix-blend-mode : exclusion;<br>
-    mix-blend-mode : hue;<br>
-    mix-blend-mode : saturation;<br>
-    mix-blend-mode : color;<br>
-    mix-blend-mode : luminosity;<br><br>
-
-    /* 다중 속성 */<br>
-    mix-blend-mode : color-dodge, exclusion; <br>
-    mix-blend-mode : color-dodge, hue;<br> 
+    backdrop-filter : none; <br>
+    backdrop-filter : blur()<br>
+    backdrop-filter : brightness();<br>
+    backdrop-filter : contrast(); <br>
+    backdrop-filter : drop-shadow();<br>
+    backdrop-filter : grayscale();<br>
+    backdrop-filter : hue-rotate();<br>
+    backdrop-filter : invert();<br>
+    backdrop-filter : opacity();<br>
+    backdrop-filter : sepia();<br>
+    backdrop-filter : saturate();<br>
 </p>
 
 
@@ -96,64 +87,61 @@
         </thead>
         <tbody>
             <tr>
-                <th>normal</th>
-                <td>배경색의 기본 값을 정의합니다. </td>
+                <th>none</th>
+                <td>이미지의 아무런 효과를 주지 않습니다.</td>
             </tr>
             <tr>
-                <th>multiply</th>
-                <td>배경의 혼합 상태를 multiply(어둡게)으로 정의합니다.</td>
+                <th>blur(px)</th>
+                <td>이미지의 블러 효과를 설정합니다.</td>
             </tr>
             <tr>
-                <th>screen</th>
-                <td>배경의 혼합 상태를 screen(밝게)으로 정의합니다.</td>
+                <th>brightness(%)</th>
+                <td>이미지의 밝고 어두움 정도를 설정합니다.</td>
             </tr>
             <tr>
-                <th>overlay</th>
-                <td>배경의 혼합 상태를 overlay으로 정의합니다.</td>
+                <th>contrast(%)</th>
+                <td>이미지의 대비를 설정합니다.</td>
             </tr>
             <tr>
-                <th>darken</th>
-                <td>배경의 혼합 상태를 darken으로 정의합니다.</td>
+                <th>drop-shadow()</th>
+                <td>이미지의 그림자를 설정합니다.</td>
             </tr>
             <tr>
-                <th>lighten</th>
-                <td>배경의 혼합 상태를 lighten으로 정의합니다.</td>
+                <th>grayscale(%)</th>
+                <td>이미지의 그레이스케일를 설정합니다.</td>
             </tr>
             <tr>
-                <th>color-dodge</th>
-                <td>배경의 혼합 상태를 color-dodge으로 정의합니다.</td>
+                <th>hue-rotate(deg)</th>
+                <td>이미지의 색조를 설정합니다.</td>
             </tr>
             <tr>
-                <th>color-burn</th>
-                <td>배경의 혼합 상태를 color-burn으로 정의합니다.</td>
+                <th>invert(%)</th>
+                <td>이미지를 반전합니다.</td>
             </tr>
             <tr>
-                <th>difference</th>
-                <td>배경의 혼합 상태를 difference으로 정의합니다.</td>
+                <th>opacity(%)</th>
+                <td>이미지의 투명도를 설정합니다.</td>
             </tr>
             <tr>
-                <th>exclusion</th>
-                <td>배경의 혼합 상태를 exclusion으로 정의합니다.</td>
+                <th>saturate(%)</th>
+                <td>이미지의 채도를 설정합니다.</td>
             </tr>
             <tr>
-                <th>hue</th>
-                <td>배경의 혼합 상태를 hue으로 정의합니다.</td>
+                <th>sepia(%)</th>
+                <td>이미지의 세피아 효과를 설정합니다.</td>
             </tr>
             <tr>
-                <th>saturation</th>
-                <td>배경의 혼합 상태를 saturation으로 정의합니다.</td>
+                <th>url()</th>
+                <td>이미지의 경로를 설정합니다.</td>
             </tr>
             <tr>
-                <th>color</th>
-                <td>배경의 혼합 상태를 color으로 정의합니다.</td>
-            </tr>
-            <tr>
-                <th>luminosity</th>
-                <td>배경의 혼합 상태를 luminosity으로 정의합니다.</td>
+                <th>inherit</th>
+                <td>상위 요소의 속성 값을 상속받습니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
+
 
 
 
@@ -166,25 +154,39 @@
         <thead>
             <tr>
                 <th></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
-                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png"
+                        alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png"
+                        alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png"
+                        alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png"
+                        alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png"
+                        alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png"
+                        alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png"
+                        alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png"
+                        alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png"
+                        alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png"
+                        alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png"
+                        alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png"
+                        alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td scope="row">mix-blend-mode</td>
+                <td scope="row">backdrop-filter</td>
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
@@ -200,31 +202,16 @@
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
                 <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
             </tr>
-            
+
         </tbody>
     </table>
 </div>
 
 
-
-<h4 class="pt50">백그라운드와 관련된 속성(Background Related Properties)</h4>
-<ul>
-    <li>background 속성은 애니메이션 속성을 설정합니다.</li>
-    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
-    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
-    <li>background-clip 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
-    <li>background-color 속성은 배경 색을 설정합니다.</li>
-    <li>background-image 속성은 배경 이미지 및 배경 속성을 설정합니다.</li>
-    <li>background-origin 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
-    <li>background-position 속성은 배경 이미지의 위치 영역을 설정합니다.</li>
-    <li>background-repeat 속성은 배경 이미지 반복 여부를 설정합니다.</li>
-    <li>background-size 속성은 배경 이미지 사이즈를 설정합니다.</li>
-</ul>
-
 <h4 class="pt30">참고 사이트(Reference)</h4>
 <ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">MDN</a></li>
-    <li><a href="https://drafts.fxtf.org/compositing-1/#mix-blend-mode">w3</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter">MDN</a></li>
+    <li><a href="https://drafts.fxtf.org/filter-effects-2/#BackdropFilterProperty">w3</a></li>
 </ul>
 
 <hr>

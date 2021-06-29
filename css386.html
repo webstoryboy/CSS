@@ -1,11 +1,11 @@
 
 <h2>border-bottom</h2>
-<p>border-bottom 속성은 테두리 아래쪽 테두리 속성을 설정합니다.</p>
+<p>border-bottom 속성은 테두리 아래쪽 속성을 일괄적으로 설정합니다.</p>
 
 <hr>
 
 <h3>border-bottom</h3>
-<p class="blue">border-bottom 속성은 아래쪽 테두리 속성을 설정합니다.</p>
+<p class="blue">border-bottom 속성은 아래쪽 속성을 일괄적으로 설정합니다.</p>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
@@ -36,15 +36,41 @@
                 <th scope="row"><a href="http://webzz.tistory.com/359">버전</a></th>
                 <td><a href="http://webzz.tistory.com/359">CSS1</a></td>
             </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>border-bottom 속성은 아래쪽 테두리 속성을 설정합니다.</li>
+    <li>border-bottom 속성은 테두리 아래쪽 속성을 일괄적으로 설정합니다.</li>
+</ul>
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>border-top 속성은 테두리 위쪽 속성을 일괄적으로 설정합니다.</li>
+    <li>border-right 속성은 테두리 오른쪽 속성을 일괄적으로 설정합니다.</li>
+    <li>border-bottom 속성은 테두리 아래쪽 속성을 일괄적으로 설정합니다.</li>
+    <li>border-left 속성은 테두리 왼쪽 속성을 일괄적으로 설정합니다.</li>
 </ul>
   
+<h4 class="pt50">테두리와 관련된 속성(Border Related Properties)</h4>
+<ul>
+    <li>border-width는 테두리 두께 속성을 설정합니다.</li>
+    <li>border-style는 테두리 스타일 속성을 설정합니다.</li>
+    <li>border-color는 테두리 색 속성을 설정합니다.</li>
+    <li>border-image는 테두리 이미지 속성을 설정합니다.</li>
+    <li>border-radius는 모서리 굴곡을 설정합니다.</li>
+    <li>outline는 아웃라인의 속성을 설정합니다.</li>
+    <li>box-shadow은 요소의 그림자를 설정합니다.</li>
+</ul>
    
    
 <h4 class="pt50">문법(Syntax)</h4>
@@ -105,6 +131,115 @@ border-bottom : 3px dashed #797979;
     </table>
 </div>
 
+
+<style>
+    .border-box {
+        display: flex;
+    }
+    .border-box > div {
+        flex: 1 1 20%;
+        border-radius: 3px;
+        background-color: #a2cbfa;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #4390e1;;
+        box-sizing: border-box;
+        box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+        color: #fff;
+        padding: 10px;
+        margin: 1%;
+        min-height: 100px;
+    }
+</style>
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>border-bottom 속성을 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="border-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">border-bottom : 1px solid #4390e1;</a>
+        <a href="#">border-bottom : dashed #4390e1;</a>
+        <a href="#">border-bottom : 8px solid #4390e1</a>
+        <a href="#">border-bottom : 10px double #4390e1</a>
+        <a href="#">border-bottom : 9px dotted #4390e1</a>
+    </div>
+    <div class="sampleOption">
+        <div class="option">
+            <span class="left">아이템</span>
+            <span class="right">
+                <a href="#"><i class="fa fa-plus-circle opt1" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-minus-circle opt1" aria-hidden="true"></i></a>
+            </span>
+        </div>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="border-box"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.border-box {
+    display: flex;
+}
+.border-box > div {
+    flex: 1 1 20%;
+    border-radius: 3px;
+    background-color: #a2cbfa;
+    border: 1px solid #4390e1;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+    color: #fff;
+    padding: 10px;
+    margin: 1%;
+    min-height: 100px;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample1 -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(".sampleBtn a").click(function (e) {
+        e.preventDefault();
+        var text = $(this).text();
+        $(this).parent().prev().children().children().attr("style",text);
+    });
+    $(".fa-plus-circle.opt1").click(function (e) {
+        e.preventDefault();
+        $(this).parent().parent().parent().parent().prev().prev().children().append("<div class='box'></div>");
+    });
+    $(".fa-minus-circle.opt1").click(function (e) {
+        e.preventDefault();
+        $(this).parent().parent().parent().parent().prev().prev().children().find(".box:last-child").remove();
+    });
+</script>
 
   
 <h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
@@ -205,5 +340,12 @@ border-bottom : 3px dashed #797979;
     </table>
 </div>
 
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/border-bottom">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-backgrounds-3/#border-bottom">w3</a></li>
+</ul>
 
 <hr>
