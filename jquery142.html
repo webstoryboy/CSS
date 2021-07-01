@@ -1,269 +1,165 @@
-
-
 <h2>.wrapAll()</h2>
-<p>선택한 모든 요소에 새로운 요소를 추가합니다.</p>
+<p>.wrapAll() 메서드는 선택한 요소 부모 요소를 감쌉니다.</p>
 
 <hr>
 
 <h3>.wrapAll()</h3>
-<p class="blue">선택한 모든 요소에 새로운 요소를 추가합니다.</p>
+<p class="blue">.wrapAll() 메서드는 선택한 요소 부모 요소를 감쌉니다.</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">특징</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">리턴 값(Returns)</a></th>
+                <td>jQuery</td>
+            </tr>
+            <tr>
+                <th scope="row">버전</a></th>
+                <td>1.x</td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 <h4 class="pt50">문법(Syntax)</h4>
 <p class="blue">
-$("선택자").wrapAll("선택자");<br>
-$("선택자").wrapAll("함수");<br>
+    $("선택자").wrapAll("선택자");<br>
+    $("선택자").wrapAll("함수");<br>
 </p>
 
 <h4 class="pt50">정의(Definition)</h4>
 <ul>
-    <li>.wrapAll("선택자") 메서드는 선택한 모든 요소에 새로운 선택자를 추가합니다.</li>
-    <li>.wrapAll("함수") 메서드는 선택한 모든 요소에 함수를 설정합니다.</li>
+    <li>.wrapAll() 메서드는 선택한 요소 부모 요소를 감쌉니다.</li>
+    <li>.wrapAll() 메서드는 선택한 요소에 콜백 함수를 설정합니다.</li>
+</ul>
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>.wrap() 메서드는 선택한 요소에 새로운 요소를 감쌉니다.</li>
+    <li>.wrapAll() 메서드는 선택한 요소 부모 요소를 감쌉니다.</li>
+    <li>.wrapInner() 메서드는 선택한 요소 자식 요소를 감쌉니다.</li>
+    <li>.unwrap() 메서드는 선택한 요소의 부모 요소를 삭제합니다.</li>
 </ul>
 
 
 
-
-
-
-
-<!-- Sample1 -->
-<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample142-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
-<p>.wrapAll() : 선택한 요소에 div 태그를 감싸는 예제입니다.</p>
+<style>
+.wrap-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.new {
+    border: 1px solid #4390E1;
+    margin: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #4390E1;
+    padding: 5px;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #A2CBFA;
+    border: 1px solid #4390E1;
+    box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+}
+</style>
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
 <div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
+    <h5>선택한 요소에 새로운 요소를 감싸는 예제입니다.</h5>
+    <div class="sampleView">
         <!-- ex -->
-        <h3>속성(Attributes)</h3>
-        <div class="list1">
-            <p class="p">.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.</p>
-            <p class="p">.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.</p>
-            <p class="p">.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.</p>
-            <p class="p">.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.</p>
-            <p class="p">.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.</p>
-            <p class="p">.nextUntil() 메서드는 지정한 선택 요소의 모든 요소를 선택합니다.</p>
+        <div class="wrap-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
         </div>
         <!-- ex -->
     </div>
-    
-     <div class="choice1">
-        <a href="#" class="off1">리셋</a>
-        <a href="#" class="btn1">클릭하면 <em>p태그</em>에 <em>div태그</em>로 감쌉니다.</a>
+    <div class="sampleBtn">
+        <a href="#" class="reset">리셋</a>
+        <a href="#" class="btn1">버튼을 클릭하면 박스 부모 요소에 새로운 요소를 추가합니다.</a>
     </div>
-</div>
-<!-- sample -->
-
-
-<div class="sample">
-    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="script">
-        <pre class="line-numbers"><code class="language-javascript">$(".choice1 .btn1").on("click", function(e){
-    e.preventDefault();
-    $(".list1 p").wrapAll("&lt;div class='div'&gt;&lt;/div&gt;");
-});</code></pre>
-    </div>
-</div>
-<!-- sample -->
-
-<div class="sample">
-    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html ">
-        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;속성(Attributes)&lt;/h3&gt;
-&lt;div class="list1"&gt;
-    &lt;p class="p"&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.&lt;/p&gt;
-    &lt;p class="p"&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.&lt;/p&gt;
-    &lt;p class="p"&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/p&gt;
-    &lt;p class="p"&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/p&gt;
-    &lt;p class="p"&gt;.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/p&gt;
-    &lt;p class="p"&gt;.nextUntil() 메서드는 지정한 선택 요소의 모든 요소를 선택합니다.&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-    </div>
-</div>
-<!-- sample -->
-
-<div class="sample">
-    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html on">
-        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;jQuery Sample&lt;/title&gt;
-    &lt;style&gt;
-        .p:before {content:'p'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
-        .div {padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px;border: 1px dashed #a51a3d;}
-        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    
-    &lt;h3&gt;속성(Attributes)&lt;/h3&gt;
-    &lt;div class="list1"&gt;
-        &lt;p class="p"&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.&lt;/p&gt;
-        &lt;p class="p"&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.&lt;/p&gt;
-        &lt;p class="p"&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/p&gt;
-        &lt;p class="p"&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/p&gt;
-        &lt;p class="p"&gt;.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/p&gt;
-        &lt;p class="p"&gt;.nextUntil() 메서드는 지정한 선택 요소의 모든 요소를 선택합니다.&lt;/p&gt;
-    &lt;/div&gt;
-    
-    &lt;div class="choice1"&gt;
-        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
-        &lt;a href="#" class="btn1"&gt;클릭하면 &lt;em&gt;p태그&lt;/em&gt;에 &lt;em&gt;div태그&lt;/em&gt;로 감쌉니다.&lt;/a&gt;
-    &lt;/div&gt;
-    
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-        $(".choice1 .off1").on("click", function(e){
-            e.preventDefault();
-            $(".list1 p").unwrap();
-        });
-        $(".choice1 .btn1").on("click", function(e){
-            e.preventDefault();
-            $(".list1 p").wrapAll("&lt;div class='div'&gt;&lt;/div&gt;");
-        });
-    &lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-    </div>
-</div>
-<!-- sample -->
-
-
-<script>
-    $(".choice1 .off1").on("click", function(e){
-        e.preventDefault();
-        $(".list1 p").unwrap();
-    });
-    $(".choice1 .btn1").on("click", function(e){
-        e.preventDefault();
-        $(".list1 p").wrapAll("<div class='div'></div>");
-    });
-</script>
-<!-- //Sample1 -->
-
-
-
-
-
-
-
-
-<!-- Sample2 -->
-<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/jquery/sample142-2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
-<p>.wrapAll() : 선택한 요소에 스타일을 다른 태그에 적용하는 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <h3>속성(Attributes)</h3>
-        <div class="list2">
-            <p class="p">.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.</p>
-            <p class="p">.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.</p>
-            <p class="p">.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.</p>
-            <p class="p">.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.</p>
-            <p class="p">.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.</p>
-            <div class="div"></div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div class="active">SCRIPT</div>
         </div>
-        <!-- ex -->
-    </div>
-    
-    <div class="choice2">
-        <a href="#" class="off1">리셋</a>
-        <a href="#" class="btn1">클릭하면 컨텐츠 요소를 div 스타일을 <em>p 태그</em>에 적용합니다.</a>
-    </div>
-</div>
-<!-- sample -->
-
-
-<div class="sample">
-    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="script on">
-        <pre class="line-numbers"><code class="language-javascript">$(".choice2 .btn1").on("click", function(e){
-    e.preventDefault();
-    $(".list2 p").wrapAll($( ".list2 .div" ));
-});</code></pre>
-    </div>
-</div>
-<!-- sample -->
-
-<div class="sample">
-    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html ">
-        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;속성(Attributes)&lt;/h3&gt;
-&lt;div class="list2"&gt;
-    &lt;p class="p"&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.&lt;/p&gt;
-    &lt;p class="p"&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.&lt;/p&gt;
-    &lt;p class="p"&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/p&gt;
-    &lt;p class="p"&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/p&gt;
-    &lt;p class="p"&gt;.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/p&gt;
-    &lt;div class="div"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-    </div>
-</div>
-<!-- sample -->
-
-<div class="sample">
-    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="html on">
-        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;jQuery Sample&lt;/title&gt;
-    &lt;style&gt;
-        .p:before {content:'p'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
-        .div {padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px;border: 1px dashed #a51a3d;}
-        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    
-    &lt;h3&gt;속성(Attributes)&lt;/h3&gt;
-    &lt;div class="list2"&gt;
-        &lt;p class="p"&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.&lt;/p&gt;
-        &lt;p class="p"&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.&lt;/p&gt;
-        &lt;p class="p"&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/p&gt;
-        &lt;p class="p"&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/p&gt;
-        &lt;p class="p"&gt;.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/p&gt;
-        &lt;div class="div"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    
-    &lt;div class="choice2"&gt;
-        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
-        &lt;a href="#" class="btn1"&gt;클릭하면 컨텐츠 요소를 div 스타일을 &lt;em&gt;p 태그&lt;/em&gt;에 적용합니다.&lt;/a&gt;
-    &lt;/div&gt;
-    
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-        $(".choice2 .off1").on("click", function(e){
-            e.preventDefault();
-            $(".list2 p").unwrap();
-        });
-        $(".choice2 .btn1").on("click", function(e){
-            e.preventDefault();
-            $(".list2 p").wrapAll($( ".list2 .div" ));
-        });
-    &lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="wrap-box"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.wrap-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.new {
+    border: 1px solid #4390E1;
+    margin: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #4390E1;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #A2CBFA;
+    border: 1px solid #4390E1;
+    box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+}
+</code></pre>
+            </div>
+            <div style="display: block;">
+<pre class="line-numbers"><code class="language-js">$(".sampleBtn .btn1").click(function(){
+    $( ".wrap-box .box" ).wrapAll( "&lt;div class='new'&gt;wrapAll&lt;/div&gt;" );
+});
+</code></pre>
+            </div>
+        </div>
     </div>
 </div>
-<!-- sample -->
-
+<!-- //sample1 -->
 
 <script>
-    $(".choice2 .off1").on("click", function(e){
-        e.preventDefault();
-        $(".list2 p").unwrap();
+    $(".sampleBtn .reset").click(function(){
+        $(".wrap-box").find(".new").remove();
+        $(".wrap-box").append("<div class='box'></div><div class='box'></div><div class='box'></div>")
     });
-    $(".choice2 .btn1").on("click", function(e){
-        e.preventDefault();
-        $(".list2 p").wrapAll($( ".list2 .div" ));
+    $(".sampleBtn .btn1").click(function(){
+        $( ".wrap-box .box" ).wrapAll( "<div class='new'>wrapAll</div>" );
     });
 </script>
-<!-- //Sample2 -->
+
+
+
+
 
 
 
@@ -274,20 +170,34 @@ $("선택자").wrapAll("함수");<br>
             <tr>
                 <th class="ce">메서드</th>
                 <th class="ce">버전</th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
-                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
-                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
-                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
-                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png"
+                        alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png"
+                        alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png"
+                        alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png"
+                        alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png"
+                        alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png"
+                        alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png"
+                        alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png"
+                        alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png"
+                        alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png"
+                        alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png"
+                        alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png"
+                        alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
             </tr>
         </thead>
         <tbody>
@@ -346,3 +256,12 @@ $("선택자").wrapAll("함수");<br>
         </tbody>
     </table>
 </div>
+
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://api.jquery.com/wrap/">jQuery.com</a></li>
+</ul>
+
+<hr>
